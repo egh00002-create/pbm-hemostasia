@@ -1,0 +1,7 @@
+node_modules
+dist
+dev-dist
+.DS_Store
+*.local
+# datos sincronizados desde ../app-data (se regeneran con npm run sync-data)
+public/app-data

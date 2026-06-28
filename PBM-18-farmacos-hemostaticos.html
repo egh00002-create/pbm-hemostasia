@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- SERIE PBM - PBM-18 Farmacos hemostaticos. Ancla REV. -->
+<style>
+  @page { size:A4; margin:16mm 15mm 18mm 15mm; @bottom-center{ content:counter(page);} }
+  :root{
+    --accent:#8E2433; --accent-soft:#F4E3E6; --accent2:#4F6B7A; --accent2-soft:#E7EDF1;
+    --warm:#B0682B; --warm-soft:#F6E8D8;
+    --ink:#211A1C; --ink2:#3A2E31; --muted:#6E6168; --line:#E0D6D8;
+    --violet:#6B2740;
+    --key:var(--accent); --key-bg:var(--accent-soft);
+    --alert:#9A3B1E; --alert-bg:var(--warm-soft);
+    --note:#4F6B7A; --note-bg:var(--accent2-soft);
+    --pearl:#0E6E6B; --pearl-bg:#D7EFEC;
+    --rev:#6E6168; --rev-bg:#EFEAEB;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif; color:var(--ink); font-size:9.3pt; line-height:1.48; margin:0; }
+  h1,h2,h3,h4{ font-family:"DejaVu Serif",Georgia,serif; color:var(--ink); line-height:1.18; }
+  p{ margin:0 0 7px 0; text-align:justify; }
+  .mono{ font-family:"DejaVu Sans Mono",monospace; }
+  sub,sup{ font-size:75%; }
+  .docref{ display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .doc-code{ font-family:"DejaVu Sans Mono",monospace; font-size:8.4pt; font-weight:700; letter-spacing:.06em; color:#fff; background:var(--accent); padding:3px 9px; border-radius:3px; }
+  .badge{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:7pt; letter-spacing:.06em; font-weight:700; padding:3px 8px; border-radius:3px; color:#fff; }
+  .b-guia{ background:#8E2433; } .b-meta{ background:#4F6B7A; } .b-eca{ background:#7A3E6E; }
+  .b-rev{ background:#6E6358; } .b-alg{ background:#4E5A66; }
+  .module-tag{ font-family:"DejaVu Sans Mono",monospace; font-size:7.2pt; color:var(--muted); letter-spacing:.04em; }
+  .kicker{ font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:8px; }
+  h1.title{ font-size:20pt; margin:0 0 6px 0; letter-spacing:-.01em; border-bottom:3px solid var(--accent); padding-bottom:12px; }
+  .subtitle{ font-size:11pt; color:var(--ink2); font-family:"DejaVu Serif",Georgia,serif; font-style:italic; margin:10px 0 14px 0; }
+  .tagline{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; color:var(--muted); line-height:1.7; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0; margin-bottom:14px; }
+  .refbar{ background:var(--accent2-soft); border-left:4px solid var(--accent2); padding:9px 12px; font-size:8.3pt; color:var(--ink2); margin-bottom:10px; border-radius:0 4px 4px 0; }
+  .refbar.guiabar{ background:var(--accent-soft); border-left-color:var(--accent); }
+  .refbar b{ color:var(--ink); }
+  .meta-row{ display:flex; flex-wrap:wrap; margin-bottom:6px; }
+  .meta-chip{ font-family:"DejaVu Sans Mono",monospace; font-size:7pt; color:var(--ink2); background:#F3ECEE; border:1px solid var(--line); border-radius:20px; padding:3px 9px; margin:0 6px 6px 0; }
+  .lead{ font-size:9.5pt; color:var(--ink2); line-height:1.55; }
+  .toc{ background:#FBF7F8; border:1px solid var(--line); border-radius:6px; padding:12px 16px; margin:6px 0 4px; }
+  .toc h2{ font-size:11pt; margin:0 0 8px 0; color:var(--accent); }
+  .toc ol{ margin:0; padding-left:20px; columns:2; column-gap:26px; font-size:8.5pt; }
+  .toc li{ margin-bottom:4px; }
+  h2.sec{ font-size:12.5pt; margin:18px 0 4px 0; padding-top:8px; border-top:2px solid var(--ink); color:var(--ink); }
+  h2.sec .num{ color:var(--accent); margin-right:8px; }
+  h3{ font-size:10pt; margin:11px 0 3px 0; color:var(--violet); }
+  h4{ font-size:9pt; margin:8px 0 2px 0; color:var(--ink2); }
+  .box{ border-radius:0 6px 6px 0; padding:9px 13px 7px 13px; margin:10px 0; font-size:8.6pt; line-height:1.44; }
+  .box .box-h{ font-family:"DejaVu Sans Mono",monospace; font-weight:700; font-size:7.6pt; letter-spacing:.07em; text-transform:uppercase; margin-bottom:5px; display:block; }
+  .box ul{ margin:3px 0 2px 0; padding-left:16px; }
+  .box li{ margin-bottom:3px; }
+  .box p{ margin:0 0 4px 0; }
+  .key{ background:var(--key-bg); border-left:4px solid var(--key);} .key .box-h{ color:var(--key);}
+  .alert{ background:var(--alert-bg); border-left:4px solid var(--warm);} .alert .box-h{ color:var(--alert);}
+  .note{ background:var(--note-bg); border-left:4px solid var(--note);} .note .box-h{ color:var(--note);}
+  .pearl{ background:var(--pearl-bg); border-left:4px solid var(--pearl);} .pearl .box-h{ color:var(--pearl);}
+  .rev{ background:var(--rev-bg); border-left:4px solid var(--rev);} .rev .box-h{ color:var(--rev);}
+  table{ width:100%; border-collapse:collapse; margin:10px 0; font-size:7.5pt; }
+  caption{ caption-side:bottom; font-size:7pt; color:var(--muted); text-align:left; padding-top:5px; line-height:1.4; }
+  th{ background:var(--ink); color:#fff; text-align:left; padding:5px 7px; font-weight:600; vertical-align:top; }
+  td{ border:1px solid var(--line); padding:4px 7px; vertical-align:top; }
+  tbody tr:nth-child(even){ background:#F7F1F2; }
+  td.c{ text-align:center; }
+  .gr{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:6.6pt; font-weight:700; color:#fff; border-radius:3px; padding:1px 5px; }
+  .gr-fuerte{ background:#4F6B7A; } .gr-mod{ background:#8E2433; } .gr-debil{ background:var(--muted); } .gr-no{ background:#9A3B1E; }
+  .tbl-title{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:14px 0 0; }
+  ol.refs{ font-size:7.4pt; line-height:1.4; padding-left:22px; margin:6px 0; }
+  ol.refs li{ margin-bottom:4px; }
+  ol.refs .doi{ color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7pt; }
+  .footer-note{ margin-top:16px; padding-top:8px; border-top:1px solid var(--line); font-size:7.3pt; color:var(--muted); font-style:italic; line-height:1.45; }
+  .avoid-break{ break-inside:avoid; }
+  strong{ color:var(--ink); }
+  .pillars{ display:flex; gap:8px; margin:10px 0; flex-wrap:wrap; }
+  .pillar{ flex:1 1 0; min-width:110px; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:0 0 5px 5px; padding:7px 9px; font-size:8pt; }
+  .pillar h4{ margin:0 0 3px; color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.04em; text-transform:uppercase; }
+  .pillar.p5{ border-top-color:var(--accent2); } .pillar.p5 h4{ color:var(--accent2); }
+  .flow{ display:flex; flex-direction:column; gap:0; margin:10px 0; }
+  .step{ border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:0 5px 5px 0; padding:7px 11px; margin-bottom:6px; font-size:8.4pt; background:#FBF7F8; }
+  .step b{ color:var(--accent); }
+  .step.q{ border-left-color:var(--accent2); } .step.q b{ color:var(--accent2); }
+  .step.a{ border-left-color:var(--warm); background:var(--warm-soft); } .step.a b{ color:var(--alert); }
+  figure{ margin:12px 0; text-align:center; break-inside:avoid; }
+  figure img{ display:block; width:70%; height:auto; margin:0 auto; border:1px solid var(--line); border-radius:5px; }
+  figure.wide img{ width:86%; } figure.narrow img{ width:42%; }
+  figcaption{ font-size:7pt; color:var(--muted); line-height:1.4; text-align:center; margin:5px auto 0; max-width:82%; }
+  figcaption b{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="docref">
+    <span class="doc-code">PBM-18</span>
+    <span class="badge b-rev">REV &middot; revisi&oacute;n / s&iacute;ntesis</span>
+    <span class="module-tag">M&oacute;dulo 5 &middot; Hemostasia clínica y riesgo hemorr&aacute;gico</span>
+  </div>
+  <div class="kicker">F&aacute;rmacos hemost&aacute;ticos &middot; CCP &middot; Fibrin&oacute;geno &middot; rFVIIa &middot; Desmopresina</div>
+  <h1 class="title">F&aacute;rmacos hemost&aacute;ticos: CCP, fibrin&oacute;geno, rFVIIa y desmopresina</h1>
+  <div class="subtitle">Herramientas dirigidas para corregir d&eacute;ficits concretos &mdash; potentes y, algunas, con riesgo trombótico</div>
+  <div class="meta-row">
+    <span class="meta-chip">Concentrado de complejo protrombínico</span>
+    <span class="meta-chip">Concentrado de fibrin&oacute;geno</span>
+    <span class="meta-chip">Factor VII activado</span>
+    <span class="meta-chip">Desmopresina</span>
+    <span class="meta-chip">Uso dirigido</span>
+  </div>
+  <div class="refbar">
+    <b>Ancla de evidencia (referencia vertebral):</b> Kietaibl S, Ahmed A, Afshari A, et&nbsp;al.
+    <i>Management of severe peri-operative bleeding: Guidelines from the ESAIC: Second update 2022.</i>
+    Eur J Anaesthesiol 2023;40(4):226&ndash;304. <span class="mono">doi:10.1097/EJA.0000000000001803 &middot; PMID&nbsp;36855941</span>.
+  </div>
+  <div class="tagline">
+    2026 &middot; 3 referencias indexadas verificadas en PubMed &middot; S&iacute;ntesis docente para adjuntos y residentes (CAUSA / SACYL)<br>
+    <b>Mensaje nuclear:</b> los f&aacute;rmacos hemost&aacute;ticos corrigen <b>d&eacute;ficits concretos</b>: el <b>CCP</b> revierte los AVK y aporta
+    factores; el <b>fibrin&oacute;geno</b> repone el primer factor que cae; la <b>desmopresina</b> ayuda en la von Willebrand
+    respondedora y la disfunci&oacute;n plaquetaria; el <b>rFVIIa</b> es un recurso de rescate <b>off-label</b> con riesgo trombótico.
+    Se usan <b>dirigidos</b>, no a ciegas.
+  </div>
+  <div class="lead">
+    <p>Cuando la hemostasia b&aacute;sica (cirug&iacute;a, normotermia, calcio, antifibrinol&iacute;ticos) no basta, disponemos de f&aacute;rmacos que
+    corrigen d&eacute;ficits espec&iacute;ficos de la coagulaci&oacute;n. Su valor depende de usarlos <b>dirigidos al d&eacute;ficit</b> &mdash;idealmente
+    guiados por viscoel&aacute;stica (PBM-09)&mdash;, no como gesto gen&eacute;rico.</p>
+    <p>Este documento cierra la serie repasando los principales agentes hemost&aacute;ticos, sus indicaciones y sus riesgos, con el
+    tono honesto de la serie: son potentes, pero algunos (rFVIIa) tienen un balance beneficio-riesgo estrecho.</p>
+  </div>
+</section>
+
+
+<nav class="toc avoid-break"><h2>&Iacute;ndice</h2><ol>
+  <li>Concentrado de complejo protrombínico (CCP)</li>
+  <li>Concentrado de fibrin&oacute;geno</li>
+  <li>Factor VII activado recombinante (rFVIIa)</li>
+  <li>Desmopresina (DDAVP)</li>
+  <li>Tabla integradora de uso dirigido</li>
+  <li>Mensaje nuclear y conexiones</li>
+  <li>Verificaci&oacute;n bibliogr&aacute;fica</li>
+  <li>Referencias</li>
+</ol></nav>
+
+<h2 class="sec"><span class="num">1.</span>Concentrado de complejo protrombínico (CCP)</h2>
+<p>El <b>CCP</b> aporta factores dependientes de vitamina K (II, VII, IX, X). Su indicaci&oacute;n m&aacute;s clara es la <b>reversi&oacute;n
+urgente de los antagonistas de la vitamina K</b> (con vitamina K) en hemorragia grave o cirug&iacute;a inaplazable, donde es m&aacute;s
+r&aacute;pido y eficaz que el plasma [1]. Tambi&eacute;n se emplea, guiado por viscoel&aacute;stica, en la coagulopat&iacute;a por d&eacute;ficit de
+factores en la hemorragia perioperatoria. Conlleva cierto <b>riesgo trombótico</b>, por lo que se dosifica de forma
+dirigida [1].</p>
+
+<div class="box key avoid-break"><span class="box-h">Puntos clave</span><ul>
+  <li><b>CCP</b>: reversi&oacute;n urgente de AVK (con vitamina K); m&aacute;s r&aacute;pido que el plasma [1].</li>
+  <li><b>Fibrin&oacute;geno</b>: reponer cuando &lt; 1,5&nbsp;g/l o d&eacute;ficit funcional en sangrado [1].</li>
+  <li><b>rFVIIa</b>: rescate <b>off-label</b> con riesgo trombótico; no de primera l&iacute;nea [1].</li>
+</ul></div>
+
+<h2 class="sec"><span class="num">2.</span>Concentrado de fibrin&oacute;geno</h2>
+<p>El fibrin&oacute;geno es el <b>primer factor que desciende</b> en la hemorragia masiva y el sustrato final del co&aacute;gulo. Su
+reposici&oacute;n &mdash;con <b>concentrado de fibrin&oacute;geno</b> o crioprecipitado&mdash; est&aacute; indicada cuando, en contexto de sangrado, el
+fibrin&oacute;geno plasm&aacute;tico es <b>&lt; 1,5&nbsp;g/l</b> o hay d&eacute;ficit funcional en viscoel&aacute;stica [1]. En Europa, el concentrado de
+fibrin&oacute;geno ha desplazado en gran medida al crioprecipitado por su estandarizaci&oacute;n y seguridad (PBM-02).</p>
+
+<h2 class="sec"><span class="num">3.</span>Factor VII activado recombinante (rFVIIa)</h2>
+<p>El <b>rFVIIa</b> potencia la generaci&oacute;n de trombina en el sitio de la lesi&oacute;n. Su uso aprobado es limitado (p.&nbsp;ej.
+hemofilia con inhibidores); en la hemorragia perioperatoria masiva refractaria es un <b>recurso de rescate off-label</b>,
+tras optimizar plaquetas, fibrin&oacute;geno, calcio, temperatura y pH. Su eficacia en este escenario es incierta y se asocia a
+<b>eventos trombóticos</b>, por lo que <b>no es un f&aacute;rmaco de primera l&iacute;nea</b> [1].</p>
+
+<div class="box alert avoid-break"><span class="box-h">Precauci&oacute;n con el rFVIIa</span>
+  <p>El rFVIIa no sustituye el control quir&uacute;rgico ni la correcci&oacute;n del entorno (calcio, temperatura, pH, fibrin&oacute;geno). Su
+  uso off-label en hemorragia refractaria debe ser una decisi&oacute;n meditada por el riesgo trombótico y la evidencia limitada [1].</p>
+</div>
+
+<h2 class="sec"><span class="num">4.</span>Desmopresina (DDAVP)</h2>
+<p>La <b>desmopresina</b> libera factor de von Willebrand y factor VIII de los dep&oacute;sitos endoteliales. Es &uacute;til en la
+<b>enfermedad de von Willebrand tipo 1 respondedora</b> y en la <b>disfunci&oacute;n plaquetaria</b> (ur&eacute;mica o inducida por
+f&aacute;rmacos), como alternativa o complemento a los hemoderivados [1]. Debe vigilarse la <b>hiponatremia</b> por su efecto
+antidiur&eacute;tico, especialmente con dosis repetidas.</p>
+
+<h2 class="sec"><span class="num">5.</span>Tabla integradora de uso dirigido</h2>
+<div class="tbl-title">Tabla 1 &middot; F&aacute;rmacos hemost&aacute;ticos: d&eacute;ficit diana, indicaci&oacute;n y cautela</div>
+<table class="avoid-break">
+  <thead><tr><th style="width:22%">F&aacute;rmaco</th><th>Indicaci&oacute;n dirigida</th><th style="width:24%">Cautela</th></tr></thead>
+  <tbody>
+    <tr><td><b>CCP</b></td><td>Reversi&oacute;n urgente de AVK; d&eacute;ficit de factores en sangrado</td><td>Riesgo trombótico; dosis dirigida [1]</td></tr>
+    <tr><td><b>Fibrin&oacute;geno / crio</b></td><td>Fibrin&oacute;geno &lt; 1,5&nbsp;g/l o d&eacute;ficit funcional en sangrado</td><td>Reponer guiado por objetivo [1]</td></tr>
+    <tr><td><b>rFVIIa</b></td><td>Rescate off-label en hemorragia refractaria (tras optimizar todo)</td><td>Eventos trombóticos; no 1.&ordf; l&iacute;nea [1]</td></tr>
+    <tr><td><b>Desmopresina</b></td><td>vW tipo 1 respondedora; disfunci&oacute;n plaquetaria</td><td>Hiponatremia; taquifilaxia [1]</td></tr>
+  </tbody>
+  <caption>S&iacute;ntesis a partir de la gu&iacute;a ESAIC [1]. El uso dirigido &mdash;al d&eacute;ficit demostrado, idealmente guiado por viscoel&aacute;stica&mdash; es el principio com&uacute;n.</caption>
+</table>
+
+<h2 class="sec"><span class="num">6.</span>Mensaje nuclear y conexiones</h2>
+<p><b>Mensaje nuclear (equilibrado):</b> los f&aacute;rmacos hemost&aacute;ticos corrigen d&eacute;ficits concretos y son muy &uacute;tiles usados de
+forma <b>dirigida</b> (CCP para AVK, fibrin&oacute;geno para hipofibrinogenemia, desmopresina para vW/disfunci&oacute;n plaquetaria); el
+<b>rFVIIa</b> es un recurso de rescate off-label con riesgo trombótico y evidencia limitada. Ninguno sustituye el control
+quir&uacute;rgico ni el entorno fisiol&oacute;gico.</p>
+<p>Conecta con <b>PBM-02</b> (fibrin&oacute;geno/crio), <b>PBM-09</b> (guía por viscoel&aacute;stica), <b>PBM-13</b> (hemorragia masiva),
+<b>PBM-16</b> (reversi&oacute;n de anticoagulantes) y <b>PBM-17</b> (coagulopat&iacute;as). Cierra el eje de hemostasia de la serie.</p>
+
+<div class="box key avoid-break"><span class="box-h">Resumen en una frase</span>
+  <p>Usa el f&aacute;rmaco hemost&aacute;tico que corresponde al d&eacute;ficit (CCP, fibrin&oacute;geno, desmopresina), guiado por viscoel&aacute;stica
+  &mdash;y reserva el rFVIIa como rescate off-label por su riesgo trombótico&mdash;.</p>
+</div>
+
+<h2 class="sec"><span class="num">7.</span>Verificaci&oacute;n bibliogr&aacute;fica</h2>
+<p>Documento <b>REV</b> anclado en la gu&iacute;a ESAIC de sangrado perioperatorio grave [1], complementada por la gu&iacute;a de trastornos
+raros [2] y la gu&iacute;a BSH de plasma/crioprecipitado [3], verificadas contra PubMed (autor&iacute;a, t&iacute;tulo, revista, a&ntilde;o, DOI/PMID).
+El dintel de fibrin&oacute;geno (&lt; 1,5&nbsp;g/l), las indicaciones del CCP y la cautela con el rFVIIa proceden de estas fuentes; se
+declara expl&iacute;citamente el car&aacute;cter <b>off-label</b> y el riesgo trombótico del rFVIIa.</p>
+
+
+<h2 class="sec"><span class="num">8.</span>Referencias</h2>
+<ol class="refs">
+  <li>Kietaibl S, Ahmed A, Afshari A, Albaladejo P, Aldecoa C, Barauskas G, et al. Management of severe peri-operative bleeding: Guidelines from the European Society of Anaesthesiology and Intensive Care: Second update 2022. <i>Eur J Anaesthesiol</i> 2023;40(4):226&ndash;304. <span class="doi">doi:10.1097/EJA.0000000000001803</span> &middot; PMID 36855941.</li>
+  <li>Mumford AD, Ackroyd S, Alikhan R, Bowles L, Chowdary P, Grainger J, et al. Guideline for the diagnosis and management of the rare coagulation disorders (UKHCDO / British Committee for Standards in Haematology). <i>Br J Haematol</i> 2014;167(3):304&ndash;326. <span class="doi">doi:10.1111/bjh.13058</span> &middot; PMID 25100430.</li>
+  <li>Green L, Bolton-Maggs P, Beattie C, Cardigan R, Kallis Y, Stanworth SJ, et al. British Society of Haematology Guidelines on the spectrum of fresh frozen plasma and cryoprecipitate products. <i>Br J Haematol</i> 2018;181(1):54&ndash;67. <span class="doi">doi:10.1111/bjh.15167</span> &middot; PMID 29527654.</li>
+</ol>
+
+<div class="footer-note">Serie Hemostasia y Medicina Transfusional Perioperatoria (PBM) - Documento PBM-18 - Modulo 5 (eje hemostasia) - ancla REV - 2026. Sintesis docente en espanol para adjuntos y residentes (CAUSA / SACYL). Cifras procedentes de fuentes primarias indexadas verificadas contra PubMed. No sustituye al juicio clinico ni a los protocolos locales vigentes.<br><strong>Ideacion:</strong> Emilio Garcia Hernandez - Licenciado Especialista en Anestesiologia y Reanimacion - CAUSA - SACYL.</div>
+</body>
+</html>

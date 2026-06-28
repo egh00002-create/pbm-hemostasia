@@ -1,0 +1,18 @@
+# --- Node / app ---
+pbm-app/node_modules/
+pbm-app/dist/
+pbm-app/dev-dist/
+pbm-app/public/app-data/        # datos sincronizados desde ../app-data (se regeneran)
+pbm-app/*.tsbuildinfo
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Artefactos de render temporales ---
+_wptest.*
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
+*.local

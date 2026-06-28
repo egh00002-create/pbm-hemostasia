@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- SERIE PBM - P-QR-01 Los 3 pilares del PBM de un vistazo. Ancla ALG. -->
+<style>
+  @page { size:A4; margin:16mm 15mm 18mm 15mm; @bottom-center{ content:counter(page);} }
+  :root{
+    --accent:#8E2433; --accent-soft:#F4E3E6; --accent2:#4F6B7A; --accent2-soft:#E7EDF1;
+    --warm:#B0682B; --warm-soft:#F6E8D8;
+    --ink:#211A1C; --ink2:#3A2E31; --muted:#6E6168; --line:#E0D6D8;
+    --violet:#6B2740;
+    --key:var(--accent); --key-bg:var(--accent-soft);
+    --alert:#9A3B1E; --alert-bg:var(--warm-soft);
+    --note:#4F6B7A; --note-bg:var(--accent2-soft);
+    --pearl:#0E6E6B; --pearl-bg:#D7EFEC;
+    --rev:#6E6168; --rev-bg:#EFEAEB;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif; color:var(--ink); font-size:9.3pt; line-height:1.48; margin:0; }
+  h1,h2,h3,h4{ font-family:"DejaVu Serif",Georgia,serif; color:var(--ink); line-height:1.18; }
+  p{ margin:0 0 7px 0; text-align:justify; }
+  .mono{ font-family:"DejaVu Sans Mono",monospace; }
+  sub,sup{ font-size:75%; }
+  .docref{ display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .doc-code{ font-family:"DejaVu Sans Mono",monospace; font-size:8.4pt; font-weight:700; letter-spacing:.06em; color:#fff; background:var(--accent); padding:3px 9px; border-radius:3px; }
+  .badge{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:7pt; letter-spacing:.06em; font-weight:700; padding:3px 8px; border-radius:3px; color:#fff; }
+  .b-guia{ background:#8E2433; } .b-meta{ background:#4F6B7A; } .b-eca{ background:#7A3E6E; }
+  .b-rev{ background:#6E6358; } .b-alg{ background:#4E5A66; }
+  .module-tag{ font-family:"DejaVu Sans Mono",monospace; font-size:7.2pt; color:var(--muted); letter-spacing:.04em; }
+  .kicker{ font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:8px; }
+  h1.title{ font-size:20pt; margin:0 0 6px 0; letter-spacing:-.01em; border-bottom:3px solid var(--accent); padding-bottom:12px; }
+  .subtitle{ font-size:11pt; color:var(--ink2); font-family:"DejaVu Serif",Georgia,serif; font-style:italic; margin:10px 0 14px 0; }
+  .tagline{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; color:var(--muted); line-height:1.7; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0; margin-bottom:14px; }
+  .refbar{ background:var(--accent2-soft); border-left:4px solid var(--accent2); padding:9px 12px; font-size:8.3pt; color:var(--ink2); margin-bottom:10px; border-radius:0 4px 4px 0; }
+  .refbar.guiabar{ background:var(--accent-soft); border-left-color:var(--accent); }
+  .refbar b{ color:var(--ink); }
+  .meta-row{ display:flex; flex-wrap:wrap; margin-bottom:6px; }
+  .meta-chip{ font-family:"DejaVu Sans Mono",monospace; font-size:7pt; color:var(--ink2); background:#F3ECEE; border:1px solid var(--line); border-radius:20px; padding:3px 9px; margin:0 6px 6px 0; }
+  .lead{ font-size:9.5pt; color:var(--ink2); line-height:1.55; }
+  .toc{ background:#FBF7F8; border:1px solid var(--line); border-radius:6px; padding:12px 16px; margin:6px 0 4px; }
+  .toc h2{ font-size:11pt; margin:0 0 8px 0; color:var(--accent); }
+  .toc ol{ margin:0; padding-left:20px; columns:2; column-gap:26px; font-size:8.5pt; }
+  .toc li{ margin-bottom:4px; }
+  h2.sec{ font-size:12.5pt; margin:18px 0 4px 0; padding-top:8px; border-top:2px solid var(--ink); color:var(--ink); }
+  h2.sec .num{ color:var(--accent); margin-right:8px; }
+  h3{ font-size:10pt; margin:11px 0 3px 0; color:var(--violet); }
+  h4{ font-size:9pt; margin:8px 0 2px 0; color:var(--ink2); }
+  .box{ border-radius:0 6px 6px 0; padding:9px 13px 7px 13px; margin:10px 0; font-size:8.6pt; line-height:1.44; }
+  .box .box-h{ font-family:"DejaVu Sans Mono",monospace; font-weight:700; font-size:7.6pt; letter-spacing:.07em; text-transform:uppercase; margin-bottom:5px; display:block; }
+  .box ul{ margin:3px 0 2px 0; padding-left:16px; }
+  .box li{ margin-bottom:3px; }
+  .box p{ margin:0 0 4px 0; }
+  .key{ background:var(--key-bg); border-left:4px solid var(--key);} .key .box-h{ color:var(--key);}
+  .alert{ background:var(--alert-bg); border-left:4px solid var(--warm);} .alert .box-h{ color:var(--alert);}
+  .note{ background:var(--note-bg); border-left:4px solid var(--note);} .note .box-h{ color:var(--note);}
+  .pearl{ background:var(--pearl-bg); border-left:4px solid var(--pearl);} .pearl .box-h{ color:var(--pearl);}
+  .rev{ background:var(--rev-bg); border-left:4px solid var(--rev);} .rev .box-h{ color:var(--rev);}
+  table{ width:100%; border-collapse:collapse; margin:10px 0; font-size:7.5pt; }
+  caption{ caption-side:bottom; font-size:7pt; color:var(--muted); text-align:left; padding-top:5px; line-height:1.4; }
+  th{ background:var(--ink); color:#fff; text-align:left; padding:5px 7px; font-weight:600; vertical-align:top; }
+  td{ border:1px solid var(--line); padding:4px 7px; vertical-align:top; }
+  tbody tr:nth-child(even){ background:#F7F1F2; }
+  td.c{ text-align:center; }
+  .gr{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:6.6pt; font-weight:700; color:#fff; border-radius:3px; padding:1px 5px; }
+  .gr-fuerte{ background:#4F6B7A; } .gr-mod{ background:#8E2433; } .gr-debil{ background:var(--muted); } .gr-no{ background:#9A3B1E; }
+  .tbl-title{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:14px 0 0; }
+  ol.refs{ font-size:7.4pt; line-height:1.4; padding-left:22px; margin:6px 0; }
+  ol.refs li{ margin-bottom:4px; }
+  ol.refs .doi{ color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7pt; }
+  .footer-note{ margin-top:16px; padding-top:8px; border-top:1px solid var(--line); font-size:7.3pt; color:var(--muted); font-style:italic; line-height:1.45; }
+  .avoid-break{ break-inside:avoid; }
+  strong{ color:var(--ink); }
+  .pillars{ display:flex; gap:8px; margin:10px 0; flex-wrap:wrap; }
+  .pillar{ flex:1 1 0; min-width:110px; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:0 0 5px 5px; padding:7px 9px; font-size:8pt; }
+  .pillar h4{ margin:0 0 3px; color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.04em; text-transform:uppercase; }
+  .pillar.p5{ border-top-color:var(--accent2); } .pillar.p5 h4{ color:var(--accent2); }
+  .flow{ display:flex; flex-direction:column; gap:0; margin:10px 0; }
+  .step{ border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:0 5px 5px 0; padding:7px 11px; margin-bottom:6px; font-size:8.4pt; background:#FBF7F8; }
+  .step b{ color:var(--accent); }
+  .step.q{ border-left-color:var(--accent2); } .step.q b{ color:var(--accent2); }
+  .step.a{ border-left-color:var(--warm); background:var(--warm-soft); } .step.a b{ color:var(--alert); }
+  figure{ margin:12px 0; text-align:center; break-inside:avoid; }
+  figure img{ display:block; width:70%; height:auto; margin:0 auto; border:1px solid var(--line); border-radius:5px; }
+  figure.wide img{ width:86%; } figure.narrow img{ width:42%; }
+  figcaption{ font-size:7pt; color:var(--muted); line-height:1.4; text-align:center; margin:5px auto 0; max-width:82%; }
+  figcaption b{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="docref">
+    <span class="doc-code">P-QR-01</span>
+    <span class="badge b-alg">ALG &middot; tarjeta de consulta r&aacute;pida</span>
+    <span class="module-tag">Quick-reference &middot; sintetiza PBM-01</span>
+  </div>
+  <div class="kicker">Los 3 pilares del PBM de un vistazo</div>
+  <h1 class="title">Los 3 pilares del PBM de un vistazo</h1>
+  <div class="subtitle">Tarjeta de consulta r&aacute;pida &mdash; el marco conceptual de toda la serie en una p&aacute;gina</div>
+  <div class="tagline">
+    2026 &middot; Tarjeta derivada de PBM-01 &middot; CAUSA / SACYL<br>
+    <b>Idea:</b> gestionar la sangre del paciente en tres pilares + el eje de la hemostasia; transfundir solo cuando aporta beneficio.
+  </div>
+</section>
+
+
+<div class="pillars avoid-break">
+  <div class="pillar"><h4>Pilar 1 &middot; Masa eritrocitaria</h4><b>Optimizar</b>: detectar y tratar la <b>anemia preoperatoria</b>
+    (ferropenia, hierro, EPO) con tiempo. <span class="mono">&rarr; PBM-04 a 06</span></div>
+  <div class="pillar"><h4>Pilar 2 &middot; P&eacute;rdida sangu&iacute;nea</h4><b>Minimizar</b>: hemostasia quir&uacute;rgica, <b>tranex&aacute;mico</b>,
+    viscoel&aacute;stica, recuperador celular, MABL. <span class="mono">&rarr; PBM-07 a 11</span></div>
+  <div class="pillar p5"><h4>Pilar 3 &middot; Tolerancia a la anemia</h4><b>Tolerar</b>: umbrales <b>restrictivos</b> y soporte
+    fisiol&oacute;gico de la entrega de ox&iacute;geno. <span class="mono">&rarr; PBM-12 a 14</span></div>
+</div>
+
+<div class="box key avoid-break"><span class="box-h">Eje transversal &middot; Hemostasia y sangrado</span>
+  <p>Cribado del riesgo hemorr&aacute;gico (HEMSTOP), manejo de antitrombóticos, coagulopat&iacute;as y f&aacute;rmacos hemost&aacute;ticos.
+  <span class="mono">&rarr; PBM-15 a 18</span></p>
+</div>
+
+<div class="tbl-title">Qu&eacute; hacer en cada momento del periodo perioperatorio</div>
+<table class="avoid-break">
+  <thead><tr><th style="width:16%">Momento</th><th>Pilar 1 (masa)</th><th>Pilar 2 (p&eacute;rdida)</th><th>Pilar 3 (tolerancia)</th></tr></thead>
+  <tbody>
+    <tr><td><b>Preoperatorio</b></td><td>Cribar y tratar anemia/ferropenia con tiempo</td><td>Revisar antitrombóticos; planificar (MABL)</td><td>Definir umbral diana seg&uacute;n contexto</td></tr>
+    <tr><td><b>Intraoperatorio</b></td><td>&mdash;</td><td>Tranex&aacute;mico, recuperador, viscoel&aacute;stica, normotermia</td><td>Normovolemia, oxigenaci&oacute;n, menor consumo</td></tr>
+    <tr><td><b>Postoperatorio</b></td><td>Tratar anemia postoperatoria</td><td>Vigilar sangrado; reanudar antitrombóticos</td><td>Umbral restrictivo; transfusi&oacute;n unitaria</td></tr>
+  </tbody>
+  <caption>S&iacute;ntesis docente de los 3 pilares [1,2]. Detalle y excepciones en los documentos correspondientes (p.&nbsp;ej. SCA en PBM-12).</caption>
+</table>
+
+<div class="box pearl avoid-break"><span class="box-h">Regla de oro</span>
+  <p>La mejor unidad de sangre es la que <b>no hace falta transfundir</b>: optimiza la masa, minimiza la p&eacute;rdida y tolera la anemia.</p>
+</div>
+
+
+<h2 class="sec"><span class="num">&middot;</span>Referencias</h2>
+<ol class="refs">
+  <li>Mueller MM, Van Remoortel H, Meybohm P, Aranko K, Aubron C, Burger R, et al. Patient Blood Management: Recommendations From the 2018 Frankfurt Consensus Conference. <i>JAMA</i> 2019;321(10):983&ndash;997. <span class="doi">doi:10.1001/jama.2019.0554</span> &middot; PMID 30860564.</li>
+  <li>Althoff FC, Neb H, Herrmann E, Trentino KM, Vernich L, F&uuml;llenbach C, et al. Multimodal Patient Blood Management Program Based on a Three-pillar Strategy: A Systematic Review and Meta-analysis. <i>Ann Surg</i> 2019;269(5):794&ndash;804. <span class="doi">doi:10.1097/SLA.0000000000003095</span> &middot; PMID 30418206.</li>
+</ol>
+
+<div class="footer-note">Serie Hemostasia y Medicina Transfusional Perioperatoria (PBM) - Tarjeta P-QR-01 - ancla ALG - 2026. Tarjeta de consulta rapida; sintetiza PBM-01. No sustituye al juicio clinico ni a los protocolos locales vigentes.<br><strong>Ideacion:</strong> Emilio Garcia Hernandez - Licenciado Especialista en Anestesiologia y Reanimacion - CAUSA - SACYL.</div>
+</body>
+</html>

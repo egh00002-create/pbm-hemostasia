@@ -1,0 +1,3202 @@
+[
+ {
+  "id": "Q001",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "basico",
+  "q": "¿Cuál es el cambio de paradigma central del Patient Blood Management (PBM)?",
+  "options": [
+   "Centrarse en el paciente y preservar su propia sangre",
+   "Centrarse en el producto (la bolsa de sangre)",
+   "Transfundir siempre de forma liberal",
+   "Eliminar toda transfusión"
+  ],
+  "answer": 0,
+  "explanation": "El PBM desplaza el foco del producto al paciente: cómo evitar que necesite transfusión.",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q002",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "basico",
+  "q": "¿Cuáles son los 3 pilares del PBM?",
+  "options": [
+   "Optimizar masa eritrocitaria, minimizar pérdida y tolerar la anemia",
+   "Cristaloides, coloides y hemoderivados",
+   "Diagnóstico, tratamiento y seguimiento",
+   "Prevención, cribado y rehabilitación"
+  ],
+  "answer": 0,
+  "explanation": "Los 3 pilares: optimizar masa eritrocitaria, minimizar la pérdida sanguínea y optimizar/tolerar la anemia.",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q003",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "basico",
+  "q": "En el metaanálisis de Althoff, un programa PBM multimodal se asoció a una reducción de la tasa de transfusión de aproximadamente:",
+  "options": [
+   "10%",
+   "25%",
+   "60%",
+   "39%"
+  ],
+  "answer": 3,
+  "explanation": "RR 0,61 (−39%); es el efecto más consistente de los programas PBM.",
+  "ref": "PMID 30418206"
+ },
+ {
+  "id": "Q004",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "avanzado",
+  "q": "Sobre la evidencia de los programas PBM, ¿qué afirmación es la más correcta?",
+  "options": [
+   "Toda procede de ECA con desenlaces duros",
+   "No hay ninguna evidencia de beneficio",
+   "Solo aplica a cirugía cardíaca",
+   "La reducción de transfusión es robusta; mortalidad/complicaciones, de menor certeza"
+  ],
+  "answer": 3,
+  "explanation": "Gran parte es observacional; el ahorro de sangre es sólido, los desenlaces duros más débiles.",
+  "ref": "PMID 30418206"
+ },
+ {
+  "id": "Q005",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "basico",
+  "q": "¿Qué consenso internacional es referencia vertebral del PBM?",
+  "options": [
+   "Consenso de Frankfurt 2018 (JAMA 2019)",
+   "Declaración de Helsinki",
+   "Consenso de Sevilla 1997",
+   "Iniciativa Choosing Wisely"
+  ],
+  "answer": 0,
+  "explanation": "El consenso de Frankfurt 2018 (Mueller et al., JAMA 2019) vertebra las recomendaciones de PBM.",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q006",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "basico",
+  "q": "Además de los 3 pilares, la serie añade un eje transversal centrado en:",
+  "options": [
+   "La nutrición perioperatoria",
+   "La analgesia multimodal",
+   "La profilaxis antibiótica",
+   "La hemostasia y el manejo del sangrado/coagulopatías"
+  ],
+  "answer": 3,
+  "explanation": "El eje transversal es la evaluación y manejo del sangrado y las coagulopatías.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q007",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "avanzado",
+  "q": "En el metaanálisis de Althoff, la mortalidad con programa PBM mostró:",
+  "options": [
+   "RR 1,50 (aumento)",
+   "RR 0,89 (reducción, certeza moderada)",
+   "Sin estimación posible",
+   "RR 0,10"
+  ],
+  "answer": 1,
+  "explanation": "Mortalidad RR 0,89 (IC 0,80-0,98), asociación de certeza moderada.",
+  "ref": "PMID 30418206"
+ },
+ {
+  "id": "Q008",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "basico",
+  "q": "El PBM es fundamentalmente:",
+  "options": [
+   "Una técnica quirúrgica",
+   "Una estrategia multimodal y multidisciplinar",
+   "Un fármaco",
+   "Un tipo de hemoderivado"
+  ],
+  "answer": 1,
+  "explanation": "Es multimodal y multidisciplinar: anestesia, cirugía, hematología, enfermería y banco de sangre.",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q009",
+  "doc": "PBM-01",
+  "module": 1,
+  "level": "basico",
+  "q": "En el PBM, la transfusión se considera:",
+  "options": [
+   "El objetivo terapéutico principal",
+   "Siempre contraindicada",
+   "Indicada por debajo de Hb 10 g/dl siempre",
+   "Una herramienta más, reservada para cuando aporta beneficio"
+  ],
+  "answer": 3,
+  "explanation": "La transfusión es el último recurso cuando las demás medidas no bastan.",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q010",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "¿Qué aporta principalmente el concentrado de hematíes?",
+  "options": [
+   "Factores de coagulación",
+   "Plaquetas",
+   "Fibrinógeno",
+   "Transporte de oxígeno"
+  ],
+  "answer": 3,
+  "explanation": "Los hematíes mejoran el transporte de oxígeno.",
+  "ref": "PMID 37824153"
+ },
+ {
+  "id": "Q011",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "Umbral restrictivo de hematíes en el adulto estable hospitalizado (AABB 2023):",
+  "options": [
+   "Hb < 7 g/dl",
+   "Hb < 10 g/dl",
+   "Hb < 9 g/dl",
+   "Hb < 5 g/dl"
+  ],
+  "answer": 0,
+  "explanation": "Recomendación fuerte: considerar transfusión con Hb < 7 g/dl en el paciente estable.",
+  "ref": "PMID 37824153"
+ },
+ {
+  "id": "Q012",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "En cirugía cardíaca, el umbral de hematíes admitido por la AABB es:",
+  "options": [
+   "Hb < 6 g/dl",
+   "Hb < 7,5 g/dl",
+   "Hb < 9 g/dl",
+   "Hb < 11 g/dl"
+  ],
+  "answer": 1,
+  "explanation": "7,5 g/dl en cirugía cardíaca, en línea con los ensayos.",
+  "ref": "PMID 37824153"
+ },
+ {
+  "id": "Q013",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "Una unidad de hematíes eleva la Hb en el adulto aproximadamente:",
+  "options": [
+   "0,1 g/dl",
+   "3 g/dl",
+   "1 g/dl",
+   "5 g/dl"
+  ],
+  "answer": 2,
+  "explanation": "≈ +1 g/dl (Hto ≈ +3%); transfundir de unidad en unidad y reevaluar.",
+  "ref": "PMID 37824153"
+ },
+ {
+  "id": "Q014",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "Umbral profiláctico de plaquetas en trombocitopenia hipoproliferativa (AABB/ICTMG 2025):",
+  "options": [
+   "< 30 ×10⁹/l",
+   "< 50 ×10⁹/l",
+   "< 10 ×10⁹/l",
+   "< 100 ×10⁹/l"
+  ],
+  "answer": 2,
+  "explanation": "Profilaxis con < 10 ×10⁹/l (recomendación fuerte).",
+  "ref": "PMID 40440268"
+ },
+ {
+  "id": "Q015",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "avanzado",
+  "q": "Según la guía de plaquetas 2025, antes de una punción lumbar se sugiere transfundir si plaquetas:",
+  "options": [
+   "< 20 ×10⁹/l",
+   "< 50 ×10⁹/l",
+   "< 10 ×10⁹/l",
+   "No transfundir nunca"
+  ],
+  "answer": 0,
+  "explanation": "La actualización 2025 bajó el dintel de punción lumbar a < 20 ×10⁹/l (antes 50).",
+  "ref": "PMID 40440268"
+ },
+ {
+  "id": "Q016",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "avanzado",
+  "q": "En hemorragia intracraneal no quirúrgica con plaquetas > 100 ×10⁹/l, incluso bajo antiagregantes, la guía 2025:",
+  "options": [
+   "Recomienda transfundir plaquetas",
+   "Recomienda plasma",
+   "Recomienda fibrinógeno",
+   "Recomienda NO transfundir plaquetas"
+  ],
+  "answer": 3,
+  "explanation": "Recomendación en contra de transfundir (en línea con el ensayo PATCH).",
+  "ref": "PMID 40440268"
+ },
+ {
+  "id": "Q017",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "El plasma fresco congelado está indicado, esencialmente, en:",
+  "options": [
+   "Cualquier INR alterado sin sangrado",
+   "Como expansor de volumen",
+   "Para revertir warfarina siempre",
+   "Sangrado/procedimiento invasivo con coagulopatía documentada"
+  ],
+  "answer": 3,
+  "explanation": "Su indicación es el sangrado con coagulopatía documentada; dosis 10-15 ml/kg.",
+  "ref": "PMID 29527654"
+ },
+ {
+  "id": "Q018",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "El dintel de reposición de fibrinógeno en sangrado (ESAIC) es:",
+  "options": [
+   "< 1,5 g/l",
+   "< 0,5 g/l",
+   "< 3 g/l",
+   "< 5 g/l"
+  ],
+  "answer": 0,
+  "explanation": "Reponer fibrinógeno si < 1,5 g/l o déficit funcional en el contexto de sangrado.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q019",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "avanzado",
+  "q": "En cirugía cardiovascular sin sangrado mayor ni trombocitopenia, la guía 2025 sobre plaquetas:",
+  "options": [
+   "Recomienda profilaxis sistemática",
+   "Exige 2 unidades de aféresis",
+   "Recomienda crioprecipitado",
+   "Recomienda NO transfundir profilácticamente"
+  ],
+  "answer": 3,
+  "explanation": "No se recomienda la transfusión profiláctica de plaquetas en ese contexto.",
+  "ref": "PMID 40440268"
+ },
+ {
+  "id": "Q020",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "El error más frecuente de uso inapropiado de componentes es:",
+  "options": [
+   "Calentar la sangre",
+   "Usar filtros de leucorreducción",
+   "Transfundir por una analítica en un paciente que no sangra",
+   "Transfundir de unidad en unidad"
+  ],
+  "answer": 2,
+  "explanation": "Transfundir 'por el número' sin contexto clínico es la fuente más común de uso inapropiado.",
+  "ref": "PMID 37824153"
+ },
+ {
+  "id": "Q021",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "basico",
+  "q": "Hoy, el riesgo transfusional más grave y evitable es:",
+  "options": [
+   "El error de identificación (transfusión ABO incompatible)",
+   "La transmisión de VIH",
+   "La hipotermia",
+   "La hipocalcemia"
+  ],
+  "answer": 0,
+  "explanation": "El error administrativo de identificación es el principal riesgo letal evitable.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q022",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "basico",
+  "q": "¿Cuál es la última barrera y la más eficaz contra la transfusión equivocada?",
+  "options": [
+   "El cribado del donante",
+   "Las pruebas cruzadas",
+   "La comprobación final de identidad a pie de cama",
+   "La irradiación del componente"
+  ],
+  "answer": 2,
+  "explanation": "La verificación positiva de identidad paciente-unidad antes de conectar es la barrera clave.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q023",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "basico",
+  "q": "El TACO corresponde a:",
+  "options": [
+   "Sobrecarga circulatoria asociada a transfusión",
+   "Lesión pulmonar inmunomediada",
+   "Reacción febril no hemolítica",
+   "Contaminación bacteriana"
+  ],
+  "answer": 0,
+  "explanation": "TACO = sobrecarga circulatoria; cursa con edema pulmonar hidrostático.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q024",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "avanzado",
+  "q": "Diferencia clave entre TACO y TRALI:",
+  "options": [
+   "TACO es inmunomediada y TRALI hidrostática",
+   "TACO es hidrostática (volumen) y TRALI es lesión pulmonar inmunomediada",
+   "Ambas son infecciosas",
+   "Ninguna causa disnea"
+  ],
+  "answer": 1,
+  "explanation": "TACO: hidrostático por volumen; TRALI: lesión pulmonar inmunomediada.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q025",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "basico",
+  "q": "Ante una reacción transfusional grave, la primera medida es:",
+  "options": [
+   "Acelerar la transfusión",
+   "Administrar más volumen",
+   "Detener la transfusión y mantener la vía",
+   "Dar un diurético siempre"
+  ],
+  "answer": 2,
+  "explanation": "Detener de inmediato, mantener vía, reevaluar identidad y avisar al banco.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q026",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "avanzado",
+  "q": "La enfermedad injerto contra huésped asociada a transfusión (TA-GVHD) se previene con:",
+  "options": [
+   "Lavado de hematíes",
+   "Calentamiento",
+   "Filtros de microagregados",
+   "Irradiación de componentes en pacientes de riesgo"
+  ],
+  "answer": 3,
+  "explanation": "La irradiación de componentes previene la TA-GVHD en pacientes de riesgo.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q027",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "basico",
+  "q": "La trazabilidad bidireccional de cada unidad es:",
+  "options": [
+   "Una exigencia legal en la UE",
+   "Opcional",
+   "Solo para plaquetas",
+   "Innecesaria con leucorreducción"
+  ],
+  "answer": 0,
+  "explanation": "Debe poder seguirse del donante al receptor y viceversa; es exigencia legal en la UE.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q028",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "basico",
+  "q": "Ante disnea durante una transfusión, lo más frecuente e infradiagnosticado es:",
+  "options": [
+   "TRALI",
+   "Anafilaxia",
+   "TACO",
+   "Reacción hemolítica"
+  ],
+  "answer": 2,
+  "explanation": "Pensar TACO primero: más frecuente y a menudo infradiagnosticado.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q029",
+  "doc": "PBM-03",
+  "module": 1,
+  "level": "avanzado",
+  "q": "La medida preventiva más simple frente al TACO es:",
+  "options": [
+   "Transfundir rápido",
+   "Premedicar con antihistamínico",
+   "Transfundir despacio y de unidad en unidad",
+   "Usar plasma siempre"
+  ],
+  "answer": 2,
+  "explanation": "Ritmo lento, una unidad cada vez y valorar el balance.",
+  "ref": "PMID 27083327"
+ },
+ {
+  "id": "Q030",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "basico",
+  "q": "La causa más frecuente y tratable de anemia preoperatoria es:",
+  "options": [
+   "Déficit de B12",
+   "Hemólisis",
+   "Aplasia medular",
+   "Ferropenia"
+  ],
+  "answer": 3,
+  "explanation": "La ferropenia (absoluta o funcional) es la causa principal.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q031",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "basico",
+  "q": "Umbral diagnóstico de anemia (criterio operativo) en la mujer:",
+  "options": [
+   "Hb < 120 g/l",
+   "Hb < 100 g/l",
+   "Hb < 130 g/l",
+   "Hb < 140 g/l"
+  ],
+  "answer": 0,
+  "explanation": "Anemia: Hb < 130 g/l (varón) y < 120 g/l (mujer).",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q032",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "basico",
+  "q": "¿Cuándo debe activarse el cribado de anemia preoperatoria?",
+  "options": [
+   "El día de la cirugía",
+   "En el preoperatorio inmediato",
+   "Tras la cirugía",
+   "Al indicar la cirugía, con antelación de semanas"
+  ],
+  "answer": 3,
+  "explanation": "Cribar precozmente para disponer de margen terapéutico.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q033",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "avanzado",
+  "q": "¿Por qué la ferritina puede enmascarar una ferropenia?",
+  "options": [
+   "Es un marcador renal",
+   "Es un reactante de fase aguda que sube con la inflamación",
+   "Disminuye con la edad",
+   "Depende del grupo sanguíneo"
+  ],
+  "answer": 1,
+  "explanation": "La inflamación eleva la ferritina; debe interpretarse junto a la PCR.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q034",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "avanzado",
+  "q": "En contexto inflamatorio, una ferropenia puede seguir siendo compatible con ferritina hasta:",
+  "options": [
+   "≈ 15 µg/l",
+   "≈ 300 µg/l",
+   "≈ 100 µg/l",
+   "≈ 500 µg/l"
+  ],
+  "answer": 2,
+  "explanation": "Con inflamación, ferritina hasta ≈ 100 µg/l con saturación de transferrina baja sugiere ferropenia.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q035",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "basico",
+  "q": "El tratamiento de la anemia preoperatoria crónica NO es:",
+  "options": [
+   "Tratar la causa (hierro, etc.)",
+   "La EPO en casos seleccionados",
+   "La transfusión el día de la cirugía",
+   "El cribado precoz"
+  ],
+  "answer": 2,
+  "explanation": "Transfundir para 'subir la Hb' el día de la operación es el peor abordaje.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q036",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "basico",
+  "q": "Una ferritina < 30 µg/l indica:",
+  "options": [
+   "Sobrecarga de hierro",
+   "Anemia hemolítica",
+   "Ferropenia absoluta casi segura",
+   "Normalidad"
+  ],
+  "answer": 2,
+  "explanation": "Ferritina < 30 µg/l = ferropenia absoluta casi segura.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q037",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "avanzado",
+  "q": "La saturación de transferrina baja ayuda a detectar especialmente:",
+  "options": [
+   "Hemocromatosis",
+   "Talasemia",
+   "Déficit de folato",
+   "Ferropenia funcional"
+  ],
+  "answer": 3,
+  "explanation": "La saturación de transferrina baja orienta a ferropenia funcional.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q038",
+  "doc": "PBM-04",
+  "module": 2,
+  "level": "basico",
+  "q": "La anemia preoperatoria se asocia de forma consistente a:",
+  "options": [
+   "Menos complicaciones",
+   "Mejor pronóstico",
+   "Ningún efecto",
+   "Más transfusiones, complicaciones y estancia"
+  ],
+  "answer": 3,
+  "explanation": "Predice mayor necesidad transfusional y peores desenlaces.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q039",
+  "doc": "PBM-05",
+  "module": 2,
+  "level": "basico",
+  "q": "La pauta moderna de hierro oral que mejora absorción y tolerancia es:",
+  "options": [
+   "Tres tomas diarias altas",
+   "Dosis baja una vez al día o en días alternos",
+   "Dosis máxima nocturna",
+   "Siempre intravenoso"
+  ],
+  "answer": 1,
+  "explanation": "Dosis más bajas y menos frecuentes mejoran la absorción fraccional (hepcidina).",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q040",
+  "doc": "PBM-05",
+  "module": 2,
+  "level": "basico",
+  "q": "El hierro intravenoso es preferente cuando:",
+  "options": [
+   "Hay semanas de margen y buena tolerancia",
+   "La ferritina es alta",
+   "Hay intolerancia oral, malabsorción o poco tiempo",
+   "No hay anemia"
+  ],
+  "answer": 2,
+  "explanation": "IV preferente ante intolerancia/ineficacia oral, malabsorción, anemia moderada-grave o poco margen.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q041",
+  "doc": "PBM-05",
+  "module": 2,
+  "level": "avanzado",
+  "q": "El ensayo PREVENTT demostró que el hierro IV preoperatorio en cirugía abdominal mayor:",
+  "options": [
+   "Redujo a la mitad las transfusiones",
+   "NO redujo el combinado muerte o transfusión (RR 1,03)",
+   "Aumentó la mortalidad",
+   "Eliminó la anemia en 24 h"
+  ],
+  "answer": 1,
+  "explanation": "PREVENTT fue neutro en su desenlace primario (RR 1,03; IC 0,78-1,37).",
+  "ref": "PMID 32896294"
+ },
+ {
+  "id": "Q042",
+  "doc": "PBM-05",
+  "module": 2,
+  "level": "avanzado",
+  "q": "La lectura correcta de PREVENTT es:",
+  "options": [
+   "El hierro nunca sirve",
+   "Hay que transfundir más",
+   "El hierro oral es peligroso",
+   "Darlo a todo anémico, tarde y sin filiar el déficit, no rinde"
+  ],
+  "answer": 3,
+  "explanation": "El mensaje es diagnosticar la ferropenia y tratarla con tiempo, no hierro IV universal de última hora.",
+  "ref": "PMID 32896294"
+ },
+ {
+  "id": "Q043",
+  "doc": "PBM-05",
+  "module": 2,
+  "level": "basico",
+  "q": "La ferropenia funcional se caracteriza por:",
+  "options": [
+   "Depósitos agotados con ferritina muy baja",
+   "Exceso de hierro",
+   "Incapacidad de movilizar hierro pese a depósitos aparentes, típica de inflamación",
+   "Déficit de B12"
+  ],
+  "answer": 2,
+  "explanation": "Funcional: saturación de transferrina baja con ferritina normal-alta.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q044",
+  "doc": "PBM-05",
+  "module": 2,
+  "level": "basico",
+  "q": "La dosis de carboximaltosa férrica usada en PREVENTT fue:",
+  "options": [
+   "100 mg",
+   "500 mg",
+   "1000 mg",
+   "5000 mg"
+  ],
+  "answer": 2,
+  "explanation": "Dosis única de 1000 mg de carboximaltosa férrica.",
+  "ref": "PMID 32896294"
+ },
+ {
+  "id": "Q045",
+  "doc": "PBM-05",
+  "module": 2,
+  "level": "avanzado",
+  "q": "En ferropenia funcional/inflamatoria que responde mal al hierro, una opción es:",
+  "options": [
+   "Aumentar hierro oral",
+   "Plasma",
+   "Hierro IV ± EPO",
+   "Plaquetas"
+  ],
+  "answer": 2,
+  "explanation": "Hierro IV ± EPO (ver PBM-06).",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q046",
+  "doc": "PBM-05",
+  "module": 2,
+  "level": "basico",
+  "q": "El hierro oral requiere para reponer depósitos:",
+  "options": [
+   "Horas",
+   "Días",
+   "Semanas",
+   "Meses fijos"
+  ],
+  "answer": 2,
+  "explanation": "Necesita varias semanas; por eso importa el margen temporal.",
+  "ref": "PMID 38664944"
+ },
+ {
+  "id": "Q047",
+  "doc": "PBM-06",
+  "module": 2,
+  "level": "basico",
+  "q": "Para ser eficaces, los ESA (EPO) deben administrarse:",
+  "options": [
+   "Solos",
+   "Con plasma",
+   "Con hierro suficiente",
+   "Tras la cirugía"
+  ],
+  "answer": 2,
+  "explanation": "Sin hierro adecuado la respuesta es pobre; EPO se da con hierro.",
+  "ref": "PMID 39764839"
+ },
+ {
+  "id": "Q048",
+  "doc": "PBM-06",
+  "module": 2,
+  "level": "basico",
+  "q": "La pauta con mejor respaldo de ESA + hierro se inicia:",
+  "options": [
+   "3-4 semanas antes de la cirugía",
+   "El día de la cirugía",
+   "Solo intraoperatorio",
+   "Al alta"
+  ],
+  "answer": 0,
+  "explanation": "Alta dosis de ESA + hierro 3-4 semanas antes eleva la Hb perioperatoria.",
+  "ref": "PMID 39764839"
+ },
+ {
+  "id": "Q049",
+  "doc": "PBM-06",
+  "module": 2,
+  "level": "avanzado",
+  "q": "El principal riesgo de los ESA es:",
+  "options": [
+   "Hipotensión",
+   "Hipoglucemia",
+   "Sordera",
+   "Tromboembolismo"
+  ],
+  "answer": 3,
+  "explanation": "El riesgo tromboembólico obliga a indicación selectiva y a valorar el balance.",
+  "ref": "PMID 39764839"
+ },
+ {
+  "id": "Q050",
+  "doc": "PBM-06",
+  "module": 2,
+  "level": "basico",
+  "q": "Una indicación con buena relación beneficio-riesgo de la EPO es:",
+  "options": [
+   "Cirugía menor sin sangrado",
+   "Paciente sin anemia",
+   "Paciente que rechaza la transfusión",
+   "Profilaxis universal"
+  ],
+  "answer": 2,
+  "explanation": "Rechazo de transfusión, anemia renal/inflamatoria y ferropenia funcional son indicaciones sólidas.",
+  "ref": "PMID 39764839"
+ },
+ {
+  "id": "Q051",
+  "doc": "PBM-06",
+  "module": 2,
+  "level": "avanzado",
+  "q": "En qué contexto debe sopesarse con especial cuidado la EPO:",
+  "options": [
+   "Cirugía ortopédica",
+   "Cirugía oncológica",
+   "Cirugía menor",
+   "Endoscopia"
+  ],
+  "answer": 1,
+  "explanation": "En cirugía oncológica el balance beneficio-riesgo debe valorarse con cuidado.",
+  "ref": "PMID 39764839"
+ },
+ {
+  "id": "Q052",
+  "doc": "PBM-06",
+  "module": 2,
+  "level": "avanzado",
+  "q": "El beneficio de los ESA se concreta sobre todo en:",
+  "options": [
+   "Reducción de mortalidad",
+   "Curación de la enfermedad de base",
+   "Reducción de infecciones",
+   "Reducción de transfusión"
+  ],
+  "answer": 3,
+  "explanation": "Beneficio sobre todo en reducción de transfusión; señal en mortalidad escasa o nula.",
+  "ref": "PMID 39764839"
+ },
+ {
+  "id": "Q053",
+  "doc": "PBM-06",
+  "module": 2,
+  "level": "basico",
+  "q": "La EPO frente al hierro es:",
+  "options": [
+   "Su sustituto",
+   "Equivalente",
+   "Más barata",
+   "Un complemento selectivo"
+  ],
+  "answer": 3,
+  "explanation": "No sustituye al hierro; es una opción de segunda línea selectiva.",
+  "ref": "PMID 39764839"
+ },
+ {
+  "id": "Q054",
+  "doc": "PBM-06",
+  "module": 2,
+  "level": "avanzado",
+  "q": "¿Qué guía respalda el uso de hierro y ESA en optimización preoperatoria en cirugía cardíaca?",
+  "options": [
+   "CRASH-2",
+   "TRICC",
+   "PROPPR",
+   "EACTS/EACTAIC 2024"
+  ],
+  "answer": 3,
+  "explanation": "La guía EACTS/EACTAIC 2024 respalda hierro y ESA en ese contexto.",
+  "ref": "PMID 39385500"
+ },
+ {
+  "id": "Q055",
+  "doc": "PBM-07",
+  "module": 3,
+  "level": "basico",
+  "q": "El modelo moderno de la hemostasia es:",
+  "options": [
+   "Una cascada aislada en un tubo",
+   "Un proceso celular sobre superficies",
+   "Solo plaquetario",
+   "Independiente de la trombina"
+  ],
+  "answer": 1,
+  "explanation": "Modelo celular: iniciación, amplificación y propagación sobre superficies celulares.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q056",
+  "doc": "PBM-07",
+  "module": 3,
+  "level": "basico",
+  "q": "El primer factor que cae en la hemorragia masiva es:",
+  "options": [
+   "Factor VIII",
+   "Factor XIII",
+   "Protrombina",
+   "Fibrinógeno"
+  ],
+  "answer": 3,
+  "explanation": "El fibrinógeno es el primer factor que desciende; su reposición es prioritaria.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q057",
+  "doc": "PBM-07",
+  "module": 3,
+  "level": "basico",
+  "q": "La 'tríada letal' de la coagulopatía es:",
+  "options": [
+   "Anemia, dolor, fiebre",
+   "Hipoxia, hipercapnia, hipertensión",
+   "Hipotermia, acidosis y coagulopatía",
+   "Hipocalcemia, hipoglucemia, hipopotasemia"
+  ],
+  "answer": 2,
+  "explanation": "Hipotermia + acidosis deterioran factores y plaquetas, cerrando el círculo con la coagulopatía.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q058",
+  "doc": "PBM-07",
+  "module": 3,
+  "level": "avanzado",
+  "q": "¿Qué ion (factor IV) es imprescindible y se consume/quela en la transfusión masiva?",
+  "options": [
+   "Potasio",
+   "Sodio",
+   "Magnesio",
+   "Calcio iónico"
+  ],
+  "answer": 3,
+  "explanation": "El calcio iónico es imprescindible para la coagulación.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q059",
+  "doc": "PBM-07",
+  "module": 3,
+  "level": "basico",
+  "q": "La minimización del sangrado en el pilar 2 se logra mediante:",
+  "options": [
+   "Una sola medida potente",
+   "Solo transfusión",
+   "Una estrategia multimodal",
+   "Solo hemostasia quirúrgica"
+  ],
+  "answer": 2,
+  "explanation": "Es un paquete multimodal; el efecto procede de la suma de medidas.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q060",
+  "doc": "PBM-07",
+  "module": 3,
+  "level": "avanzado",
+  "q": "Antes de pedir más hemoderivados ante un sangrado que 'no para', conviene comprobar lo barato:",
+  "options": [
+   "Temperatura, pH y calcio iónico",
+   "Grupo sanguíneo",
+   "Hemoglobina glicada",
+   "Función tiroidea"
+  ],
+  "answer": 0,
+  "explanation": "Un paciente frío, acidótico e hipocalcémico no coagula por mucho factor que reciba.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q061",
+  "doc": "PBM-07",
+  "module": 3,
+  "level": "avanzado",
+  "q": "La hiperfibrinólisis perioperatoria justifica el uso de:",
+  "options": [
+   "Heparina",
+   "Warfarina",
+   "Aspirina",
+   "Antifibrinolíticos (tranexámico)"
+  ],
+  "answer": 3,
+  "explanation": "El exceso de fibrinólisis favorece el sangrado; de ahí el valor del tranexámico.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q062",
+  "doc": "PBM-07",
+  "module": 3,
+  "level": "basico",
+  "q": "Distinguir sangrado quirúrgico de coagulopático importa porque:",
+  "options": [
+   "El primero requiere control mecánico y el segundo corrección hemostática",
+   "Es lo mismo",
+   "Solo cambia la dosis de fluidos",
+   "No cambia el manejo"
+  ],
+  "answer": 0,
+  "explanation": "El quirúrgico exige control mecánico; el coagulopático, corrección hemostática (orienta la viscoelástica).",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q063",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "basico",
+  "q": "El ácido tranexámico actúa:",
+  "options": [
+   "Activando plaquetas",
+   "Aportando factores",
+   "Inhibiendo la fibrinólisis (bloquea plasminógeno-fibrina)",
+   "Quelando calcio"
+  ],
+  "answer": 2,
+  "explanation": "Análogo de lisina que estabiliza el coágulo inhibiendo la fibrinólisis.",
+  "ref": "PMID 20554319"
+ },
+ {
+  "id": "Q064",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "basico",
+  "q": "En CRASH-2, el TXA redujo la mortalidad por cualquier causa con un RR de:",
+  "options": [
+   "0,91",
+   "0,50",
+   "1,10",
+   "1,47"
+  ],
+  "answer": 0,
+  "explanation": "Mortalidad RR 0,91 (IC 0,85-0,97); muerte por sangrado RR 0,85.",
+  "ref": "PMID 20554319"
+ },
+ {
+  "id": "Q065",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "basico",
+  "q": "El factor común de eficacia del TXA en todos los escenarios es:",
+  "options": [
+   "La administración precoz",
+   "La dosis alta",
+   "La vía intramuscular",
+   "Asociarlo a plasma"
+  ],
+  "answer": 0,
+  "explanation": "Cuanto antes se administra (idealmente < 3 h), mayor el beneficio.",
+  "ref": "PMID 28456509"
+ },
+ {
+  "id": "Q066",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "basico",
+  "q": "La pauta de TXA en trauma (CRASH-2) fue:",
+  "options": [
+   "1 g único IM",
+   "1 g en 10 min + 1 g en 8 h",
+   "500 mg oral",
+   "5 g en bolo"
+  ],
+  "answer": 1,
+  "explanation": "Carga de 1 g en 10 min seguida de 1 g en 8 h.",
+  "ref": "PMID 20554319"
+ },
+ {
+  "id": "Q067",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "avanzado",
+  "q": "En WOMAN, el TXA redujo la muerte por hemorragia (RR 0,81) sobre todo cuando se administró:",
+  "options": [
+   "Tras 24 h",
+   "Solo por vía oral",
+   "En las 3 h siguientes al parto",
+   "A dosis doble"
+  ],
+  "answer": 2,
+  "explanation": "Mayor efecto si < 3 h del parto (RR 0,69).",
+  "ref": "PMID 28456509"
+ },
+ {
+  "id": "Q068",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "avanzado",
+  "q": "En WOMAN, el TXA NO redujo:",
+  "options": [
+   "La muerte por hemorragia",
+   "La histerectomía",
+   "La mortalidad por sangrado precoz",
+   "El sangrado"
+  ],
+  "answer": 1,
+  "explanation": "No redujo la histerectomía (la decisión solía tomarse al incluir).",
+  "ref": "PMID 28456509"
+ },
+ {
+  "id": "Q069",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "avanzado",
+  "q": "En CRASH-3, el TXA mostró beneficio en el TCE:",
+  "options": [
+   "Grave establecido",
+   "Leve-moderado (RR 0,78)",
+   "De cualquier gravedad por igual",
+   "Penetrante solo"
+  ],
+  "answer": 1,
+  "explanation": "Reducción de muerte por TCE en leve-moderado; sin señal clara en grave.",
+  "ref": "PMID 31623894"
+ },
+ {
+  "id": "Q070",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "avanzado",
+  "q": "En ATACAS (cirugía coronaria), el TXA se asoció a:",
+  "options": [
+   "Más muerte",
+   "Menos transfusión y reoperación, pero más convulsiones",
+   "Menos convulsiones",
+   "Más infarto"
+  ],
+  "answer": 1,
+  "explanation": "Reduce hemorragia/transfusión sin más eventos trombóticos; ligero aumento de convulsiones a dosis altas.",
+  "ref": "PMID 27774838"
+ },
+ {
+  "id": "Q071",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "basico",
+  "q": "El riesgo trombótico del TXA en los grandes ensayos fue:",
+  "options": [
+   "Muy elevado",
+   "Igual al de la heparina",
+   "Desconocido",
+   "Bajo"
+  ],
+  "answer": 3,
+  "explanation": "El riesgo de eventos oclusivos fue bajo en CRASH-2/WOMAN.",
+  "ref": "PMID 20554319"
+ },
+ {
+  "id": "Q072",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "avanzado",
+  "q": "¿Dónde NO hay que esperar gran beneficio del TXA?",
+  "options": [
+   "Hemorragia posparto",
+   "Trauma con hemorragia",
+   "Cirugía mayor",
+   "TCE grave establecido"
+  ],
+  "answer": 3,
+  "explanation": "En la lesión cerebral grave establecida el efecto es limitado.",
+  "ref": "PMID 31623894"
+ },
+ {
+  "id": "Q073",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "basico",
+  "q": "En CRASH-2, la muerte por hemorragia se redujo con un RR de:",
+  "options": [
+   "0,99",
+   "1,20",
+   "0,85",
+   "0,40"
+  ],
+  "answer": 2,
+  "explanation": "Muerte por sangrado RR 0,85 (IC 0,76-0,96).",
+  "ref": "PMID 20554319"
+ },
+ {
+  "id": "Q074",
+  "doc": "PBM-08",
+  "module": 3,
+  "level": "avanzado",
+  "q": "El efecto adverso característico del TXA a dosis altas en cirugía cardíaca es:",
+  "options": [
+   "Hiperpotasemia",
+   "Convulsiones",
+   "Hipertermia maligna",
+   "Anemia"
+  ],
+  "answer": 1,
+  "explanation": "ATACAS mostró más convulsiones (0,7% vs 0,1%).",
+  "ref": "PMID 27774838"
+ },
+ {
+  "id": "Q075",
+  "doc": "PBM-09",
+  "module": 3,
+  "level": "basico",
+  "q": "¿Qué miden las pruebas viscoelásticas que no ven el TP/TTPa?",
+  "options": [
+   "La firmeza del coágulo y la fibrinólisis en tiempo real",
+   "La glucemia",
+   "El grupo sanguíneo",
+   "La saturación de oxígeno"
+  ],
+  "answer": 0,
+  "explanation": "Aportan una imagen funcional: formación, firmeza y lisis del coágulo en sangre total.",
+  "ref": "PMID 27552162"
+ },
+ {
+  "id": "Q076",
+  "doc": "PBM-09",
+  "module": 3,
+  "level": "avanzado",
+  "q": "Una firmeza baja del coágulo con vía del fibrinógeno deficitaria sugiere:",
+  "options": [
+   "Trombocitopenia",
+   "Hiperfibrinólisis",
+   "Déficit de factores",
+   "Hipofibrinogenemia"
+  ],
+  "answer": 3,
+  "explanation": "Indica hipofibrinogenemia; acción: fibrinógeno o crioprecipitado.",
+  "ref": "PMID 27552162"
+ },
+ {
+  "id": "Q077",
+  "doc": "PBM-09",
+  "module": 3,
+  "level": "avanzado",
+  "q": "Una lisis acelerada en viscoelástica indica:",
+  "options": [
+   "Trombocitopenia",
+   "Déficit de factores",
+   "Sobredosis de heparina",
+   "Hiperfibrinólisis (dar tranexámico)"
+  ],
+  "answer": 3,
+  "explanation": "Lisis acelerada = hiperfibrinólisis; tratar con tranexámico.",
+  "ref": "PMID 27552162"
+ },
+ {
+  "id": "Q078",
+  "doc": "PBM-09",
+  "module": 3,
+  "level": "avanzado",
+  "q": "El metaanálisis Cochrane de TEG/ROTEM mostró reducción de transfusión de hematíes con RR:",
+  "options": [
+   "0,20",
+   "0,86 (certeza baja)",
+   "1,50",
+   "Sin efecto"
+  ],
+  "answer": 1,
+  "explanation": "RR 0,86 para hematíes; también plasma (0,57) y plaquetas (0,73), con baja certeza.",
+  "ref": "PMID 27552162"
+ },
+ {
+  "id": "Q079",
+  "doc": "PBM-09",
+  "module": 3,
+  "level": "avanzado",
+  "q": "La principal limitación de la evidencia viscoelástica es:",
+  "options": [
+   "Baja certeza y predominio de cirugía cardíaca",
+   "No existe ningún ensayo",
+   "Solo se ha estudiado en pediatría",
+   "Aumenta la mortalidad"
+  ],
+  "answer": 0,
+  "explanation": "Beneficio probable pero de baja certeza, heterogéneo y derivado sobre todo de cirugía cardíaca.",
+  "ref": "PMID 27552162"
+ },
+ {
+  "id": "Q080",
+  "doc": "PBM-09",
+  "module": 3,
+  "level": "basico",
+  "q": "El orden lógico de un algoritmo guiado por viscoelástica suele ser:",
+  "options": [
+   "Tratar hiperfibrinólisis (TXA), luego fibrinógeno, luego plaquetas/factores",
+   "Plaquetas primero siempre",
+   "Plasma siempre primero",
+   "Solo hematíes"
+  ],
+  "answer": 0,
+  "explanation": "Primero TXA si hay lisis, luego fibrinógeno, después plaquetas y factores.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q081",
+  "doc": "PBM-09",
+  "module": 3,
+  "level": "basico",
+  "q": "Las pruebas convencionales (TP/TTPa) se diseñaron para:",
+  "options": [
+   "Guiar transfusión en hemorragia activa",
+   "Diagnosticar coagulopatías",
+   "Medir fibrinólisis",
+   "Medir plaquetas"
+  ],
+  "answer": 1,
+  "explanation": "No son ideales para guiar la transfusión en sangrado activo; tardan y no informan de firmeza ni lisis.",
+  "ref": "PMID 27552162"
+ },
+ {
+  "id": "Q082",
+  "doc": "PBM-09",
+  "module": 3,
+  "level": "basico",
+  "q": "La viscoelástica debe considerarse:",
+  "options": [
+   "Una herramienta que complementa la hemostasia básica y el juicio",
+   "Un oráculo que sustituye el juicio",
+   "Innecesaria siempre",
+   "Solo para investigación"
+  ],
+  "answer": 0,
+  "explanation": "Complementa, no sustituye, la hemostasia básica y el juicio clínico.",
+  "ref": "PMID 27552162"
+ },
+ {
+  "id": "Q083",
+  "doc": "PBM-10",
+  "module": 3,
+  "level": "basico",
+  "q": "El recuperador celular reinfunde:",
+  "options": [
+   "Hematíes propios lavados",
+   "Plasma rico en factores",
+   "Plaquetas",
+   "Crioprecipitado"
+  ],
+  "answer": 0,
+  "explanation": "Reinfunde hematíes propios lavados; no aporta factores ni plaquetas.",
+  "ref": "PMID 37681564"
+ },
+ {
+  "id": "Q084",
+  "doc": "PBM-10",
+  "module": 3,
+  "level": "avanzado",
+  "q": "En la revisión Cochrane, el beneficio del recuperador fue más claro en cirugía de:",
+  "options": [
+   "Catarata",
+   "Raquis (RR 0,44)",
+   "Mano",
+   "Tiroides"
+  ],
+  "answer": 1,
+  "explanation": "Beneficio más claro en raquis (RR 0,44; certeza moderada).",
+  "ref": "PMID 37681564"
+ },
+ {
+  "id": "Q085",
+  "doc": "PBM-10",
+  "module": 3,
+  "level": "basico",
+  "q": "El recuperador celular rinde más cuando:",
+  "options": [
+   "El sangrado esperado es alto",
+   "La cirugía es de bajo sangrado",
+   "No hay anemia",
+   "Se usa en todas las cirugías"
+  ],
+  "answer": 0,
+  "explanation": "Su rendimiento es mayor cuanto mayor es la pérdida esperada.",
+  "ref": "PMID 37681564"
+ },
+ {
+  "id": "Q086",
+  "doc": "PBM-10",
+  "module": 3,
+  "level": "avanzado",
+  "q": "La hemodilución normovolémica aguda consiste en:",
+  "options": [
+   "Transfundir antes de operar",
+   "Extraer sangre al inicio y reinfundirla tras la fase de mayor sangrado",
+   "Diluir el plasma",
+   "Administrar EPO"
+  ],
+  "answer": 1,
+  "explanation": "La sangre perdida queda más diluida y se devuelve sangre rica en células/factores después.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q087",
+  "doc": "PBM-10",
+  "module": 3,
+  "level": "avanzado",
+  "q": "Las precauciones clásicas del recuperador en campo contaminado u oncológico:",
+  "options": [
+   "Son absolutas siempre",
+   "Impiden todo uso",
+   "Se han matizado con técnicas como leucorreducción/irradiación",
+   "No existen"
+  ],
+  "answer": 2,
+  "explanation": "Con filtración/irradiación su uso se ha extendido a escenarios antes vetados, según protocolo.",
+  "ref": "PMID 37681564"
+ },
+ {
+  "id": "Q088",
+  "doc": "PBM-10",
+  "module": 3,
+  "level": "basico",
+  "q": "El recuperador celular debe indicarse:",
+  "options": [
+   "Por rutina en toda cirugía",
+   "Según la pérdida esperada",
+   "Solo en cirugía menor",
+   "Nunca en cardiovascular"
+  ],
+  "answer": 1,
+  "explanation": "Indicar según la pérdida esperada, no por rutina.",
+  "ref": "PMID 37681564"
+ },
+ {
+  "id": "Q089",
+  "doc": "PBM-10",
+  "module": 3,
+  "level": "avanzado",
+  "q": "En cirugía de raquis, el recuperador redujo la necesidad de transfusión con RR:",
+  "options": [
+   "0,44",
+   "0,98",
+   "1,30",
+   "0,05"
+  ],
+  "answer": 0,
+  "explanation": "RR 0,44 (certeza moderada) en raquis.",
+  "ref": "PMID 37681564"
+ },
+ {
+  "id": "Q090",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "basico",
+  "q": "¿Qué estima la MABL?",
+  "options": [
+   "Cuánto puede perder el paciente hasta el Hto/Hb diana",
+   "El volumen tumoral",
+   "La dosis de heparina",
+   "El gasto cardíaco"
+  ],
+  "answer": 0,
+  "explanation": "Es una herramienta de planificación de la pérdida admisible.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q091",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "basico",
+  "q": "Las ecuaciones de Nadler estiman:",
+  "options": [
+   "El hematocrito",
+   "La pérdida intraoperatoria",
+   "El volumen sanguíneo a partir de talla y peso",
+   "La dosis de hierro"
+  ],
+  "answer": 2,
+  "explanation": "Nadler calcula el volumen sanguíneo estimado (VSE).",
+  "ref": "PMID 21936146"
+ },
+ {
+  "id": "Q092",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "avanzado",
+  "q": "La fórmula de Gross para la MABL usa en el denominador:",
+  "options": [
+   "El Hto medio (media de inicial y diana)",
+   "El Hto inicial",
+   "El Hto diana",
+   "El peso"
+  ],
+  "answer": 0,
+  "explanation": "MABL = VSE × (Hto_ini − Hto_diana) / Hto_medio.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q093",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "avanzado",
+  "q": "Varón 80 kg, 1,75 m, Hto 42→28%. La MABL aproximada es:",
+  "options": [
+   "≈ 500 ml",
+   "≈ 1000 ml",
+   "≈ 4000 ml",
+   "≈ 2060 ml"
+  ],
+  "answer": 3,
+  "explanation": "VSE ≈ 5,15 L; MABL = 5150 × 14/35 ≈ 2060 ml.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q094",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "basico",
+  "q": "Regla rápida del volumen sanguíneo en el varón adulto:",
+  "options": [
+   "≈ 30 ml/kg",
+   "≈ 70 ml/kg",
+   "≈ 50 ml/kg",
+   "≈ 100 ml/kg"
+  ],
+  "answer": 1,
+  "explanation": "≈ 70 ml/kg (varón) y 65 ml/kg (mujer).",
+  "ref": "PMID 21936146"
+ },
+ {
+  "id": "Q095",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "avanzado",
+  "q": "Un error frecuente con la MABL es:",
+  "options": [
+   "Tratarla como permiso de sangrado o disparador automático de transfusión",
+   "Calcularla con Nadler",
+   "Usar el Hto medio",
+   "Reevaluar la clínica"
+  ],
+  "answer": 0,
+  "explanation": "Es una estimación de planificación, no un disparador de transfusión.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q096",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "avanzado",
+  "q": "La MABL asume condiciones que la clínica no siempre cumple, como:",
+  "options": [
+   "Hipovolemia mantenida",
+   "Coagulopatía severa",
+   "Normovolemia y reposición ideal",
+   "Hemólisis"
+  ],
+  "answer": 2,
+  "explanation": "Asume normovolemia y reposición ideal; no contempla coagulopatía por dilución.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q097",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "basico",
+  "q": "Si la pérdida esperada se acerca a la MABL, conviene:",
+  "options": [
+   "No hacer nada",
+   "Transfundir profilácticamente",
+   "Optimizar la Hb previa, minimizar pérdida y planificar disponibilidad",
+   "Cancelar siempre la cirugía"
+  ],
+  "answer": 2,
+  "explanation": "Conecta los tres pilares en una decisión anticipada.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q098",
+  "doc": "PBM-11",
+  "module": 3,
+  "level": "basico",
+  "q": "La referencia clásica del volumen sanguíneo es:",
+  "options": [
+   "Gross 1983",
+   "Carson 2023",
+   "Nadler 1962",
+   "Holcomb 2015"
+  ],
+  "answer": 2,
+  "explanation": "Nadler SB et al., Surgery 1962.",
+  "ref": "PMID 21936146"
+ },
+ {
+  "id": "Q099",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "basico",
+  "q": "La estrategia restrictiva de hematíes transfunde con un umbral de Hb típicamente de:",
+  "options": [
+   "9-10 g/dl",
+   "11-12 g/dl",
+   "< 5 g/dl",
+   "7-8 g/dl"
+  ],
+  "answer": 3,
+  "explanation": "Restrictivo ≈ 7-8 g/dl frente a liberal 9-10 g/dl.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q100",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "basico",
+  "q": "El ensayo fundacional de la estrategia restrictiva en críticos es:",
+  "options": [
+   "TRISS",
+   "REALITY",
+   "PROPPR",
+   "TRICC"
+  ],
+  "answer": 3,
+  "explanation": "TRICC (Hébert, NEJM 1999) comparó Hb<7 vs <10 en críticos.",
+  "ref": "PMID 9971864"
+ },
+ {
+  "id": "Q101",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "avanzado",
+  "q": "En TRISS (shock séptico), la mortalidad a 90 días entre umbral 7 y 9 g/dl fue:",
+  "options": [
+   "Mucho mayor con restrictivo",
+   "Equivalente (RR 0,94) con menos transfusiones",
+   "Mucho menor con liberal",
+   "No evaluable"
+  ],
+  "answer": 1,
+  "explanation": "43,0% vs 45,0% (RR 0,94); la mitad de transfusiones en el grupo restrictivo.",
+  "ref": "PMID 25270275"
+ },
+ {
+  "id": "Q102",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "avanzado",
+  "q": "En el síndrome coronario agudo, la evidencia reciente favorece un umbral:",
+  "options": [
+   "Más restrictivo (< 6)",
+   "Sin transfundir nunca",
+   "Idéntico al resto",
+   "Más liberal (≈ 10 g/dl)"
+  ],
+  "answer": 3,
+  "explanation": "En SCA conviene un umbral liberal ≈ 10 g/dl (CHEST 2024 + metaanálisis).",
+  "ref": "PMID 39341492"
+ },
+ {
+  "id": "Q103",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "avanzado",
+  "q": "En el metaanálisis de datos individuales en infarto, la muerte cardíaca a 30 días con estrategia restrictiva fue:",
+  "options": [
+   "Menor (RR 0,50)",
+   "Mayor (5,5% vs 3,7%; RR 1,47)",
+   "Idéntica",
+   "No medida"
+  ],
+  "answer": 1,
+  "explanation": "Mayor muerte cardíaca con restrictivo (RR 1,47; IC 1,11-1,94).",
+  "ref": "PMID 39714935"
+ },
+ {
+  "id": "Q104",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "basico",
+  "q": "La revisión Cochrane 2025 halló que la estrategia restrictiva reduce la transfusión en torno a:",
+  "options": [
+   "10%",
+   "42% (RR 0,58)",
+   "80%",
+   "No la reduce"
+  ],
+  "answer": 1,
+  "explanation": "RR 0,58 (−42%) sin aumentar la mortalidad a 30 días (RR 1,01).",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q105",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "avanzado",
+  "q": "En TRICC, los pacientes con estrategia restrictiva tuvieron mortalidad hospitalaria:",
+  "options": [
+   "Mayor",
+   "Significativamente menor (22,2% vs 28,1%)",
+   "Idéntica",
+   "No registrada"
+  ],
+  "answer": 1,
+  "explanation": "La mortalidad intrahospitalaria fue menor con restrictivo.",
+  "ref": "PMID 9971864"
+ },
+ {
+  "id": "Q106",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "avanzado",
+  "q": "En REALITY (infarto + anemia), la estrategia restrictiva (≤8) frente a liberal (≤10) fue:",
+  "options": [
+   "Superior claramente",
+   "No inferior, pero con IC que incluía posible daño",
+   "Muy inferior",
+   "No concluyente por falta de datos"
+  ],
+  "answer": 1,
+  "explanation": "MACE 11,0% vs 14,0%; no inferior pero el IC incluía un posible daño.",
+  "ref": "PMID 33560322"
+ },
+ {
+  "id": "Q107",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "avanzado",
+  "q": "En la revisión Cochrane, en hemorragia digestiva la estrategia restrictiva mostró:",
+  "options": [
+   "Mayor mortalidad",
+   "Menor mortalidad",
+   "Sin datos",
+   "Más infecciones"
+  ],
+  "answer": 1,
+  "explanation": "En hemorragia digestiva el restrictivo redujo la mortalidad.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q108",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "avanzado",
+  "q": "En lesión cerebral aguda, la revisión Cochrane sugiere mejores desenlaces neurológicos con:",
+  "options": [
+   "Estrategia liberal",
+   "Estrategia restrictiva",
+   "No transfundir",
+   "Sin diferencia"
+  ],
+  "answer": 0,
+  "explanation": "En lesión cerebral, mejores desenlaces neurológicos con estrategia liberal.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q109",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "basico",
+  "q": "El umbral de transfusión debe entenderse como:",
+  "options": [
+   "Un disparador obligatorio",
+   "Una referencia que integra la clínica",
+   "Una norma legal",
+   "Independiente del contexto"
+  ],
+  "answer": 1,
+  "explanation": "Es una referencia; integra síntomas, sangrado activo y comorbilidad.",
+  "ref": "PMID 39341492"
+ },
+ {
+  "id": "Q110",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "basico",
+  "q": "La guía CHEST 2024 recomienda, en el paciente crítico, una estrategia restrictiva salvo en:",
+  "options": [
+   "Sepsis",
+   "Síndrome coronario agudo",
+   "Postoperatorio",
+   "Anemia leve"
+  ],
+  "answer": 1,
+  "explanation": "Restrictivo por defecto, salvo SCA (en contra de restrictivo).",
+  "ref": "PMID 39341492"
+ },
+ {
+  "id": "Q111",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "basico",
+  "q": "En la hemorragia crítica, respecto a los umbrales restrictivos:",
+  "options": [
+   "Se aplican igual",
+   "Se elevan a 15 g/dl",
+   "No se aplican: prioridad es controlar sangrado y coagulación",
+   "Se ignora la coagulación"
+  ],
+  "answer": 2,
+  "explanation": "La lógica cambia: se activa un protocolo, no se espera a umbrales.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q112",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "basico",
+  "q": "En PROPPR, la proporción de hemoderivados comparada fue:",
+  "options": [
+   "2:1:1 vs 1:2:1",
+   "Solo hematíes",
+   "1:1:1 vs 1:1:2",
+   "1:1:1 vs 3:3:3"
+  ],
+  "answer": 2,
+  "explanation": "Plasma:plaquetas:hematíes 1:1:1 frente a 1:1:2.",
+  "ref": "PMID 25647203"
+ },
+ {
+  "id": "Q113",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "avanzado",
+  "q": "PROPPR mostró que el grupo 1:1:1, frente a 1:1:2:",
+  "options": [
+   "Redujo significativamente la mortalidad a 30 días",
+   "Logró más hemostasia y menos muerte por exanguinación a 24 h",
+   "Aumentó las complicaciones",
+   "No tuvo diferencias en nada"
+  ],
+  "answer": 1,
+  "explanation": "Neutro en mortalidad, pero más hemostasia (86% vs 78%) y menos exanguinación (9,2% vs 14,6%).",
+  "ref": "PMID 25647203"
+ },
+ {
+  "id": "Q114",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "basico",
+  "q": "La 'resucitación de control de daños' incluye:",
+  "options": [
+   "Cristaloides abundantes",
+   "Solo coloides",
+   "Limitar cristaloides y transfundir equilibrado y precoz",
+   "Esperar al control quirúrgico para transfundir"
+  ],
+  "answer": 2,
+  "explanation": "Hipotensión permisiva controlada, limitar cristaloides y transfusión precoz equilibrada.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q115",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "avanzado",
+  "q": "La hipocalcemia en la transfusión masiva se debe a:",
+  "options": [
+   "Pérdida renal",
+   "El citrato de los hemoderivados que quela el calcio",
+   "Hemólisis",
+   "Hiperventilación"
+  ],
+  "answer": 1,
+  "explanation": "El citrato quela el calcio; hay que monitorizar y reponer calcio iónico.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q116",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "basico",
+  "q": "En el protocolo de transfusión masiva, el tranexámico debe administrarse:",
+  "options": [
+   "Precozmente, desde el inicio",
+   "Al final",
+   "Solo si hay coagulopatía confirmada",
+   "Nunca"
+  ],
+  "answer": 0,
+  "explanation": "TXA precoz (CRASH-2: RR 0,85 para muerte por sangrado).",
+  "ref": "PMID 20554319"
+ },
+ {
+  "id": "Q117",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "basico",
+  "q": "Las 'tres C' del entorno en transfusión masiva son:",
+  "options": [
+   "Cristaloides, coloides, concentrados",
+   "Calcio, calor (temperatura) y corrección del pH",
+   "Cirugía, control, comunicación",
+   "Citrato, calcio, cloro"
+  ],
+  "answer": 1,
+  "explanation": "Sin calcio, normotermia y pH adecuado, ningún ratio coagula bien.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q118",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "avanzado",
+  "q": "Tras la fase inicial equilibrada, lo ideal es transitar a:",
+  "options": [
+   "Manejo guiado por objetivos (viscoelástica, fibrinógeno)",
+   "Solo cristaloides",
+   "Suspender la transfusión",
+   "Umbrales restrictivos clásicos"
+  ],
+  "answer": 0,
+  "explanation": "Empezar equilibrado y pasar a manejo guiado por objetivos.",
+  "ref": "PMID 25647203"
+ },
+ {
+  "id": "Q119",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "basico",
+  "q": "En la hemorragia masiva, las plaquetas se manejan:",
+  "options": [
+   "Dentro del protocolo de transfusión masiva",
+   "Por los umbrales profilácticos habituales",
+   "Nunca",
+   "Solo si < 10 ×10⁹/l"
+  ],
+  "answer": 0,
+  "explanation": "Se manejan dentro del protocolo, no por los umbrales profilácticos de PBM-02.",
+  "ref": "PMID 40440268"
+ },
+ {
+  "id": "Q120",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "avanzado",
+  "q": "PROPPR fue, respecto a su desenlace primario (mortalidad):",
+  "options": [
+   "Positivo",
+   "Detenido por daño",
+   "No aleatorizado",
+   "Neutro (sin diferencia significativa)"
+  ],
+  "answer": 3,
+  "explanation": "No hubo diferencia significativa en mortalidad a 24 h ni 30 días.",
+  "ref": "PMID 25647203"
+ },
+ {
+  "id": "Q121",
+  "doc": "PBM-14",
+  "module": 4,
+  "level": "basico",
+  "q": "La entrega de oxígeno (DO2) depende sobre todo de:",
+  "options": [
+   "La temperatura",
+   "La diuresis",
+   "El gasto cardíaco y el contenido arterial de O2 (Hb y SaO2)",
+   "El pH urinario"
+  ],
+  "answer": 2,
+  "explanation": "DO2 = gasto cardíaco × contenido arterial de O2.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q122",
+  "doc": "PBM-14",
+  "module": 4,
+  "level": "avanzado",
+  "q": "¿Por qué se tolera la anemia moderada?",
+  "options": [
+   "Porque no afecta a los tejidos",
+   "Por aumento de la viscosidad",
+   "Por descenso del gasto cardíaco",
+   "Por mecanismos compensatorios (más gasto y extracción de O2)"
+  ],
+  "answer": 3,
+  "explanation": "Aumento del gasto, redistribución, mayor extracción y 2,3-DPG.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q123",
+  "doc": "PBM-14",
+  "module": 4,
+  "level": "basico",
+  "q": "Condición indispensable para que funcionen los mecanismos compensatorios de la anemia:",
+  "options": [
+   "Hipovolemia",
+   "Hipotermia",
+   "Acidosis",
+   "Normovolemia"
+  ],
+  "answer": 3,
+  "explanation": "La hipovolemia anula la compensación del gasto cardíaco.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q124",
+  "doc": "PBM-14",
+  "module": 4,
+  "level": "avanzado",
+  "q": "El órgano más vulnerable a la anemia por extraer O2 casi al máximo en basal es:",
+  "options": [
+   "El hígado",
+   "El riñón",
+   "El bazo",
+   "El corazón"
+  ],
+  "answer": 3,
+  "explanation": "El miocardio extrae O2 casi al máximo; por eso el SCA es la gran excepción.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q125",
+  "doc": "PBM-14",
+  "module": 4,
+  "level": "avanzado",
+  "q": "Una palanca para mejorar la tolerancia a la anemia es:",
+  "options": [
+   "Aumentar el consumo de O2",
+   "Provocar fiebre",
+   "Reducir el consumo de O2 (analgesia, normotermia)",
+   "Inducir taquicardia"
+  ],
+  "answer": 2,
+  "explanation": "Analgesia, normotermia y tratar fiebre/agitación reducen el consumo de O2.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q126",
+  "doc": "PBM-14",
+  "module": 4,
+  "level": "avanzado",
+  "q": "La 'anemia crítica' es el punto en que:",
+  "options": [
+   "La Hb sube",
+   "La DO2 ya no cubre el consumo y aparece metabolismo anaerobio",
+   "Se normaliza el lactato",
+   "Mejora la extracción"
+  ],
+  "answer": 1,
+  "explanation": "Umbral en que la entrega no cubre el consumo; varía mucho entre pacientes.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q127",
+  "doc": "PBM-14",
+  "module": 4,
+  "level": "basico",
+  "q": "El umbral único de Hb es, según la revisión Cochrane:",
+  "options": [
+   "Una aproximación útil, no universal",
+   "Una verdad fisiológica universal",
+   "Irrelevante",
+   "Idéntico para todos los órganos"
+  ],
+  "answer": 0,
+  "explanation": "La tolerancia real depende del paciente; el umbral es una aproximación útil.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q128",
+  "doc": "PBM-14",
+  "module": 4,
+  "level": "basico",
+  "q": "Un signo de mala tolerancia a la anemia que indica transfundir es:",
+  "options": [
+   "Diuresis normal",
+   "Isquemia miocárdica o lactato elevado",
+   "TA estable",
+   "Buena saturación venosa"
+  ],
+  "answer": 1,
+  "explanation": "Isquemia, lactato elevado o SvO2 baja indican mala tolerancia.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q129",
+  "doc": "PBM-15",
+  "module": 5,
+  "level": "basico",
+  "q": "El cribado correcto del riesgo hemorrágico preoperatorio es:",
+  "options": [
+   "La anamnesis estructurada (p. ej. HEMSTOP)",
+   "TP/TTPa de rutina a todos",
+   "La ecografía",
+   "El recuento plaquetario aislado"
+  ],
+  "answer": 0,
+  "explanation": "El TP/TTPa de rutina tiene bajo rendimiento; mejor anamnesis estructurada.",
+  "ref": "PMID 27369959"
+ },
+ {
+  "id": "Q130",
+  "doc": "PBM-15",
+  "module": 5,
+  "level": "basico",
+  "q": "HEMSTOP es un cuestionario de:",
+  "options": [
+   "7 ítems",
+   "3 ítems",
+   "12 ítems",
+   "20 ítems"
+  ],
+  "answer": 0,
+  "explanation": "Siete preguntas dicotómicas (Hematoma, hEmorragia, Menorragia, Surgery, Tooth, Obstetrics, Parents).",
+  "ref": "PMID 27369959"
+ },
+ {
+  "id": "Q131",
+  "doc": "PBM-15",
+  "module": 5,
+  "level": "avanzado",
+  "q": "Una puntuación HEMSTOP que indica estudio dirigido es:",
+  "options": [
+   "≥ 1",
+   "≥ 4",
+   "≥ 6",
+   "≥ 2"
+  ],
+  "answer": 3,
+  "explanation": "Score ≥ 2: especificidad 98,6% y sensibilidad 89,5% para precisar precauciones.",
+  "ref": "PMID 27369959"
+ },
+ {
+  "id": "Q132",
+  "doc": "PBM-15",
+  "module": 5,
+  "level": "avanzado",
+  "q": "La sensibilidad de las pruebas de coagulación estándar para detectar trastornos hemorrágicos fue, frente a HEMSTOP:",
+  "options": [
+   "Superior",
+   "Idéntica",
+   "Del 100%",
+   "Mucho menor (≈ 26%)"
+  ],
+  "answer": 3,
+  "explanation": "Las pruebas estándar tienen sensibilidad ≈ 26%, muy inferior a HEMSTOP.",
+  "ref": "PMID 27369959"
+ },
+ {
+  "id": "Q133",
+  "doc": "PBM-15",
+  "module": 5,
+  "level": "basico",
+  "q": "Muchos trastornos hemorrágicos relevantes (von Willebrand) cursan con:",
+  "options": [
+   "TP/TTPa normales",
+   "TP/TTPa muy alterados",
+   "Plaquetas en cero",
+   "Fibrinógeno alto"
+  ],
+  "answer": 0,
+  "explanation": "Por eso el cribado por pruebas básicas falla y se prefiere la anamnesis.",
+  "ref": "PMID 27369959"
+ },
+ {
+  "id": "Q134",
+  "doc": "PBM-15",
+  "module": 5,
+  "level": "basico",
+  "q": "La 'M' de HEMSTOP corresponde a:",
+  "options": [
+   "Migraña",
+   "Menorragia",
+   "Melena",
+   "Mareo"
+  ],
+  "answer": 1,
+  "explanation": "M = Menorragia (reglas abundantes).",
+  "ref": "PMID 27369959"
+ },
+ {
+  "id": "Q135",
+  "doc": "PBM-15",
+  "module": 5,
+  "level": "avanzado",
+  "q": "Ante un cribado positivo, además del estudio dirigido conviene:",
+  "options": [
+   "Operar de inmediato",
+   "Transfundir plaquetas",
+   "Revisar la medicación antitrombótica y valorar hematología",
+   "Dar plasma profiláctico"
+  ],
+  "answer": 2,
+  "explanation": "Revisar antiagregantes/anticoagulantes (PBM-16) y apoyo de hematología.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q136",
+  "doc": "PBM-15",
+  "module": 5,
+  "level": "basico",
+  "q": "Un HEMSTOP de 0 sin fármacos antitrombóticos:",
+  "options": [
+   "Obliga a estudio amplio",
+   "Indica transfusión",
+   "Requiere viscoelástica",
+   "Hace muy improbable un trastorno hemorrágico oculto"
+  ],
+  "answer": 3,
+  "explanation": "Evita pruebas inútiles al ser muy improbable un trastorno oculto.",
+  "ref": "PMID 27369959"
+ },
+ {
+  "id": "Q137",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "basico",
+  "q": "El manejo perioperatorio de antitrombóticos equilibra:",
+  "options": [
+   "Riesgo de trombosis frente a riesgo de sangrado",
+   "Coste y disponibilidad",
+   "Dolor y náuseas",
+   "Diuresis e hidratación"
+  ],
+  "answer": 0,
+  "explanation": "Suspender reduce sangrado pero expone a trombosis; mantener, al revés.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q138",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "avanzado",
+  "q": "La decisión sobre antitrombóticos cruza tres ejes:",
+  "options": [
+   "Fármaco × riesgo trombótico × riesgo hemorrágico del procedimiento",
+   "Edad, sexo y peso",
+   "Hb, plaquetas y fibrinógeno",
+   "Tensión, FC y diuresis"
+  ],
+  "answer": 0,
+  "explanation": "Fármaco (vida media) × riesgo trombótico del paciente × riesgo hemorrágico del procedimiento.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q139",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "avanzado",
+  "q": "El ensayo BRIDGE mostró que, en fibrilación auricular, NO hacer puente con heparina:",
+  "options": [
+   "Aumentó la trombosis",
+   "Aumentó la mortalidad",
+   "No tuvo efecto en el sangrado",
+   "Fue no inferior para tromboembolismo y redujo la hemorragia mayor (RR 0,41)"
+  ],
+  "answer": 3,
+  "explanation": "No puente: no inferior para tromboembolismo (0,4% vs 0,3%) y menos hemorragia (RR 0,41).",
+  "ref": "PMID 26095867"
+ },
+ {
+  "id": "Q140",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "basico",
+  "q": "La aspirina en prevención secundaria, en cirugía de riesgo hemorrágico bajo-moderado:",
+  "options": [
+   "A menudo puede mantenerse",
+   "Siempre se suspende",
+   "Se sustituye por warfarina",
+   "Se duplica la dosis"
+  ],
+  "answer": 0,
+  "explanation": "A menudo puede mantenerse según el procedimiento.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q141",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "avanzado",
+  "q": "La reversión urgente de los antagonistas de la vitamina K se hace con:",
+  "options": [
+   "Plasma siempre",
+   "Plaquetas",
+   "Desmopresina",
+   "Concentrado de complejo protrombínico (CCP) + vitamina K"
+  ],
+  "answer": 3,
+  "explanation": "CCP con vitamina K, más rápido y eficaz que el plasma.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q142",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "avanzado",
+  "q": "Los anticoagulantes orales de acción directa (ACOD) habitualmente:",
+  "options": [
+   "Se suspenden según fármaco y función renal, sin puente",
+   "Requieren puente con heparina",
+   "No se suspenden nunca",
+   "Se revierten solo con plasma"
+  ],
+  "answer": 0,
+  "explanation": "Vida media corta; manejo predecible y habitualmente sin puente.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q143",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "basico",
+  "q": "En el paciente con stent coronario reciente y doble antiagregación, lo prudente es:",
+  "options": [
+   "Operar de inmediato sin más",
+   "Suspender todo siempre",
+   "Posponer la cirugía electiva y decidir en equipo si es inaplazable",
+   "Duplicar antiagregantes"
+  ],
+  "answer": 2,
+  "explanation": "Posponer hasta superar el riesgo de trombosis del stent; decisión multidisciplinar.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q144",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "basico",
+  "q": "El 'puente' sistemático con heparina en FA, según BRIDGE:",
+  "options": [
+   "Es beneficioso en todos",
+   "Añade sangrado sin proteger de la trombosis en la mayoría",
+   "Reduce la mortalidad",
+   "Es obligatorio"
+  ],
+  "answer": 1,
+  "explanation": "Se reserva para alto riesgo trombótico seleccionado.",
+  "ref": "PMID 26095867"
+ },
+ {
+  "id": "Q145",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "avanzado",
+  "q": "Los inhibidores de P2Y12 (clopidogrel, ticagrelor) en cirugía mayor:",
+  "options": [
+   "Suelen suspenderse unos días antes",
+   "Se mantienen siempre",
+   "Se cambian por aspirina sin más",
+   "No afectan al sangrado"
+  ],
+  "answer": 0,
+  "explanation": "Suelen suspenderse por su mayor efecto hemorrágico.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q146",
+  "doc": "PBM-16",
+  "module": 5,
+  "level": "basico",
+  "q": "La reanudación de antitrombóticos debe:",
+  "options": [
+   "Ser inmediata siempre",
+   "Equilibrar la hemostasia quirúrgica con el riesgo trombótico, coordinada entre equipos",
+   "Retrasarse semanas siempre",
+   "Decidirla el paciente"
+  ],
+  "answer": 1,
+  "explanation": "Reiniciar cuando el riesgo de sangrado sea aceptable, de forma escalonada y coordinada.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q147",
+  "doc": "PBM-17",
+  "module": 5,
+  "level": "basico",
+  "q": "La coagulopatía congénita más frecuente es:",
+  "options": [
+   "Hemofilia A",
+   "Déficit de factor XIII",
+   "Enfermedad de von Willebrand",
+   "Afibrinogenemia"
+  ],
+  "answer": 2,
+  "explanation": "La von Willebrand es la más común, a menudo infradiagnosticada.",
+  "ref": "PMID 25100430"
+ },
+ {
+  "id": "Q148",
+  "doc": "PBM-17",
+  "module": 5,
+  "level": "basico",
+  "q": "Las coagulopatías congénitas exigen, en general:",
+  "options": [
+   "Tratamiento improvisado intraoperatorio",
+   "Solo plasma",
+   "Plan anticipado con hematología y tratamiento específico",
+   "Ningún plan especial"
+  ],
+  "answer": 2,
+  "explanation": "Plan perioperatorio anticipado con objetivos de factor y cobertura.",
+  "ref": "PMID 25100430"
+ },
+ {
+  "id": "Q149",
+  "doc": "PBM-17",
+  "module": 5,
+  "level": "avanzado",
+  "q": "En la coagulopatía hepática, transfundir plasma por un INR alterado SIN sangrado:",
+  "options": [
+   "No está indicado",
+   "Es lo recomendado",
+   "Reduce la mortalidad",
+   "Corrige siempre el INR"
+  ],
+  "answer": 0,
+  "explanation": "No transfundir plasma por una analítica alterada sin sangrado.",
+  "ref": "PMID 29527654"
+ },
+ {
+  "id": "Q150",
+  "doc": "PBM-17",
+  "module": 5,
+  "level": "basico",
+  "q": "Las hemofilias A y B son déficit de:",
+  "options": [
+   "Fibrinógeno",
+   "Factores VIII y IX",
+   "Factor V y X",
+   "Plaquetas"
+  ],
+  "answer": 1,
+  "explanation": "Hemofilia A = factor VIII; B = factor IX.",
+  "ref": "PMID 25100430"
+ },
+ {
+  "id": "Q151",
+  "doc": "PBM-17",
+  "module": 5,
+  "level": "avanzado",
+  "q": "Las coagulopatías adquiridas se tratan, en general:",
+  "options": [
+   "Con 'recetas' fijas",
+   "Solo con plaquetas",
+   "Ignorando la causa",
+   "Corrigiendo la causa y el déficit dirigido (mejor guiado por viscoelástica)"
+  ],
+  "answer": 3,
+  "explanation": "Se dirigen a la causa y al déficit demostrado.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q152",
+  "doc": "PBM-17",
+  "module": 5,
+  "level": "basico",
+  "q": "La regla de oro ante una posible coagulopatía es:",
+  "options": [
+   "Esperar a la hemorragia",
+   "Transfundir profilácticamente",
+   "Anticipar (el peor momento para descubrirla es durante el sangrado)",
+   "Evitar la cirugía siempre"
+  ],
+  "answer": 2,
+  "explanation": "Anticipar y planificar con hematología.",
+  "ref": "PMID 25100430"
+ },
+ {
+  "id": "Q153",
+  "doc": "PBM-17",
+  "module": 5,
+  "level": "avanzado",
+  "q": "En la von Willebrand tipo 1 respondedora, una opción terapéutica es:",
+  "options": [
+   "Desmopresina o concentrado de FvW/FVIII",
+   "Warfarina",
+   "Aspirina",
+   "Heparina"
+  ],
+  "answer": 0,
+  "explanation": "Desmopresina (en respondedores) o concentrado de FvW/FVIII.",
+  "ref": "PMID 25100430"
+ },
+ {
+  "id": "Q154",
+  "doc": "PBM-17",
+  "module": 5,
+  "level": "avanzado",
+  "q": "La von Willebrand suele cursar con TP/TTPa:",
+  "options": [
+   "Muy alterados",
+   "Imposibles de medir",
+   "Normales",
+   "Solo TP alterado"
+  ],
+  "answer": 2,
+  "explanation": "De ahí el valor del cribado por anamnesis (HEMSTOP).",
+  "ref": "PMID 27369959"
+ },
+ {
+  "id": "Q155",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "basico",
+  "q": "El concentrado de complejo protrombínico (CCP) aporta:",
+  "options": [
+   "Factores dependientes de vitamina K (II, VII, IX, X)",
+   "Plaquetas",
+   "Fibrinógeno puro",
+   "Hematíes"
+  ],
+  "answer": 0,
+  "explanation": "Su indicación más clara es la reversión urgente de los AVK.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q156",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "basico",
+  "q": "El concentrado de fibrinógeno se indica cuando, en sangrado, el fibrinógeno es:",
+  "options": [
+   "< 4 g/l",
+   "> 3 g/l",
+   "Siempre",
+   "< 1,5 g/l o déficit funcional"
+  ],
+  "answer": 3,
+  "explanation": "Reponer si < 1,5 g/l o déficit funcional en viscoelástica.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q157",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "avanzado",
+  "q": "El factor VII activado recombinante (rFVIIa) en hemorragia perioperatoria refractaria es:",
+  "options": [
+   "Tratamiento de primera línea",
+   "Sin riesgos",
+   "Un recurso de rescate off-label con riesgo trombótico",
+   "Equivalente al fibrinógeno"
+  ],
+  "answer": 2,
+  "explanation": "Rescate off-label tras optimizar todo; se asocia a eventos trombóticos.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q158",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "basico",
+  "q": "La desmopresina (DDAVP) es útil en:",
+  "options": [
+   "Hemofilia B grave",
+   "Von Willebrand tipo 1 respondedora y disfunción plaquetaria",
+   "Déficit de fibrinógeno",
+   "CID"
+  ],
+  "answer": 1,
+  "explanation": "Libera FvW y FVIII; útil en vW tipo 1 respondedora y disfunción plaquetaria.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q159",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "avanzado",
+  "q": "Un efecto a vigilar con la desmopresina es:",
+  "options": [
+   "Hipernatremia",
+   "Hiponatremia (efecto antidiurético)",
+   "Hiperglucemia",
+   "Hipertermia"
+  ],
+  "answer": 1,
+  "explanation": "Vigilar hiponatremia, sobre todo con dosis repetidas.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q160",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "avanzado",
+  "q": "El rFVIIa NO sustituye:",
+  "options": [
+   "A la anestesia",
+   "A la analgesia",
+   "Al control quirúrgico ni a la corrección del entorno",
+   "A la profilaxis antibiótica"
+  ],
+  "answer": 2,
+  "explanation": "No sustituye el control quirúrgico ni la corrección de calcio/temperatura/pH/fibrinógeno.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q161",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "basico",
+  "q": "El principio común de los fármacos hemostáticos es usarlos:",
+  "options": [
+   "A ciegas",
+   "Siempre combinados",
+   "Dirigidos al déficit demostrado (idealmente guiados por viscoelástica)",
+   "Solo en UCI"
+  ],
+  "answer": 2,
+  "explanation": "Uso dirigido al déficit, no como gesto genérico.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q162",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "avanzado",
+  "q": "Frente al plasma, el CCP para revertir AVK es:",
+  "options": [
+   "Más lento",
+   "Más rápido y eficaz",
+   "Menos seguro siempre",
+   "Equivalente en velocidad"
+  ],
+  "answer": 1,
+  "explanation": "El CCP es más rápido y eficaz que el plasma para revertir AVK.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q163",
+  "doc": "PBM-18",
+  "module": 5,
+  "level": "basico",
+  "q": "En Europa, el concentrado de fibrinógeno frente al crioprecipitado:",
+  "options": [
+   "Lo ha desplazado en gran medida por estandarización y seguridad",
+   "Está prohibido",
+   "Es idéntico",
+   "Aporta plaquetas"
+  ],
+  "answer": 0,
+  "explanation": "El concentrado de fibrinógeno ha desplazado al crioprecipitado en muchos países europeos.",
+  "ref": "PMID 29527654"
+ },
+ {
+  "id": "Q164",
+  "doc": "P-QR-01",
+  "module": 0,
+  "level": "basico",
+  "q": "El pilar 1 del PBM se centra en:",
+  "options": [
+   "Minimizar la pérdida",
+   "Optimizar la masa eritrocitaria",
+   "Tolerar la anemia",
+   "La hemostasia"
+  ],
+  "answer": 1,
+  "explanation": "Pilar 1: optimizar la masa eritrocitaria (anemia, hierro, EPO).",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q165",
+  "doc": "P-QR-01",
+  "module": 0,
+  "level": "basico",
+  "q": "El pilar 2 del PBM se centra en:",
+  "options": [
+   "Optimizar la masa eritrocitaria",
+   "Minimizar la pérdida sanguínea",
+   "Tolerar la anemia",
+   "Cribar coagulopatías"
+  ],
+  "answer": 1,
+  "explanation": "Pilar 2: minimizar la pérdida (hemostasia, TXA, viscoelástica, recuperador, MABL).",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q166",
+  "doc": "P-QR-01",
+  "module": 0,
+  "level": "basico",
+  "q": "El pilar 3 del PBM se centra en:",
+  "options": [
+   "Optimizar la masa eritrocitaria",
+   "Minimizar la pérdida",
+   "Optimizar y tolerar la anemia",
+   "Fármacos hemostáticos"
+  ],
+  "answer": 2,
+  "explanation": "Pilar 3: tolerancia a la anemia y umbrales restrictivos.",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q167",
+  "doc": "P-QR-01",
+  "module": 0,
+  "level": "basico",
+  "q": "La 'regla de oro' del PBM es:",
+  "options": [
+   "Transfundir pronto",
+   "Usar siempre coloides",
+   "Evitar el hierro",
+   "La mejor unidad es la que no hace falta transfundir"
+  ],
+  "answer": 3,
+  "explanation": "Optimiza la masa, minimiza la pérdida y tolera la anemia.",
+  "ref": "PMID 30860564"
+ },
+ {
+  "id": "Q168",
+  "doc": "P-QR-01",
+  "module": 0,
+  "level": "avanzado",
+  "q": "En el postoperatorio, dentro del pilar 3, se recomienda:",
+  "options": [
+   "Umbral liberal",
+   "Umbral restrictivo y transfusión unitaria",
+   "No medir la Hb",
+   "Transfundir 2 unidades por defecto"
+  ],
+  "answer": 1,
+  "explanation": "Criterios restrictivos y transfusión de una unidad cada vez con reevaluación.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q169",
+  "doc": "P-QR-01",
+  "module": 0,
+  "level": "basico",
+  "q": "El eje transversal de la serie abarca los documentos:",
+  "options": [
+   "PBM-01 a 03",
+   "PBM-04 a 06",
+   "PBM-07 a 11",
+   "PBM-15 a 18"
+  ],
+  "answer": 3,
+  "explanation": "El eje de hemostasia clínica es el Módulo 5 (PBM-15 a 18).",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q170",
+  "doc": "P-QR-02",
+  "module": 0,
+  "level": "basico",
+  "q": "Umbral de hematíes en el paciente estable:",
+  "options": [
+   "< 7 g/dl",
+   "< 9 g/dl",
+   "< 10 g/dl",
+   "< 11 g/dl"
+  ],
+  "answer": 0,
+  "explanation": "Restrictivo < 7 g/dl en estable/crítico/séptico estable.",
+  "ref": "PMID 37824153"
+ },
+ {
+  "id": "Q171",
+  "doc": "P-QR-02",
+  "module": 0,
+  "level": "basico",
+  "q": "Umbral de hematíes en ortopedia o enfermedad cardiovascular crónica:",
+  "options": [
+   "< 8 g/dl",
+   "< 6 g/dl",
+   "< 7 g/dl",
+   "< 10 g/dl"
+  ],
+  "answer": 0,
+  "explanation": "8 g/dl en ortopedia o ECV crónica.",
+  "ref": "PMID 37824153"
+ },
+ {
+  "id": "Q172",
+  "doc": "P-QR-02",
+  "module": 0,
+  "level": "avanzado",
+  "q": "En el SCA, el umbral recomendado es:",
+  "options": [
+   "< 7 g/dl restrictivo",
+   "< 6 g/dl",
+   "Sin transfundir",
+   "Liberal ≈ 10 g/dl"
+  ],
+  "answer": 3,
+  "explanation": "Excepción del SCA: liberal ≈ 10 g/dl (en contra de restrictivo).",
+  "ref": "PMID 39341492"
+ },
+ {
+  "id": "Q173",
+  "doc": "P-QR-02",
+  "module": 0,
+  "level": "avanzado",
+  "q": "Umbral de plaquetas para cirugía mayor no neuroaxial (2025):",
+  "options": [
+   "< 10 ×10⁹/l",
+   "< 50 ×10⁹/l",
+   "< 20 ×10⁹/l",
+   "< 100 ×10⁹/l"
+  ],
+  "answer": 1,
+  "explanation": "< 50 ×10⁹/l para cirugía mayor no neuroaxial o RI de alto riesgo.",
+  "ref": "PMID 40440268"
+ },
+ {
+  "id": "Q174",
+  "doc": "P-QR-02",
+  "module": 0,
+  "level": "avanzado",
+  "q": "Cambio 2025 vs 2015 en plaquetas: punción lumbar y CVC pasan a:",
+  "options": [
+   "50→20 y 20→10",
+   "20→50 y 10→20",
+   "Sin cambios",
+   "10→5 y 5→2"
+  ],
+  "answer": 0,
+  "explanation": "PL 50→20 y CVC 20→10 ×10⁹/l.",
+  "ref": "PMID 40440268"
+ },
+ {
+  "id": "Q175",
+  "doc": "P-QR-02",
+  "module": 0,
+  "level": "basico",
+  "q": "Dosis habitual de plasma fresco congelado:",
+  "options": [
+   "1-2 ml/kg",
+   "30-40 ml/kg",
+   "10-15 ml/kg",
+   "60 ml/kg"
+  ],
+  "answer": 2,
+  "explanation": "10-15 ml/kg, solo con coagulopatía y sangrado.",
+  "ref": "PMID 29527654"
+ },
+ {
+  "id": "Q176",
+  "doc": "P-QR-02",
+  "module": 0,
+  "level": "basico",
+  "q": "En hemorragia masiva, ¿qué rige en vez de los umbrales por componente?",
+  "options": [
+   "El protocolo de transfusión masiva",
+   "La diuresis",
+   "La presión venosa central",
+   "El peso"
+  ],
+  "answer": 0,
+  "explanation": "Rige el protocolo (PBM-13), no los umbrales profilácticos.",
+  "ref": "PMID 25647203"
+ },
+ {
+  "id": "Q177",
+  "doc": "P-QR-02",
+  "module": 0,
+  "level": "avanzado",
+  "q": "Dosis de plaquetas por episodio profiláctico:",
+  "options": [
+   "Media unidad de aféresis no es eficaz",
+   "Hasta una unidad de aféresis (dosis mayores no son más eficaces)",
+   "Tres unidades de aféresis",
+   "Diez pools"
+  ],
+  "answer": 1,
+  "explanation": "Hasta 1 unidad de aféresis; dosis mayores no aportan más eficacia.",
+  "ref": "PMID 40440268"
+ },
+ {
+  "id": "Q178",
+  "doc": "P-QR-03",
+  "module": 0,
+  "level": "basico",
+  "q": "Mensaje transversal del TXA en todos los escenarios:",
+  "options": [
+   "Cuanto más tarde mejor",
+   "Solo por vía oral",
+   "Cuanto antes, mejor (idealmente < 3 h)",
+   "Dosis única siempre"
+  ],
+  "answer": 2,
+  "explanation": "La administración precoz (< 3 h) es el factor común de eficacia.",
+  "ref": "PMID 28456509"
+ },
+ {
+  "id": "Q179",
+  "doc": "P-QR-03",
+  "module": 0,
+  "level": "basico",
+  "q": "Pauta de TXA en hemorragia posparto (WOMAN):",
+  "options": [
+   "5 g en bolo",
+   "500 mg oral",
+   "1 g IV, repetible a los 30 min",
+   "Infusión de 24 h"
+  ],
+  "answer": 2,
+  "explanation": "1 g IV, repetible si persiste el sangrado.",
+  "ref": "PMID 28456509"
+ },
+ {
+  "id": "Q180",
+  "doc": "P-QR-03",
+  "module": 0,
+  "level": "avanzado",
+  "q": "En cirugía cardíaca, vigilar con dosis altas de TXA:",
+  "options": [
+   "Hipertermia maligna",
+   "Hipoglucemia",
+   "Convulsiones",
+   "Sordera"
+  ],
+  "answer": 2,
+  "explanation": "ATACAS: ligero aumento de convulsiones a dosis altas.",
+  "ref": "PMID 27774838"
+ },
+ {
+  "id": "Q181",
+  "doc": "P-QR-03",
+  "module": 0,
+  "level": "avanzado",
+  "q": "En el TCE grave establecido, el TXA:",
+  "options": [
+   "Es muy eficaz",
+   "Tiene efecto limitado",
+   "Está contraindicado por trombosis",
+   "Reduce la mortalidad un 50%"
+  ],
+  "answer": 1,
+  "explanation": "CRASH-3: efecto limitado en TCE grave establecido.",
+  "ref": "PMID 31623894"
+ },
+ {
+  "id": "Q182",
+  "doc": "P-QR-03",
+  "module": 0,
+  "level": "basico",
+  "q": "Pauta de carga de TXA en trauma:",
+  "options": [
+   "100 mg en bolo",
+   "2 g en 1 min",
+   "Infusión sin carga",
+   "1 g en 10 min"
+  ],
+  "answer": 3,
+  "explanation": "1 g en 10 min + 1 g en 8 h, iniciar < 3 h.",
+  "ref": "PMID 20554319"
+ },
+ {
+  "id": "Q183",
+  "doc": "P-QR-03",
+  "module": 0,
+  "level": "basico",
+  "q": "El TXA reduce de forma demostrada en trauma y posparto:",
+  "options": [
+   "La estancia en UCI",
+   "La infección",
+   "La muerte por hemorragia",
+   "El dolor"
+  ],
+  "answer": 2,
+  "explanation": "Reduce la muerte por hemorragia (CRASH-2, WOMAN).",
+  "ref": "PMID 20554319"
+ },
+ {
+  "id": "Q184",
+  "doc": "P-QR-03",
+  "module": 0,
+  "level": "avanzado",
+  "q": "En cirugía, el principal beneficio del TXA es:",
+  "options": [
+   "Reducir transfusión y reoperación",
+   "Curar la anemia",
+   "Revertir anticoagulantes",
+   "Aumentar el gasto cardíaco"
+  ],
+  "answer": 0,
+  "explanation": "Reduce hemorragia, transfusión y reoperación por sangrado.",
+  "ref": "PMID 27774838"
+ },
+ {
+  "id": "Q185",
+  "doc": "P-QR-04",
+  "module": 0,
+  "level": "basico",
+  "q": "La MABL es:",
+  "options": [
+   "Un disparador de transfusión",
+   "Una herramienta de planificación",
+   "Una dosis de fármaco",
+   "Un umbral de Hb"
+  ],
+  "answer": 1,
+  "explanation": "Estima la pérdida admisible para planificar, no para disparar transfusión.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q186",
+  "doc": "P-QR-04",
+  "module": 0,
+  "level": "avanzado",
+  "q": "En la fórmula de Nadler, las variables de entrada son:",
+  "options": [
+   "Edad y sexo",
+   "Talla y peso",
+   "Hb y Hto",
+   "FC y TA"
+  ],
+  "answer": 1,
+  "explanation": "VSE se calcula a partir de talla y peso (y sexo).",
+  "ref": "PMID 21936146"
+ },
+ {
+  "id": "Q187",
+  "doc": "P-QR-04",
+  "module": 0,
+  "level": "avanzado",
+  "q": "El Hto medio en la fórmula de Gross es:",
+  "options": [
+   "El Hto inicial",
+   "El Hto diana",
+   "Siempre 40%",
+   "La media de Hto inicial y diana"
+  ],
+  "answer": 3,
+  "explanation": "Hto medio = (Hto_ini + Hto_diana)/2.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q188",
+  "doc": "P-QR-04",
+  "module": 0,
+  "level": "basico",
+  "q": "La MABL se decide junto con:",
+  "options": [
+   "El umbral de Hb y la clínica (sangrado activo)",
+   "Solo el peso",
+   "El grupo sanguíneo",
+   "La diuresis"
+  ],
+  "answer": 0,
+  "explanation": "La transfusión se decide por el umbral (P-QR-02), el sangrado y la clínica.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q189",
+  "doc": "P-QR-04",
+  "module": 0,
+  "level": "avanzado",
+  "q": "Si la pérdida esperada se acerca a la MABL, una medida es:",
+  "options": [
+   "No optimizar nada",
+   "Activar ahorro de sangre (recuperador, TXA) y planificar disponibilidad",
+   "Transfundir profilácticamente",
+   "Aumentar cristaloides"
+  ],
+  "answer": 1,
+  "explanation": "Optimizar Hb previa, activar ahorro de sangre y planificar disponibilidad.",
+  "ref": "PMID 37681564"
+ },
+ {
+  "id": "Q190",
+  "doc": "P-QR-04",
+  "module": 0,
+  "level": "basico",
+  "q": "Regla rápida del volumen sanguíneo en la mujer:",
+  "options": [
+   "≈ 50 ml/kg",
+   "≈ 80 ml/kg",
+   "≈ 100 ml/kg",
+   "≈ 65 ml/kg"
+  ],
+  "answer": 3,
+  "explanation": "≈ 65 ml/kg en la mujer (70 ml/kg en el varón).",
+  "ref": "PMID 21936146"
+ },
+ {
+  "id": "Q191",
+  "doc": "P-QR-04",
+  "module": 0,
+  "level": "avanzado",
+  "q": "La MABL conecta los tres pilares porque permite:",
+  "options": [
+   "Solo medir la Hb",
+   "Anticipar: optimizar Hb, minimizar pérdida y planificar transfusión",
+   "Evitar la cirugía",
+   "Sustituir la viscoelástica"
+  ],
+  "answer": 1,
+  "explanation": "Traduce el riesgo en una decisión anticipada que integra los pilares.",
+  "ref": "PMID 6829965"
+ },
+ {
+  "id": "Q192",
+  "doc": "P-QR-05",
+  "module": 0,
+  "level": "basico",
+  "q": "Las tres preguntas antes de decidir sobre antitrombóticos son:",
+  "options": [
+   "Fármaco/vida media, riesgo trombótico del paciente, riesgo hemorrágico del procedimiento",
+   "Edad, sexo, peso",
+   "Hb, plaquetas, fibrinógeno",
+   "TA, FC, diuresis"
+  ],
+  "answer": 0,
+  "explanation": "Fármaco × riesgo trombótico × riesgo hemorrágico.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q193",
+  "doc": "P-QR-05",
+  "module": 0,
+  "level": "avanzado",
+  "q": "Los tiempos exactos de suspensión de cada antitrombótico se toman de:",
+  "options": [
+   "La memoria",
+   "Un solo ensayo",
+   "La preferencia del paciente",
+   "El protocolo local y la ficha técnica vigentes"
+  ],
+  "answer": 3,
+  "explanation": "El marco da la decisión; los tiempos exactos, del protocolo local y la ficha técnica.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q194",
+  "doc": "P-QR-05",
+  "module": 0,
+  "level": "basico",
+  "q": "En FA, el puente con heparina debe reservarse para:",
+  "options": [
+   "Todos los pacientes",
+   "Bajo riesgo",
+   "Alto riesgo trombótico seleccionado",
+   "Nunca usarse"
+  ],
+  "answer": 2,
+  "explanation": "BRIDGE: el puente sistemático añade sangrado; reservarlo a alto riesgo seleccionado.",
+  "ref": "PMID 26095867"
+ },
+ {
+  "id": "Q195",
+  "doc": "P-QR-05",
+  "module": 0,
+  "level": "avanzado",
+  "q": "La reversión urgente de AVK en la tarjeta remite a:",
+  "options": [
+   "Plaquetas",
+   "Desmopresina",
+   "Fibrinógeno",
+   "CCP + vitamina K (PBM-18)"
+  ],
+  "answer": 3,
+  "explanation": "CCP con vitamina K; reversión y rescate en PBM-18.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q196",
+  "doc": "P-QR-05",
+  "module": 0,
+  "level": "basico",
+  "q": "En BRIDGE, la hemorragia mayor con puente frente a no puente fue:",
+  "options": [
+   "Menor con puente",
+   "Idéntica",
+   "No medida",
+   "Mayor con puente (3,2% vs 1,3%)"
+  ],
+  "answer": 3,
+  "explanation": "Más hemorragia mayor con puente (RR 0,41 a favor de no puente).",
+  "ref": "PMID 26095867"
+ },
+ {
+  "id": "Q197",
+  "doc": "P-QR-05",
+  "module": 0,
+  "level": "avanzado",
+  "q": "La reanudación de antitrombóticos tras cirugía debe ser:",
+  "options": [
+   "Escalonada y coordinada cuando la hemostasia lo permita",
+   "Inmediata y completa",
+   "A las 6 semanas siempre",
+   "Decidida por el paciente"
+  ],
+  "answer": 0,
+  "explanation": "Reiniciar de forma escalonada y coordinada entre equipos.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q198",
+  "doc": "PBM-12",
+  "module": 4,
+  "level": "basico",
+  "q": "La estrategia restrictiva funciona porque el paciente:",
+  "options": [
+   "No tolera la anemia",
+   "Aumenta su Hb solo",
+   "Tolera grados moderados de anemia por mecanismos compensatorios",
+   "No necesita oxígeno"
+  ],
+  "answer": 2,
+  "explanation": "La tolerancia compensatoria permite equivalencia o beneficio con menos transfusión.",
+  "ref": "PMID 41114449"
+ },
+ {
+  "id": "Q199",
+  "doc": "PBM-02",
+  "module": 1,
+  "level": "basico",
+  "q": "El crioprecipitado es la fracción rica en:",
+  "options": [
+   "Hematíes",
+   "Plaquetas",
+   "Albúmina",
+   "Fibrinógeno (y FVIII, FXIII, FvW)"
+  ],
+  "answer": 3,
+  "explanation": "Crioprecipitado: fibrinógeno, FVIII, FXIII, factor de von Willebrand y fibronectina.",
+  "ref": "PMID 36855941"
+ },
+ {
+  "id": "Q200",
+  "doc": "PBM-13",
+  "module": 4,
+  "level": "basico",
+  "q": "La activación del protocolo de transfusión masiva debe ser:",
+  "options": [
+   "Tardía y cautelosa",
+   "Solo tras pruebas de laboratorio",
+   "Precoz ante hemorragia no controlada",
+   "Opcional"
+  ],
+  "answer": 2,
+  "explanation": "La activación precoz evita el retraso logístico y salva vidas.",
+  "ref": "PMID 36855941"
+ }
+]

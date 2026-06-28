@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- SERIE PBM - P-QR-03 Acido tranexamico: dosis por escenario. Ancla ALG. -->
+<style>
+  @page { size:A4; margin:16mm 15mm 18mm 15mm; @bottom-center{ content:counter(page);} }
+  :root{
+    --accent:#8E2433; --accent-soft:#F4E3E6; --accent2:#4F6B7A; --accent2-soft:#E7EDF1;
+    --warm:#B0682B; --warm-soft:#F6E8D8;
+    --ink:#211A1C; --ink2:#3A2E31; --muted:#6E6168; --line:#E0D6D8;
+    --violet:#6B2740;
+    --key:var(--accent); --key-bg:var(--accent-soft);
+    --alert:#9A3B1E; --alert-bg:var(--warm-soft);
+    --note:#4F6B7A; --note-bg:var(--accent2-soft);
+    --pearl:#0E6E6B; --pearl-bg:#D7EFEC;
+    --rev:#6E6168; --rev-bg:#EFEAEB;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif; color:var(--ink); font-size:9.3pt; line-height:1.48; margin:0; }
+  h1,h2,h3,h4{ font-family:"DejaVu Serif",Georgia,serif; color:var(--ink); line-height:1.18; }
+  p{ margin:0 0 7px 0; text-align:justify; }
+  .mono{ font-family:"DejaVu Sans Mono",monospace; }
+  sub,sup{ font-size:75%; }
+  .docref{ display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .doc-code{ font-family:"DejaVu Sans Mono",monospace; font-size:8.4pt; font-weight:700; letter-spacing:.06em; color:#fff; background:var(--accent); padding:3px 9px; border-radius:3px; }
+  .badge{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:7pt; letter-spacing:.06em; font-weight:700; padding:3px 8px; border-radius:3px; color:#fff; }
+  .b-guia{ background:#8E2433; } .b-meta{ background:#4F6B7A; } .b-eca{ background:#7A3E6E; }
+  .b-rev{ background:#6E6358; } .b-alg{ background:#4E5A66; }
+  .module-tag{ font-family:"DejaVu Sans Mono",monospace; font-size:7.2pt; color:var(--muted); letter-spacing:.04em; }
+  .kicker{ font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:8px; }
+  h1.title{ font-size:20pt; margin:0 0 6px 0; letter-spacing:-.01em; border-bottom:3px solid var(--accent); padding-bottom:12px; }
+  .subtitle{ font-size:11pt; color:var(--ink2); font-family:"DejaVu Serif",Georgia,serif; font-style:italic; margin:10px 0 14px 0; }
+  .tagline{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; color:var(--muted); line-height:1.7; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0; margin-bottom:14px; }
+  .refbar{ background:var(--accent2-soft); border-left:4px solid var(--accent2); padding:9px 12px; font-size:8.3pt; color:var(--ink2); margin-bottom:10px; border-radius:0 4px 4px 0; }
+  .refbar.guiabar{ background:var(--accent-soft); border-left-color:var(--accent); }
+  .refbar b{ color:var(--ink); }
+  .meta-row{ display:flex; flex-wrap:wrap; margin-bottom:6px; }
+  .meta-chip{ font-family:"DejaVu Sans Mono",monospace; font-size:7pt; color:var(--ink2); background:#F3ECEE; border:1px solid var(--line); border-radius:20px; padding:3px 9px; margin:0 6px 6px 0; }
+  .lead{ font-size:9.5pt; color:var(--ink2); line-height:1.55; }
+  .toc{ background:#FBF7F8; border:1px solid var(--line); border-radius:6px; padding:12px 16px; margin:6px 0 4px; }
+  .toc h2{ font-size:11pt; margin:0 0 8px 0; color:var(--accent); }
+  .toc ol{ margin:0; padding-left:20px; columns:2; column-gap:26px; font-size:8.5pt; }
+  .toc li{ margin-bottom:4px; }
+  h2.sec{ font-size:12.5pt; margin:18px 0 4px 0; padding-top:8px; border-top:2px solid var(--ink); color:var(--ink); }
+  h2.sec .num{ color:var(--accent); margin-right:8px; }
+  h3{ font-size:10pt; margin:11px 0 3px 0; color:var(--violet); }
+  h4{ font-size:9pt; margin:8px 0 2px 0; color:var(--ink2); }
+  .box{ border-radius:0 6px 6px 0; padding:9px 13px 7px 13px; margin:10px 0; font-size:8.6pt; line-height:1.44; }
+  .box .box-h{ font-family:"DejaVu Sans Mono",monospace; font-weight:700; font-size:7.6pt; letter-spacing:.07em; text-transform:uppercase; margin-bottom:5px; display:block; }
+  .box ul{ margin:3px 0 2px 0; padding-left:16px; }
+  .box li{ margin-bottom:3px; }
+  .box p{ margin:0 0 4px 0; }
+  .key{ background:var(--key-bg); border-left:4px solid var(--key);} .key .box-h{ color:var(--key);}
+  .alert{ background:var(--alert-bg); border-left:4px solid var(--warm);} .alert .box-h{ color:var(--alert);}
+  .note{ background:var(--note-bg); border-left:4px solid var(--note);} .note .box-h{ color:var(--note);}
+  .pearl{ background:var(--pearl-bg); border-left:4px solid var(--pearl);} .pearl .box-h{ color:var(--pearl);}
+  .rev{ background:var(--rev-bg); border-left:4px solid var(--rev);} .rev .box-h{ color:var(--rev);}
+  table{ width:100%; border-collapse:collapse; margin:10px 0; font-size:7.5pt; }
+  caption{ caption-side:bottom; font-size:7pt; color:var(--muted); text-align:left; padding-top:5px; line-height:1.4; }
+  th{ background:var(--ink); color:#fff; text-align:left; padding:5px 7px; font-weight:600; vertical-align:top; }
+  td{ border:1px solid var(--line); padding:4px 7px; vertical-align:top; }
+  tbody tr:nth-child(even){ background:#F7F1F2; }
+  td.c{ text-align:center; }
+  .gr{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:6.6pt; font-weight:700; color:#fff; border-radius:3px; padding:1px 5px; }
+  .gr-fuerte{ background:#4F6B7A; } .gr-mod{ background:#8E2433; } .gr-debil{ background:var(--muted); } .gr-no{ background:#9A3B1E; }
+  .tbl-title{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:14px 0 0; }
+  ol.refs{ font-size:7.4pt; line-height:1.4; padding-left:22px; margin:6px 0; }
+  ol.refs li{ margin-bottom:4px; }
+  ol.refs .doi{ color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7pt; }
+  .footer-note{ margin-top:16px; padding-top:8px; border-top:1px solid var(--line); font-size:7.3pt; color:var(--muted); font-style:italic; line-height:1.45; }
+  .avoid-break{ break-inside:avoid; }
+  strong{ color:var(--ink); }
+  .pillars{ display:flex; gap:8px; margin:10px 0; flex-wrap:wrap; }
+  .pillar{ flex:1 1 0; min-width:110px; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:0 0 5px 5px; padding:7px 9px; font-size:8pt; }
+  .pillar h4{ margin:0 0 3px; color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.04em; text-transform:uppercase; }
+  .pillar.p5{ border-top-color:var(--accent2); } .pillar.p5 h4{ color:var(--accent2); }
+  .flow{ display:flex; flex-direction:column; gap:0; margin:10px 0; }
+  .step{ border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:0 5px 5px 0; padding:7px 11px; margin-bottom:6px; font-size:8.4pt; background:#FBF7F8; }
+  .step b{ color:var(--accent); }
+  .step.q{ border-left-color:var(--accent2); } .step.q b{ color:var(--accent2); }
+  .step.a{ border-left-color:var(--warm); background:var(--warm-soft); } .step.a b{ color:var(--alert); }
+  figure{ margin:12px 0; text-align:center; break-inside:avoid; }
+  figure img{ display:block; width:70%; height:auto; margin:0 auto; border:1px solid var(--line); border-radius:5px; }
+  figure.wide img{ width:86%; } figure.narrow img{ width:42%; }
+  figcaption{ font-size:7pt; color:var(--muted); line-height:1.4; text-align:center; margin:5px auto 0; max-width:82%; }
+  figcaption b{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="docref">
+    <span class="doc-code">P-QR-03</span>
+    <span class="badge b-alg">ALG &middot; tarjeta de consulta r&aacute;pida</span>
+    <span class="module-tag">Quick-reference &middot; sintetiza PBM-08</span>
+  </div>
+  <div class="kicker">&Aacute;cido tranex&aacute;mico: dosis por escenario</div>
+  <h1 class="title">&Aacute;cido tranex&aacute;mico: dosis por escenario</h1>
+  <div class="subtitle">Tarjeta de consulta r&aacute;pida &mdash; el factor com&uacute;n es administrarlo pronto</div>
+  <div class="tagline">
+    2026 &middot; Tarjeta derivada de PBM-08 &middot; CAUSA / SACYL<br>
+    <b>Idea:</b> el TXA reduce muerte por hemorragia (trauma, posparto) y transfusi&oacute;n (cirug&iacute;a); <b>cuanto antes, mejor</b>.
+  </div>
+</section>
+
+
+<div class="tbl-title">Pautas por escenario (tal como en los ensayos)</div>
+<table class="avoid-break">
+  <thead><tr><th style="width:22%">Escenario</th><th>Pauta</th><th>Efecto / matiz</th><th style="width:12%">Ensayo</th></tr></thead>
+  <tbody>
+    <tr><td><b>Trauma con hemorragia</b></td><td>1&nbsp;g IV en 10&nbsp;min + 1&nbsp;g en 8&nbsp;h; iniciar &lt; 3&nbsp;h de la lesi&oacute;n</td><td>&darr; mortalidad (RR 0,91); m&aacute;ximo si precoz</td><td class="c">CRASH-2 [1]</td></tr>
+    <tr><td><b>Hemorragia posparto</b></td><td>1&nbsp;g IV; repetible a los 30&nbsp;min si persiste</td><td>&darr; muerte por hemorragia (RR 0,81; 0,69 si &lt; 3&nbsp;h)</td><td class="c">WOMAN [2]</td></tr>
+    <tr><td><b>TCE leve-moderado</b></td><td>1&nbsp;g + 1&nbsp;g/8&nbsp;h; &lt; 3&nbsp;h</td><td>&darr; muerte por TCE en leve-moderado; <b>no</b> en grave</td><td class="c">CRASH-3 [3]</td></tr>
+    <tr><td><b>Cirug&iacute;a (cardíaca/mayor)</b></td><td>Bolo + infusi&oacute;n perioperatoria</td><td>&darr; transfusi&oacute;n y reoperaci&oacute;n; &uarr; convulsiones a dosis altas</td><td class="c">ATACAS [4]</td></tr>
+  </tbody>
+  <caption>Pautas de los ensayos pivotales. Ajustar a protocolo local y ficha t&eacute;cnica; vigilar dosis altas en insuficiencia renal y cirug&iacute;a cardíaca (convulsiones).</caption>
+</table>
+
+<div class="box pearl avoid-break"><span class="box-h">Regla de oro</span>
+  <p>En el sangrado de trauma y posparto, el TXA salva vidas <b>solo si se da pronto</b> (idealmente &lt; 3&nbsp;h). No lo
+  retrases esperando pruebas.</p>
+</div>
+
+<div class="box alert avoid-break"><span class="box-h">D&oacute;nde NO esperar gran beneficio</span>
+  <p>En el <b>TCE grave establecido</b> el efecto es limitado [3]. A <b>dosis altas en cirug&iacute;a cardíaca</b>, vigilar
+  convulsiones [4].</p>
+</div>
+
+<div class="box rev avoid-break"><span class="box-h">Actualizaci&oacute;n NICE NG24 (2026)</span>
+  <p>NICE ya <b>no exige estimar la p&eacute;rdida sangu&iacute;nea</b>: ofrece TXA en <b>cualquier procedimiento con riesgo
+  hemorr&aacute;gico</b>. Fuera de quir&oacute;fano (radiolog&iacute;a intervencionista, urgencias), si la p&eacute;rdida prevista supera 500&nbsp;ml
+  (adultos) o el 10&nbsp;% del volumen sangu&iacute;neo (ni&ntilde;os 1&ndash;15&nbsp;a&ntilde;os) [5].</p>
+</div>
+
+
+<h2 class="sec"><span class="num">&middot;</span>Referencias</h2>
+<ol class="refs">
+  <li>CRASH-2 trial collaborators (Shakur H, Roberts I, et al.). Effects of tranexamic acid... (CRASH-2). <i>Lancet</i> 2010;376(9734):23&ndash;32. <span class="doi">doi:10.1016/S0140-6736(10)60835-5</span> &middot; PMID 20554319.</li>
+  <li>WOMAN Trial Collaborators. Effect of early tranexamic acid administration... (WOMAN). <i>Lancet</i> 2017;389(10084):2105&ndash;2116. <span class="doi">doi:10.1016/S0140-6736(17)30638-4</span> &middot; PMID 28456509.</li>
+  <li>CRASH-3 trial collaborators. Effects of tranexamic acid... traumatic brain injury (CRASH-3). <i>Lancet</i> 2019;394(10210):1713&ndash;1723. <span class="doi">doi:10.1016/S0140-6736(19)32233-0</span> &middot; PMID 31623894.</li>
+  <li>Myles PS, Smith JA, Forbes A, et al. Tranexamic Acid in Patients Undergoing Coronary-Artery Surgery. <i>N Engl J Med</i> 2017;376(2):136&ndash;148. <span class="doi">doi:10.1056/NEJMoa1606424</span> &middot; PMID 27774838.</li>
+  <li>National Institute for Health and Care Excellence (NICE). Blood transfusion (NG24): tranexamic acid &mdash; actualizaci&oacute;n. Londres: NICE; 26 feb 2026. Disponible en: <span class="mono">https://www.nice.org.uk/guidance/ng24</span>. <i>(Gu&iacute;a verificada en la web oficial de NICE; no indexada en PubMed.)</i></li>
+</ol>
+
+<div class="footer-note">Serie Hemostasia y Medicina Transfusional Perioperatoria (PBM) - Tarjeta P-QR-03 - ancla ALG - 2026. Tarjeta de consulta rapida; sintetiza PBM-08. Pautas de los ensayos pivotales verificados contra PubMed. No sustituye al juicio clinico ni a los protocolos locales vigentes.<br><strong>Ideacion:</strong> Emilio Garcia Hernandez - Licenciado Especialista en Anestesiologia y Reanimacion - CAUSA - SACYL.</div>
+</body>
+</html>

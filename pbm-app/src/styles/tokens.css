@@ -1,0 +1,65 @@
+/* Identidad visual PBM — tokens exactos (granate / acero) */
+:root {
+  --accent: #8e2433; /* granate */
+  --accent-soft: #f4e3e6;
+  --accent2: #4f6b7a; /* acero */
+  --accent2-soft: #e7edf1;
+  --warm: #b0682b; /* alertas */
+  --ink: #211a1c;
+  --muted: #6e6168;
+  --line: #e0d6d8;
+  --bg: #faf6f7;
+
+  /* superficies derivadas (tema claro) */
+  --surface: #ffffff;
+  --surface-2: #fbf7f8;
+  --shadow: 0 1px 2px rgba(33, 26, 28, 0.06), 0 6px 20px rgba(33, 26, 28, 0.06);
+  --focus: #4f6b7a;
+
+  /* badges de ancla */
+  --anchor-guia: #8e2433;
+  --anchor-meta: #4f6b7a;
+  --anchor-eca: #7a3e6e;
+  --anchor-rev: #6e6358;
+  --anchor-alg: #4e5a66;
+
+  /* tipografía */
+  --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman',
+    serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --radius: 14px;
+  --radius-sm: 9px;
+  --tap: 44px; /* objetivo táctil mínimo */
+  --maxw: 1080px;
+}
+
+/* Tema oscuro */
+:root[data-theme='dark'] {
+  --accent: #d76b78;
+  --accent-soft: #3a1f24;
+  --accent2: #8fb0bf;
+  --accent2-soft: #1e2a30;
+  --warm: #e0975a;
+  --ink: #f1e9eb;
+  --muted: #b3a4aa;
+  --line: #3a2f32;
+  --bg: #181113;
+
+  --surface: #221a1d;
+  --surface-2: #1d1517;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.35);
+  --focus: #8fb0bf;
+
+  --anchor-guia: #d76b78;
+  --anchor-meta: #8fb0bf;
+  --anchor-eca: #c08bb6;
+  --anchor-rev: #b6a994;
+  --anchor-alg: #95a3af;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']):not([data-theme='dark']) {
+    color-scheme: dark;
+  }
+}

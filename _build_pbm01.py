@@ -1,0 +1,173 @@
+# -*- coding: utf-8 -*-
+"""PBM-01 (cabeza de serie) - Que es el PBM: los 3 pilares y el marco perioperatorio."""
+from build_doc import build
+
+META = {
+    "comment": "SERIE PBM - PBM-01 Que es el PBM: los 3 pilares y el marco perioperatorio (cabeza de serie). Ancla GUIA.",
+    "footer": ("Serie Hemostasia y Medicina Transfusional Perioperatoria (PBM) - Documento PBM-01 - Modulo 1 - ancla GUIA - 2026. "
+               "Sintesis docente en espanol para adjuntos y residentes (CAUSA / SACYL). "
+               "Cifras procedentes de fuentes primarias indexadas verificadas contra PubMed. "
+               "No sustituye al juicio clinico ni a los protocolos locales vigentes."),
+}
+
+COVER = r"""
+<section class="cover">
+  <div class="docref">
+    <span class="doc-code">PBM-01</span>
+    <span class="badge b-guia">GU&Iacute;A &middot; gu&iacute;a / consenso formal</span>
+    <span class="module-tag">M&oacute;dulo 1 &middot; Fundamentos: PBM y medicina transfusional</span>
+  </div>
+  <div class="kicker">Cabeza de serie &middot; Qu&eacute; es el PBM &middot; Mapa de la serie</div>
+  <h1 class="title">Qu&eacute; es el Patient Blood Management: los 3 pilares y el marco perioperatorio</h1>
+  <div class="subtitle">Gestionar la sangre del paciente, no solo transfundir &mdash; cabeza de serie que fija el molde y el mensaje de evidencia</div>
+  <div class="meta-row">
+    <span class="meta-chip">Definici&oacute;n y cambio de paradigma</span>
+    <span class="meta-chip">Los 3 pilares</span>
+    <span class="meta-chip">Evidencia de los programas PBM</span>
+    <span class="meta-chip">Marco de guías</span>
+    <span class="meta-chip">El eje de la hemostasia</span>
+  </div>
+  <div class="refbar guiabar">
+    <b>Ancla de evidencia (referencia vertebral):</b> Mueller MM, Van Remoortel H, Meybohm P, et&nbsp;al.
+    <i>Patient Blood Management: Recommendations From the 2018 Frankfurt Consensus Conference.</i> JAMA 2019;321(10):983&ndash;997.
+    <span class="mono">doi:10.1001/jama.2019.0554 &middot; PMID&nbsp;30860564</span>.
+  </div>
+  <div class="tagline">
+    2026 &middot; 4 referencias verificadas (3 indexadas en PubMed + gu&iacute;a OMS 2025) &middot; S&iacute;ntesis docente para adjuntos y residentes (CAUSA / SACYL)<br>
+    <b>Mensaje nuclear:</b> el PBM desplaza el foco <i>del producto al paciente</i>: en vez de preguntar &laquo;&iquest;cu&aacute;ndo transfundir?&raquo;,
+    pregunta &laquo;&iquest;c&oacute;mo evitar que este paciente necesite transfusi&oacute;n?&raquo;. Sus programas multimodales <b>reducen transfusiones,
+    complicaciones y mortalidad</b>; pero buena parte de la evidencia es observacional y muchos umbrales proceden de consenso.
+  </div>
+  <div class="lead">
+    <p>La transfusi&oacute;n de sangre es una de las terapias m&aacute;s usadas del mundo, con beneficios pero tambi&eacute;n riesgos y costes [1].
+    El <b>Patient Blood Management (PBM)</b> &mdash;gesti&oacute;n de la sangre del paciente&mdash; es el paradigma que reordena la pr&aacute;ctica
+    transfusional alrededor del paciente: un conjunto de estrategias multimodales para <b>optimizar la propia sangre del
+    paciente</b> y reservar la transfusi&oacute;n para cuando aporta beneficio real [2].</p>
+    <p>Este documento abre la serie y fija su <b>molde conceptual</b>: los <b>3 pilares</b> del PBM &mdash;optimizar la masa
+    eritrocitaria, minimizar la p&eacute;rdida sangu&iacute;nea y optimizar/tolerar la anemia&mdash; m&aacute;s el <b>eje transversal de la hemostasia
+    y el sangrado</b>. Y fija el <b>tono honesto</b> de la serie: el PBM mejora desenlaces, pero su base de evidencia es
+    desigual y exige aplicar cada recomendaci&oacute;n seg&uacute;n su fuerza real.</p>
+  </div>
+</section>
+"""
+
+BODY = r"""
+<nav class="toc avoid-break"><h2>&Iacute;ndice</h2><ol>
+  <li>Qu&eacute; es el PBM: del producto al paciente</li>
+  <li>Los 3 pilares del PBM</li>
+  <li>Qu&eacute; dice la evidencia de los programas PBM</li>
+  <li>El marco de guías y umbrales</li>
+  <li>El eje transversal: hemostasia y sangrado</li>
+  <li>Mensaje nuclear, mapa de la serie y conexiones</li>
+  <li>Verificaci&oacute;n bibliogr&aacute;fica</li>
+  <li>Referencias</li>
+</ol></nav>
+
+<h2 class="sec"><span class="num">1.</span>Qu&eacute; es el PBM: del producto al paciente</h2>
+<p>Durante d&eacute;cadas, la pregunta transfusional fue &laquo;&iquest;cu&aacute;ndo y cu&aacute;nto transfundir?&raquo;, centrada en el <b>producto</b>
+(el concentrado de hematíes). El PBM invierte el enfoque: lo centra en el <b>paciente</b> y en preservar su propia sangre,
+de modo que la transfusi&oacute;n deja de ser el objetivo y pasa a ser el &uacute;ltimo recurso cuando las dem&aacute;s medidas no bastan [2].
+No es &laquo;transfundir menos&raquo; por ahorro, sino <b>tratar mejor</b>: la anemia, el sangrado y la coagulopat&iacute;a se abordan de forma
+proactiva a lo largo de todo el periodo perioperatorio.</p>
+
+<div class="box key avoid-break"><span class="box-h">Puntos clave</span><ul>
+  <li>El PBM es un <b>cambio de paradigma</b>: del producto (la bolsa) al paciente (su sangre y su tolerancia).</li>
+  <li>Es <b>multimodal y multidisciplinar</b>: anestesia, cirug&iacute;a, hematolog&iacute;a, enfermer&iacute;a y banco de sangre.</li>
+  <li>La transfusi&oacute;n es una herramienta m&aacute;s, con beneficios y riesgos; el objetivo es <b>necesitarla menos</b>.</li>
+</ul></div>
+
+<h2 class="sec"><span class="num">2.</span>Los 3 pilares del PBM</h2>
+<p>El marco internacional estructura el PBM en <b>tres pilares</b>, cada uno con medidas a lo largo del tiempo perioperatorio
+[2]. Son la espina conceptual de toda esta serie: cada documento posterior desarrolla uno de ellos (o el eje de la hemostasia).</p>
+
+<div class="pillars avoid-break">
+  <div class="pillar"><h4>Pilar 1 &middot; Masa eritrocitaria</h4><b>Optimizar</b> la masa de gl&oacute;bulos rojos: detectar y tratar la
+    <b>anemia preoperatoria</b> (ferropenia, hierro IV, EPO) con antelaci&oacute;n suficiente. <span class="mono">&rarr; PBM-04 a 06</span></div>
+  <div class="pillar"><h4>Pilar 2 &middot; P&eacute;rdida sangu&iacute;nea</h4><b>Minimizar</b> el sangrado: hemostasia quir&uacute;rgica y farmacol&oacute;gica,
+    <b>antifibrinol&iacute;ticos</b>, viscoel&aacute;stica, recuperador celular y planificaci&oacute;n (MABL). <span class="mono">&rarr; PBM-07 a 11</span></div>
+  <div class="pillar p5"><h4>Pilar 3 &middot; Tolerancia a la anemia</h4><b>Optimizar y tolerar</b> la anemia: umbrales
+    <b>restrictivos</b> de transfusi&oacute;n y soporte fisiol&oacute;gico de la entrega de ox&iacute;geno. <span class="mono">&rarr; PBM-12 a 14</span></div>
+</div>
+
+<h2 class="sec"><span class="num">3.</span>Qu&eacute; dice la evidencia de los programas PBM</h2>
+<p>La evidencia m&aacute;s s&oacute;lida a favor del PBM proviene de la implantaci&oacute;n de <b>programas completos</b> que abordan los tres
+pilares a la vez. El metaan&aacute;lisis de Althoff y colaboradores (17 estudios, 235.779 pacientes quir&uacute;rgicos) mostr&oacute; que un
+programa PBM multimodal se asocia a [3]:</p>
+
+<div class="tbl-title">Tabla 1 &middot; Efecto de los programas PBM (3 pilares) &mdash; metaan&aacute;lisis Althoff 2019</div>
+<table class="avoid-break">
+  <thead><tr><th>Desenlace</th><th style="width:34%">Efecto (RR / diferencia)</th><th style="width:18%">Respaldo</th></tr></thead>
+  <tbody>
+    <tr><td>Tasa de transfusi&oacute;n</td><td>&minus;39&nbsp;% (RR 0,61; IC95&nbsp;% 0,55&ndash;0,68)</td><td class="c"><span class="gr gr-fuerte">FUERTE</span></td></tr>
+    <tr><td>Unidades de hemat&iacute;es por paciente</td><td>&minus;0,43 U (IC95&nbsp;% &minus;0,54 a &minus;0,31)</td><td class="c"><span class="gr gr-fuerte">FUERTE</span></td></tr>
+    <tr><td>Complicaciones totales</td><td>RR 0,80 (IC95&nbsp;% 0,74&ndash;0,88)</td><td class="c"><span class="gr gr-mod">MODERADA</span></td></tr>
+    <tr><td>Mortalidad</td><td>RR 0,89 (IC95&nbsp;% 0,80&ndash;0,98)</td><td class="c"><span class="gr gr-mod">MODERADA</span></td></tr>
+    <tr><td>Estancia hospitalaria</td><td>&minus;0,45 d&iacute;as (IC95&nbsp;% &minus;0,65 a &minus;0,25)</td><td class="c"><span class="gr gr-mod">MODERADA</span></td></tr>
+  </tbody>
+  <caption>Datos de Althoff et&nbsp;al. [3] (estudios mayoritariamente observacionales). La reducci&oacute;n de transfusi&oacute;n es el efecto m&aacute;s consistente; complicaciones y mortalidad, asociaciones m&aacute;s d&eacute;biles por el dise&ntilde;o.</caption>
+</table>
+
+<div class="box rev avoid-break"><span class="box-h">Honestidad sobre la evidencia</span>
+  <p>El consenso de Frankfurt subraya la <b>relativa escasez de evidencia fuerte</b> para muchas preguntas del PBM: gran
+  parte se apoya en estudios observacionales y en consenso, no en ECA con desenlaces duros [1]. El beneficio en
+  <b>reducci&oacute;n de transfusiones</b> es robusto; el de <b>mortalidad/complicaciones</b>, plausible pero de menor certeza [3].</p>
+</div>
+
+<h2 class="sec"><span class="num">4.</span>El marco de guías y umbrales</h2>
+<p>El PBM se sostiene sobre guías y consensos formales que son las anclas de esta serie. El <b>consenso de Frankfurt 2018</b>
+(JAMA) estableci&oacute; recomendaciones clave: detectar y tratar la anemia <b>antes</b> de la cirug&iacute;a electiva mayor, y emplear
+umbrales <b>restrictivos</b> de transfusi&oacute;n &mdash;por ejemplo, Hb &lt; 7&nbsp;g/dl en el paciente cr&iacute;tico estable y Hb &lt; 7,5&nbsp;g/dl
+en cirug&iacute;a cardíaca&mdash; [1]. La gu&iacute;a de la <b>ESAIC sobre sangrado perioperatorio grave</b> (2.&ordf; actualizaci&oacute;n 2022)
+aporta el marco para el eje de la hemostasia [3]. A escala internacional, las
+<b>guías de PBM de la NBA australiana (Módulos 1&ndash;6)</b> ofrecen el desarrollo por escenarios y son la referencia GUÍA
+transversal de la serie. En 2025, la <b>OMS</b> public&oacute; su <i>Guidance on implementing patient blood management</i>, que
+consagra el PBM como <b>est&aacute;ndar nacional de atenci&oacute;n</b> y aporta una hoja de ruta de implantaci&oacute;n &mdash;detectar y tratar
+la anemia, minimizar la p&eacute;rdida sangu&iacute;nea y optimizar la coagulaci&oacute;n&mdash;, con &eacute;nfasis en los pa&iacute;ses de renta baja y media
+[4]. Es la se&ntilde;al m&aacute;s reciente de que el PBM ha pasado de iniciativa local a <b>pol&iacute;tica de salud global</b>.</p>
+
+<h2 class="sec"><span class="num">5.</span>El eje transversal: hemostasia y sangrado</h2>
+<p>Junto a los tres pilares, la serie a&ntilde;ade un <b>eje transversal</b>: la evaluaci&oacute;n y el manejo del sangrado y las
+coagulopat&iacute;as &mdash;cribado del riesgo hemorr&aacute;gico, manejo de antiagregantes y anticoagulantes, coagulopat&iacute;as cong&eacute;nitas y
+adquiridas, f&aacute;rmacos hemost&aacute;ticos&mdash;. Es la dimensi&oacute;n que conecta el PBM con la <b>hemostasia perioperatoria</b> (la
+&laquo;Hemostasia y Medicina Transfusional Perioperatoria&raquo; que da nombre a la serie) y que se desarrolla en el M&oacute;dulo 5.</p>
+
+<h2 class="sec"><span class="num">6.</span>Mensaje nuclear, mapa de la serie y conexiones</h2>
+<p><b>Mensaje nuclear (equilibrado):</b> el PBM es un cambio de paradigma centrado en el paciente cuyos programas
+multimodales reducen de forma consistente la necesidad de transfusi&oacute;n y, probablemente, las complicaciones y la
+mortalidad; sin embargo, su base de evidencia es desigual &mdash;s&oacute;lida para los umbrales restrictivos y el ahorro de sangre,
+m&aacute;s d&eacute;bil (observacional) para los desenlaces duros&mdash;, y debe aplicarse con honestidad sobre la fuerza de cada
+recomendaci&oacute;n.</p>
+<p>Esta cabeza de serie <b>conecta con PBM-04</b> (anemia preoperatoria, n&uacute;cleo del pilar 1), <b>con PBM-08</b> (&aacute;cido
+tranex&aacute;mico, pilar 2) y <b>con PBM-12</b> (umbrales restrictivos, pilar 3). Enlaza con las series hermanas de
+<b>prehabilitaci&oacute;n/CMA</b> (optimizaci&oacute;n preoperatoria), <b>traumatolog&iacute;a</b> (hemorragia y tranex&aacute;mico) y comparte m&eacute;todo y
+tono con la serie <b>BIS</b>.</p>
+
+<div class="box key avoid-break"><span class="box-h">Resumen en una frase</span>
+  <p>El PBM gestiona la sangre del paciente en tres pilares &mdash;optimizar la masa eritrocitaria, minimizar la p&eacute;rdida y
+  tolerar la anemia&mdash; m&aacute;s el eje de la hemostasia; reduce transfusiones con beneficio probable en desenlaces, aplicado
+  seg&uacute;n la fuerza real de cada recomendaci&oacute;n.</p>
+</div>
+
+<h2 class="sec"><span class="num">7.</span>Verificaci&oacute;n bibliogr&aacute;fica</h2>
+<p>Documento de tipo <b>GUÍA</b> (apoyado en un consenso internacional, un metaan&aacute;lisis, una gu&iacute;a de sociedad y la gu&iacute;a de
+implementaci&oacute;n del PBM de la OMS, 2025). Las tres primeras referencias se han verificado contra PubMed (autor&iacute;a, t&iacute;tulo,
+revista, a&ntilde;o, DOI/PMID); la gu&iacute;a de la OMS [4] se ha verificado contra el repositorio oficial <b>WHO IRIS</b> (no est&aacute;
+indexada en PubMed). Las cifras &mdash;reducci&oacute;n de transfusi&oacute;n del 39&nbsp;% (RR 0,61), complicaciones RR 0,80 y mortalidad
+RR 0,89 [3]; umbrales de Hb &lt; 7 y &lt; 7,5&nbsp;g/dl [1]&mdash; proceden directamente de las fuentes primarias. Se declara
+expl&iacute;citamente la naturaleza mayoritariamente observacional de la evidencia de desenlaces y la escasez de evidencia fuerte
+se&ntilde;alada por el propio consenso [1].</p>
+"""
+
+REFS = r"""
+<h2 class="sec"><span class="num">8.</span>Referencias</h2>
+<ol class="refs">
+  <li>Mueller MM, Van Remoortel H, Meybohm P, Aranko K, Aubron C, Burger R, et al. Patient Blood Management: Recommendations From the 2018 Frankfurt Consensus Conference. <i>JAMA</i> 2019;321(10):983&ndash;997. <span class="doi">doi:10.1001/jama.2019.0554</span> &middot; PMID 30860564.</li>
+  <li>Althoff FC, Neb H, Herrmann E, Trentino KM, Vernich L, F&uuml;llenbach C, et al. Multimodal Patient Blood Management Program Based on a Three-pillar Strategy: A Systematic Review and Meta-analysis. <i>Ann Surg</i> 2019;269(5):794&ndash;804. <span class="doi">doi:10.1097/SLA.0000000000003095</span> &middot; PMID 30418206.</li>
+  <li>Kietaibl S, Ahmed A, Afshari A, Albaladejo P, Aldecoa C, Barauskas G, et al. Management of severe peri-operative bleeding: Guidelines from the European Society of Anaesthesiology and Intensive Care: Second update 2022. <i>Eur J Anaesthesiol</i> 2023;40(4):226&ndash;304. <span class="doi">doi:10.1097/EJA.0000000000001803</span> &middot; PMID 36855941.</li>
+  <li>World Health Organization. Guidance on implementing patient blood management to improve global blood health status. Geneva: WHO; 2025. ISBN 978-92-4-010466-2. Disponible en: <span class="mono">https://iris.who.int/handle/10665/380784</span>. <i>(Gu&iacute;a verificada en WHO IRIS; documento no indexado en PubMed.)</i></li>
+</ol>
+"""
+
+if __name__ == "__main__":
+    h, p = build(META, COVER, BODY, REFS, "PBM-01-que-es-el-pbm.html")
+    print("HTML:", h); print("PDF :", p)

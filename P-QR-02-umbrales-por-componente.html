@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- SERIE PBM - P-QR-02 Umbrales de transfusion por componente. Ancla ALG. -->
+<style>
+  @page { size:A4; margin:16mm 15mm 18mm 15mm; @bottom-center{ content:counter(page);} }
+  :root{
+    --accent:#8E2433; --accent-soft:#F4E3E6; --accent2:#4F6B7A; --accent2-soft:#E7EDF1;
+    --warm:#B0682B; --warm-soft:#F6E8D8;
+    --ink:#211A1C; --ink2:#3A2E31; --muted:#6E6168; --line:#E0D6D8;
+    --violet:#6B2740;
+    --key:var(--accent); --key-bg:var(--accent-soft);
+    --alert:#9A3B1E; --alert-bg:var(--warm-soft);
+    --note:#4F6B7A; --note-bg:var(--accent2-soft);
+    --pearl:#0E6E6B; --pearl-bg:#D7EFEC;
+    --rev:#6E6168; --rev-bg:#EFEAEB;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif; color:var(--ink); font-size:9.3pt; line-height:1.48; margin:0; }
+  h1,h2,h3,h4{ font-family:"DejaVu Serif",Georgia,serif; color:var(--ink); line-height:1.18; }
+  p{ margin:0 0 7px 0; text-align:justify; }
+  .mono{ font-family:"DejaVu Sans Mono",monospace; }
+  sub,sup{ font-size:75%; }
+  .docref{ display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .doc-code{ font-family:"DejaVu Sans Mono",monospace; font-size:8.4pt; font-weight:700; letter-spacing:.06em; color:#fff; background:var(--accent); padding:3px 9px; border-radius:3px; }
+  .badge{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:7pt; letter-spacing:.06em; font-weight:700; padding:3px 8px; border-radius:3px; color:#fff; }
+  .b-guia{ background:#8E2433; } .b-meta{ background:#4F6B7A; } .b-eca{ background:#7A3E6E; }
+  .b-rev{ background:#6E6358; } .b-alg{ background:#4E5A66; }
+  .module-tag{ font-family:"DejaVu Sans Mono",monospace; font-size:7.2pt; color:var(--muted); letter-spacing:.04em; }
+  .kicker{ font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:8px; }
+  h1.title{ font-size:20pt; margin:0 0 6px 0; letter-spacing:-.01em; border-bottom:3px solid var(--accent); padding-bottom:12px; }
+  .subtitle{ font-size:11pt; color:var(--ink2); font-family:"DejaVu Serif",Georgia,serif; font-style:italic; margin:10px 0 14px 0; }
+  .tagline{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; color:var(--muted); line-height:1.7; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0; margin-bottom:14px; }
+  .refbar{ background:var(--accent2-soft); border-left:4px solid var(--accent2); padding:9px 12px; font-size:8.3pt; color:var(--ink2); margin-bottom:10px; border-radius:0 4px 4px 0; }
+  .refbar.guiabar{ background:var(--accent-soft); border-left-color:var(--accent); }
+  .refbar b{ color:var(--ink); }
+  .meta-row{ display:flex; flex-wrap:wrap; margin-bottom:6px; }
+  .meta-chip{ font-family:"DejaVu Sans Mono",monospace; font-size:7pt; color:var(--ink2); background:#F3ECEE; border:1px solid var(--line); border-radius:20px; padding:3px 9px; margin:0 6px 6px 0; }
+  .lead{ font-size:9.5pt; color:var(--ink2); line-height:1.55; }
+  .toc{ background:#FBF7F8; border:1px solid var(--line); border-radius:6px; padding:12px 16px; margin:6px 0 4px; }
+  .toc h2{ font-size:11pt; margin:0 0 8px 0; color:var(--accent); }
+  .toc ol{ margin:0; padding-left:20px; columns:2; column-gap:26px; font-size:8.5pt; }
+  .toc li{ margin-bottom:4px; }
+  h2.sec{ font-size:12.5pt; margin:18px 0 4px 0; padding-top:8px; border-top:2px solid var(--ink); color:var(--ink); }
+  h2.sec .num{ color:var(--accent); margin-right:8px; }
+  h3{ font-size:10pt; margin:11px 0 3px 0; color:var(--violet); }
+  h4{ font-size:9pt; margin:8px 0 2px 0; color:var(--ink2); }
+  .box{ border-radius:0 6px 6px 0; padding:9px 13px 7px 13px; margin:10px 0; font-size:8.6pt; line-height:1.44; }
+  .box .box-h{ font-family:"DejaVu Sans Mono",monospace; font-weight:700; font-size:7.6pt; letter-spacing:.07em; text-transform:uppercase; margin-bottom:5px; display:block; }
+  .box ul{ margin:3px 0 2px 0; padding-left:16px; }
+  .box li{ margin-bottom:3px; }
+  .box p{ margin:0 0 4px 0; }
+  .key{ background:var(--key-bg); border-left:4px solid var(--key);} .key .box-h{ color:var(--key);}
+  .alert{ background:var(--alert-bg); border-left:4px solid var(--warm);} .alert .box-h{ color:var(--alert);}
+  .note{ background:var(--note-bg); border-left:4px solid var(--note);} .note .box-h{ color:var(--note);}
+  .pearl{ background:var(--pearl-bg); border-left:4px solid var(--pearl);} .pearl .box-h{ color:var(--pearl);}
+  .rev{ background:var(--rev-bg); border-left:4px solid var(--rev);} .rev .box-h{ color:var(--rev);}
+  table{ width:100%; border-collapse:collapse; margin:10px 0; font-size:7.5pt; }
+  caption{ caption-side:bottom; font-size:7pt; color:var(--muted); text-align:left; padding-top:5px; line-height:1.4; }
+  th{ background:var(--ink); color:#fff; text-align:left; padding:5px 7px; font-weight:600; vertical-align:top; }
+  td{ border:1px solid var(--line); padding:4px 7px; vertical-align:top; }
+  tbody tr:nth-child(even){ background:#F7F1F2; }
+  td.c{ text-align:center; }
+  .gr{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:6.6pt; font-weight:700; color:#fff; border-radius:3px; padding:1px 5px; }
+  .gr-fuerte{ background:#4F6B7A; } .gr-mod{ background:#8E2433; } .gr-debil{ background:var(--muted); } .gr-no{ background:#9A3B1E; }
+  .tbl-title{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:14px 0 0; }
+  ol.refs{ font-size:7.4pt; line-height:1.4; padding-left:22px; margin:6px 0; }
+  ol.refs li{ margin-bottom:4px; }
+  ol.refs .doi{ color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7pt; }
+  .footer-note{ margin-top:16px; padding-top:8px; border-top:1px solid var(--line); font-size:7.3pt; color:var(--muted); font-style:italic; line-height:1.45; }
+  .avoid-break{ break-inside:avoid; }
+  strong{ color:var(--ink); }
+  .pillars{ display:flex; gap:8px; margin:10px 0; flex-wrap:wrap; }
+  .pillar{ flex:1 1 0; min-width:110px; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:0 0 5px 5px; padding:7px 9px; font-size:8pt; }
+  .pillar h4{ margin:0 0 3px; color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.04em; text-transform:uppercase; }
+  .pillar.p5{ border-top-color:var(--accent2); } .pillar.p5 h4{ color:var(--accent2); }
+  .flow{ display:flex; flex-direction:column; gap:0; margin:10px 0; }
+  .step{ border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:0 5px 5px 0; padding:7px 11px; margin-bottom:6px; font-size:8.4pt; background:#FBF7F8; }
+  .step b{ color:var(--accent); }
+  .step.q{ border-left-color:var(--accent2); } .step.q b{ color:var(--accent2); }
+  .step.a{ border-left-color:var(--warm); background:var(--warm-soft); } .step.a b{ color:var(--alert); }
+  figure{ margin:12px 0; text-align:center; break-inside:avoid; }
+  figure img{ display:block; width:70%; height:auto; margin:0 auto; border:1px solid var(--line); border-radius:5px; }
+  figure.wide img{ width:86%; } figure.narrow img{ width:42%; }
+  figcaption{ font-size:7pt; color:var(--muted); line-height:1.4; text-align:center; margin:5px auto 0; max-width:82%; }
+  figcaption b{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="docref">
+    <span class="doc-code">P-QR-02</span>
+    <span class="badge b-alg">ALG &middot; tarjeta de consulta r&aacute;pida</span>
+    <span class="module-tag">Quick-reference &middot; sintetiza PBM-02 y PBM-12</span>
+  </div>
+  <div class="kicker">Umbrales de transfusi&oacute;n por componente</div>
+  <h1 class="title">Umbrales de transfusi&oacute;n por componente</h1>
+  <div class="subtitle">Tarjeta de consulta r&aacute;pida &mdash; cifra + contexto, nunca la cifra sola</div>
+  <div class="tagline">
+    2026 &middot; Tarjeta derivada de PBM-02 y PBM-12 &middot; CAUSA / SACYL<br>
+    <b>Idea:</b> cada componente tiene su umbral; son <b>referencias</b>, no autom&aacute;ticos. Ojo a la excepci&oacute;n del SCA.
+  </div>
+</section>
+
+
+<div class="tbl-title">Hemat&iacute;es &middot; umbral restrictivo de hemoglobina</div>
+<table class="avoid-break">
+  <thead><tr><th>Contexto</th><th style="width:34%">Umbral orientativo</th></tr></thead>
+  <tbody>
+    <tr><td>Adulto estable / cr&iacute;tico estable / shock s&eacute;ptico estable</td><td>Hb &lt; 7&nbsp;g/dl</td></tr>
+    <tr><td>Cirug&iacute;a cardíaca</td><td>Hb &lt; 7,5&nbsp;g/dl</td></tr>
+    <tr><td>Cirug&iacute;a ortop&eacute;dica / enfermedad cardiovascular cr&oacute;nica</td><td>Hb &lt; 8&nbsp;g/dl</td></tr>
+    <tr><td><b>S&iacute;ndrome coronario agudo</b></td><td><b>Liberal &asymp; 10&nbsp;g/dl</b> (en contra de restrictivo)</td></tr>
+  </tbody>
+  <caption>1&nbsp;U de hematíes &asymp; +1&nbsp;g/dl de Hb. Transfundir de unidad en unidad y reevaluar. Fuentes [1,4].</caption>
+</table>
+
+<div class="tbl-title">Plaquetas &middot; umbral por escenario (AABB/ICTMG 2025)</div>
+<table class="avoid-break">
+  <thead><tr><th>Escenario</th><th style="width:30%">Umbral</th></tr></thead>
+  <tbody>
+    <tr><td>Profilaxis (trombocitopenia hipoproliferativa) y CVC compresible</td><td>&lt; 10&nbsp;&times;10<sup>9</sup>/l</td></tr>
+    <tr><td>Punci&oacute;n lumbar; radiolog&iacute;a intervencionista de bajo riesgo</td><td>&lt; 20&nbsp;&times;10<sup>9</sup>/l</td></tr>
+    <tr><td>Cirug&iacute;a mayor no neuroaxial; RI de alto riesgo</td><td>&lt; 50&nbsp;&times;10<sup>9</sup>/l</td></tr>
+    <tr><td>Cirug&iacute;a cardiovascular sin sangrado / HIC no quir&uacute;rgica con plaquetas &gt; 100</td><td><b>No transfundir</b></td></tr>
+  </tbody>
+  <caption>Dosis: hasta 1 unidad de af&eacute;resis. Fuente [2]. Cambios 2025 vs 2015: PL 50&rarr;20; CVC 20&rarr;10.</caption>
+</table>
+
+<div class="tbl-title">Plasma y fibrin&oacute;geno</div>
+<table class="avoid-break">
+  <thead><tr><th>Componente</th><th style="width:50%">Indicaci&oacute;n / umbral</th></tr></thead>
+  <tbody>
+    <tr><td><b>Plasma (PFC)</b></td><td>Sangrado o procedimiento con coagulopat&iacute;a documentada; 10&ndash;15&nbsp;ml/kg. <b>No</b> por INR/TTPa leve sin sangrado [3].</td></tr>
+    <tr><td><b>Fibrin&oacute;geno / crio</b></td><td>Reponer si &lt; 1,5&nbsp;g/l o d&eacute;ficit funcional en sangrado [4].</td></tr>
+  </tbody>
+  <caption>Fuentes [3,4]. CVC: cat&eacute;ter venoso central; RI: radiolog&iacute;a intervencionista; HIC: hemorragia intracraneal.</caption>
+</table>
+
+<div class="box alert avoid-break"><span class="box-h">No olvidar</span>
+  <p>El umbral es una <b>referencia</b>: integra s&iacute;ntomas, sangrado activo y comorbilidad. En <b>hemorragia masiva</b> rige el
+  protocolo (P-QR derivada de PBM-13), no estos umbrales. En <b>SCA</b>, s&eacute; m&aacute;s liberal (&asymp;10&nbsp;g/dl).</p>
+</div>
+
+
+<h2 class="sec"><span class="num">&middot;</span>Referencias</h2>
+<ol class="refs">
+  <li>Carson JL, Stanworth SJ, Guyatt G, et al. Red Blood Cell Transfusion: 2023 AABB International Guidelines. <i>JAMA</i> 2023;330(19):1892&ndash;1902. <span class="doi">doi:10.1001/jama.2023.12914</span> &middot; PMID 37824153.</li>
+  <li>Metcalf RA, Nahirniak S, Guyatt G, et al. Platelet Transfusion: 2025 AABB and ICTMG International Clinical Practice Guidelines. <i>JAMA</i> 2025;334(7):606&ndash;617. <span class="doi">doi:10.1001/jama.2025.7529</span> &middot; PMID 40440268.</li>
+  <li>Green L, Bolton-Maggs P, Beattie C, et al. British Society of Haematology Guidelines on fresh frozen plasma and cryoprecipitate products. <i>Br J Haematol</i> 2018;181(1):54&ndash;67. <span class="doi">doi:10.1111/bjh.15167</span> &middot; PMID 29527654.</li>
+  <li>Kietaibl S, Ahmed A, Afshari A, et al. Management of severe peri-operative bleeding: ESAIC Second update 2022. <i>Eur J Anaesthesiol</i> 2023;40(4):226&ndash;304. <span class="doi">doi:10.1097/EJA.0000000000001803</span> &middot; PMID 36855941.</li>
+</ol>
+
+<div class="footer-note">Serie Hemostasia y Medicina Transfusional Perioperatoria (PBM) - Tarjeta P-QR-02 - ancla ALG - 2026. Tarjeta de consulta rapida; sintetiza PBM-02 y PBM-12. Umbrales orientativos verificados contra PubMed. No sustituye al juicio clinico ni a los protocolos locales vigentes.<br><strong>Ideacion:</strong> Emilio Garcia Hernandez - Licenciado Especialista en Anestesiologia y Reanimacion - CAUSA - SACYL.</div>
+</body>
+</html>

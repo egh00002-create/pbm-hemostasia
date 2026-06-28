@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- SERIE PBM - PBM-06 Eritropoyetina (EPO) en PBM. Ancla META. -->
+<style>
+  @page { size:A4; margin:16mm 15mm 18mm 15mm; @bottom-center{ content:counter(page);} }
+  :root{
+    --accent:#8E2433; --accent-soft:#F4E3E6; --accent2:#4F6B7A; --accent2-soft:#E7EDF1;
+    --warm:#B0682B; --warm-soft:#F6E8D8;
+    --ink:#211A1C; --ink2:#3A2E31; --muted:#6E6168; --line:#E0D6D8;
+    --violet:#6B2740;
+    --key:var(--accent); --key-bg:var(--accent-soft);
+    --alert:#9A3B1E; --alert-bg:var(--warm-soft);
+    --note:#4F6B7A; --note-bg:var(--accent2-soft);
+    --pearl:#0E6E6B; --pearl-bg:#D7EFEC;
+    --rev:#6E6168; --rev-bg:#EFEAEB;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif; color:var(--ink); font-size:9.3pt; line-height:1.48; margin:0; }
+  h1,h2,h3,h4{ font-family:"DejaVu Serif",Georgia,serif; color:var(--ink); line-height:1.18; }
+  p{ margin:0 0 7px 0; text-align:justify; }
+  .mono{ font-family:"DejaVu Sans Mono",monospace; }
+  sub,sup{ font-size:75%; }
+  .docref{ display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .doc-code{ font-family:"DejaVu Sans Mono",monospace; font-size:8.4pt; font-weight:700; letter-spacing:.06em; color:#fff; background:var(--accent); padding:3px 9px; border-radius:3px; }
+  .badge{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:7pt; letter-spacing:.06em; font-weight:700; padding:3px 8px; border-radius:3px; color:#fff; }
+  .b-guia{ background:#8E2433; } .b-meta{ background:#4F6B7A; } .b-eca{ background:#7A3E6E; }
+  .b-rev{ background:#6E6358; } .b-alg{ background:#4E5A66; }
+  .module-tag{ font-family:"DejaVu Sans Mono",monospace; font-size:7.2pt; color:var(--muted); letter-spacing:.04em; }
+  .kicker{ font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:8px; }
+  h1.title{ font-size:20pt; margin:0 0 6px 0; letter-spacing:-.01em; border-bottom:3px solid var(--accent); padding-bottom:12px; }
+  .subtitle{ font-size:11pt; color:var(--ink2); font-family:"DejaVu Serif",Georgia,serif; font-style:italic; margin:10px 0 14px 0; }
+  .tagline{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; color:var(--muted); line-height:1.7; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0; margin-bottom:14px; }
+  .refbar{ background:var(--accent2-soft); border-left:4px solid var(--accent2); padding:9px 12px; font-size:8.3pt; color:var(--ink2); margin-bottom:10px; border-radius:0 4px 4px 0; }
+  .refbar.guiabar{ background:var(--accent-soft); border-left-color:var(--accent); }
+  .refbar b{ color:var(--ink); }
+  .meta-row{ display:flex; flex-wrap:wrap; margin-bottom:6px; }
+  .meta-chip{ font-family:"DejaVu Sans Mono",monospace; font-size:7pt; color:var(--ink2); background:#F3ECEE; border:1px solid var(--line); border-radius:20px; padding:3px 9px; margin:0 6px 6px 0; }
+  .lead{ font-size:9.5pt; color:var(--ink2); line-height:1.55; }
+  .toc{ background:#FBF7F8; border:1px solid var(--line); border-radius:6px; padding:12px 16px; margin:6px 0 4px; }
+  .toc h2{ font-size:11pt; margin:0 0 8px 0; color:var(--accent); }
+  .toc ol{ margin:0; padding-left:20px; columns:2; column-gap:26px; font-size:8.5pt; }
+  .toc li{ margin-bottom:4px; }
+  h2.sec{ font-size:12.5pt; margin:18px 0 4px 0; padding-top:8px; border-top:2px solid var(--ink); color:var(--ink); }
+  h2.sec .num{ color:var(--accent); margin-right:8px; }
+  h3{ font-size:10pt; margin:11px 0 3px 0; color:var(--violet); }
+  h4{ font-size:9pt; margin:8px 0 2px 0; color:var(--ink2); }
+  .box{ border-radius:0 6px 6px 0; padding:9px 13px 7px 13px; margin:10px 0; font-size:8.6pt; line-height:1.44; }
+  .box .box-h{ font-family:"DejaVu Sans Mono",monospace; font-weight:700; font-size:7.6pt; letter-spacing:.07em; text-transform:uppercase; margin-bottom:5px; display:block; }
+  .box ul{ margin:3px 0 2px 0; padding-left:16px; }
+  .box li{ margin-bottom:3px; }
+  .box p{ margin:0 0 4px 0; }
+  .key{ background:var(--key-bg); border-left:4px solid var(--key);} .key .box-h{ color:var(--key);}
+  .alert{ background:var(--alert-bg); border-left:4px solid var(--warm);} .alert .box-h{ color:var(--alert);}
+  .note{ background:var(--note-bg); border-left:4px solid var(--note);} .note .box-h{ color:var(--note);}
+  .pearl{ background:var(--pearl-bg); border-left:4px solid var(--pearl);} .pearl .box-h{ color:var(--pearl);}
+  .rev{ background:var(--rev-bg); border-left:4px solid var(--rev);} .rev .box-h{ color:var(--rev);}
+  table{ width:100%; border-collapse:collapse; margin:10px 0; font-size:7.5pt; }
+  caption{ caption-side:bottom; font-size:7pt; color:var(--muted); text-align:left; padding-top:5px; line-height:1.4; }
+  th{ background:var(--ink); color:#fff; text-align:left; padding:5px 7px; font-weight:600; vertical-align:top; }
+  td{ border:1px solid var(--line); padding:4px 7px; vertical-align:top; }
+  tbody tr:nth-child(even){ background:#F7F1F2; }
+  td.c{ text-align:center; }
+  .gr{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:6.6pt; font-weight:700; color:#fff; border-radius:3px; padding:1px 5px; }
+  .gr-fuerte{ background:#4F6B7A; } .gr-mod{ background:#8E2433; } .gr-debil{ background:var(--muted); } .gr-no{ background:#9A3B1E; }
+  .tbl-title{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:14px 0 0; }
+  ol.refs{ font-size:7.4pt; line-height:1.4; padding-left:22px; margin:6px 0; }
+  ol.refs li{ margin-bottom:4px; }
+  ol.refs .doi{ color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7pt; }
+  .footer-note{ margin-top:16px; padding-top:8px; border-top:1px solid var(--line); font-size:7.3pt; color:var(--muted); font-style:italic; line-height:1.45; }
+  .avoid-break{ break-inside:avoid; }
+  strong{ color:var(--ink); }
+  .pillars{ display:flex; gap:8px; margin:10px 0; flex-wrap:wrap; }
+  .pillar{ flex:1 1 0; min-width:110px; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:0 0 5px 5px; padding:7px 9px; font-size:8pt; }
+  .pillar h4{ margin:0 0 3px; color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.04em; text-transform:uppercase; }
+  .pillar.p5{ border-top-color:var(--accent2); } .pillar.p5 h4{ color:var(--accent2); }
+  .flow{ display:flex; flex-direction:column; gap:0; margin:10px 0; }
+  .step{ border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:0 5px 5px 0; padding:7px 11px; margin-bottom:6px; font-size:8.4pt; background:#FBF7F8; }
+  .step b{ color:var(--accent); }
+  .step.q{ border-left-color:var(--accent2); } .step.q b{ color:var(--accent2); }
+  .step.a{ border-left-color:var(--warm); background:var(--warm-soft); } .step.a b{ color:var(--alert); }
+  figure{ margin:12px 0; text-align:center; break-inside:avoid; }
+  figure img{ display:block; width:70%; height:auto; margin:0 auto; border:1px solid var(--line); border-radius:5px; }
+  figure.wide img{ width:86%; } figure.narrow img{ width:42%; }
+  figcaption{ font-size:7pt; color:var(--muted); line-height:1.4; text-align:center; margin:5px auto 0; max-width:82%; }
+  figcaption b{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="docref">
+    <span class="doc-code">PBM-06</span>
+    <span class="badge b-meta">META &middot; revisi&oacute;n sistem&aacute;tica / metaan&aacute;lisis</span>
+    <span class="module-tag">M&oacute;dulo 2 &middot; Pilar 1: optimizar la masa eritrocitaria</span>
+  </div>
+  <div class="kicker">Eritropoyetina &middot; ESA + hierro &middot; Indicaciones selectivas</div>
+  <h1 class="title">Eritropoyetina (EPO) en PBM: evidencia y uso</h1>
+  <div class="subtitle">Una herramienta potente y selectiva &mdash; no un sustituto del hierro ni una medida universal</div>
+  <div class="meta-row">
+    <span class="meta-chip">Qu&eacute; son los ESA</span>
+    <span class="meta-chip">EPO + hierro 3&ndash;4 semanas antes</span>
+    <span class="meta-chip">Indicaciones m&aacute;s s&oacute;lidas</span>
+    <span class="meta-chip">Riesgo tromboembólico</span>
+    <span class="meta-chip">Balance beneficio-riesgo</span>
+  </div>
+  <div class="refbar">
+    <b>Ancla de evidencia (referencia vertebral):</b> Lasocki S, Campfort M, Leger M, Rineau E.
+    <i>ESAs in perioperative anemia management: Who, what, how and why?</i>
+    Best Pract Res Clin Anaesthesiol 2023;37(4):519&ndash;526. <span class="mono">doi:10.1016/j.bpa.2023.10.002 &middot; PMID&nbsp;39764839</span>.
+  </div>
+  <div class="tagline">
+    2026 &middot; 3 referencias indexadas verificadas en PubMed &middot; S&iacute;ntesis docente para adjuntos y residentes (CAUSA / SACYL)<br>
+    <b>Mensaje nuclear:</b> los agentes estimuladores de la eritropoyesis (ESA), asociados a hierro y administrados
+    <b>3&ndash;4 semanas antes</b> de la cirug&iacute;a, elevan la hemoglobina y reducen la transfusi&oacute;n en escenarios seleccionados.
+    Pero son caros, exigen <b>hierro adecuado</b> y conllevan un <b>riesgo tromboembólico</b> que obliga a una indicaci&oacute;n
+    selectiva, no universal.
+  </div>
+  <div class="lead">
+    <p>La eritropoyetina recombinante y otros ESA estimulan directamente la producci&oacute;n de hematíes. En PBM son una opci&oacute;n
+    de <b>segunda l&iacute;nea selectiva</b> dentro del pilar 1, especialmente cuando el hierro solo no basta o cuando el paciente
+    rechaza la transfusi&oacute;n.</p>
+    <p>Este documento, con ancla <b>META</b>, sit&uacute;a la EPO con honestidad: d&oacute;nde la evidencia es m&aacute;s s&oacute;lida, c&oacute;mo usarla
+    (siempre con hierro y con antelaci&oacute;n) y qu&eacute; riesgos vigilar [1].</p>
+  </div>
+</section>
+
+
+<nav class="toc avoid-break"><h2>&Iacute;ndice</h2><ol>
+  <li>Qu&eacute; son los ESA y c&oacute;mo act&uacute;an</li>
+  <li>C&oacute;mo se usan: EPO + hierro, con antelaci&oacute;n</li>
+  <li>D&oacute;nde la evidencia es m&aacute;s s&oacute;lida</li>
+  <li>Riesgos y balance beneficio-riesgo</li>
+  <li>Mensaje nuclear y conexiones</li>
+  <li>Verificaci&oacute;n bibliogr&aacute;fica</li>
+  <li>Referencias</li>
+</ol></nav>
+
+<h2 class="sec"><span class="num">1.</span>Qu&eacute; son los ESA y c&oacute;mo act&uacute;an</h2>
+<p>Los agentes estimuladores de la eritropoyesis (ESA) &mdash;eritropoyetina recombinante y derivados&mdash; reproducen la se&ntilde;al
+de la EPO end&oacute;gena y estimulan la m&eacute;dula para aumentar la masa eritrocitaria. Desarrollados en los a&ntilde;os 80 para la anemia
+renal y oncol&oacute;gica, se aplican en el perioperatorio para <b>elevar la Hb antes de cirug&iacute;as con riesgo hemorr&aacute;gico
+moderado-alto</b> [1]. Requieren <b>sustrato</b>: sin hierro suficiente, la respuesta es pobre.</p>
+
+<div class="box key avoid-break"><span class="box-h">Puntos clave</span><ul>
+  <li>La EPO <b>no sustituye al hierro</b>: se administra <b>con</b> hierro (preferentemente IV) para ser eficaz [1].</li>
+  <li>Necesita <b>tiempo</b>: pauta t&iacute;pica de alta dosis <b>3&ndash;4 semanas antes</b> de la cirug&iacute;a [1].</li>
+  <li>Conlleva riesgo <b>tromboembólico</b>: indicaci&oacute;n selectiva y valoraci&oacute;n individual del balance [1].</li>
+</ul></div>
+
+<h2 class="sec"><span class="num">2.</span>C&oacute;mo se usan: EPO + hierro, con antelaci&oacute;n</h2>
+<p>La estrategia con mejor respaldo combina <b>ESA en dosis alta + hierro (idealmente IV)</b>, iniciada <b>3&ndash;4 semanas
+antes</b> de la intervenci&oacute;n; as&iacute; se eleva la Hb perioperatoria y se reduce la necesidad de transfusi&oacute;n en cirug&iacute;as
+seleccionadas (ortop&eacute;dica y cardíaca, sobre todo) [1]. Caben dos enfoques: tratar de forma sistem&aacute;tica por debajo de un
+dintel de Hb (p.&nbsp;ej. &lt; 13&nbsp;g/dl) o un abordaje <b>personalizado</b> dirigido a la anemia inflamatoria o renal [1].</p>
+
+<h2 class="sec"><span class="num">3.</span>D&oacute;nde la evidencia es m&aacute;s s&oacute;lida</h2>
+<p>Las indicaciones con mejor relaci&oacute;n beneficio-riesgo son: el <b>paciente an&eacute;mico que rechaza la transfusi&oacute;n</b> (p.&nbsp;ej.
+Testigos de Jehov&aacute;), la <b>anemia de proceso cr&oacute;nico/renal</b> y la <b>ferropenia funcional</b> que responde mal al hierro
+solo [1]. La gu&iacute;a europea de cirug&iacute;a cardíaca (EACTS/EACTAIC 2024) respalda el uso de hierro y ESA en la optimizaci&oacute;n
+preoperatoria de la anemia en ese contexto [3]. El beneficio se concreta sobre todo en <b>reducci&oacute;n de transfusi&oacute;n</b>;
+la se&ntilde;al en <b>mortalidad</b> es escasa o nula, coherente con el tono honesto del PBM.</p>
+
+<h2 class="sec"><span class="num">4.</span>Riesgos y balance beneficio-riesgo</h2>
+<p>El principal riesgo de los ESA es el <b>tromboembolismo</b>, especialmente con objetivos de Hb altos. El balance debe
+sopesarse con cuidado en <b>pacientes de alto riesgo</b>, particularmente en <b>cirug&iacute;a oncol&oacute;gica</b> (preocupaci&oacute;n por
+progresi&oacute;n tumoral). La <b>coste-efectividad</b> sigue siendo discutida [1]. Por todo ello, la EPO es una herramienta de
+indicaci&oacute;n <b>selectiva y razonada</b>, no un tratamiento por defecto.</p>
+
+<div class="box alert avoid-break"><span class="box-h">Precauci&oacute;n</span>
+  <p>No usar ESA sin asegurar hierro adecuado, sin tiempo suficiente, ni con objetivos de Hb elevados: se pierde eficacia y
+  aumenta el riesgo trombótico. Valorar individualmente en cirug&iacute;a oncol&oacute;gica [1].</p>
+</div>
+
+<h2 class="sec"><span class="num">5.</span>Mensaje nuclear y conexiones</h2>
+<p><b>Mensaje nuclear (equilibrado):</b> los ESA, con hierro y administrados con antelaci&oacute;n, elevan la Hb y reducen la
+transfusi&oacute;n en escenarios seleccionados, pero su coste y su riesgo tromboembólico obligan a una indicaci&oacute;n selectiva; la
+evidencia de mejora en mortalidad es escasa. Son un complemento del hierro, no su sustituto.</p>
+<p>Conecta con <b>PBM-04</b> (diagn&oacute;stico), <b>PBM-05</b> (hierro, imprescindible para que el ESA funcione) y con la cirug&iacute;a
+cardíaca de <b>EACTS</b> [3]; relevante para el paciente que rechaza transfusi&oacute;n.</p>
+
+<div class="box key avoid-break"><span class="box-h">Resumen en una frase</span>
+  <p>EPO + hierro, 3&ndash;4 semanas antes, en pacientes seleccionados (rechazo de transfusi&oacute;n, anemia renal/inflamatoria)
+  &mdash;vigilando el riesgo trombótico y sin esperar beneficio en mortalidad&mdash;.</p>
+</div>
+
+<h2 class="sec"><span class="num">6.</span>Verificaci&oacute;n bibliogr&aacute;fica</h2>
+<p>Documento <b>META</b> apoyado en una revisi&oacute;n especializada [1], el consenso de Frankfurt [2] y la gu&iacute;a EACTS/EACTAIC
+2024 [3], verificados contra PubMed (autor&iacute;a, t&iacute;tulo, revista, a&ntilde;o, DOI/PMID). Se presentan con honestidad tanto el
+beneficio (Hb y transfusi&oacute;n en escenarios seleccionados) como las limitaciones (riesgo tromboembólico, coste, ausencia de
+se&ntilde;al clara en mortalidad) [1].</p>
+
+
+<h2 class="sec"><span class="num">7.</span>Referencias</h2>
+<ol class="refs">
+  <li>Lasocki S, Campfort M, Leger M, Rineau E. ESAs in perioperative anemia management: Who, what, how and why? <i>Best Pract Res Clin Anaesthesiol</i> 2023;37(4):519&ndash;526. <span class="doi">doi:10.1016/j.bpa.2023.10.002</span> &middot; PMID 39764839.</li>
+  <li>Mueller MM, Van Remoortel H, Meybohm P, Aranko K, Aubron C, Burger R, et al. Patient Blood Management: Recommendations From the 2018 Frankfurt Consensus Conference. <i>JAMA</i> 2019;321(10):983&ndash;997. <span class="doi">doi:10.1001/jama.2019.0554</span> &middot; PMID 30860564.</li>
+  <li>Casselman FPA, Lance MD, Ahmed A, Ascari A, Blanco-Morillo J, Bolliger D, et al. 2024 EACTS/EACTAIC Guidelines on patient blood management in adult cardiac surgery in collaboration with EBCP. <i>Eur J Cardiothorac Surg</i> 2025;67(5):ezae352. <span class="doi">doi:10.1093/ejcts/ezae352</span> &middot; PMID 39385500.</li>
+</ol>
+
+<div class="footer-note">Serie Hemostasia y Medicina Transfusional Perioperatoria (PBM) - Documento PBM-06 - Modulo 2 (Pilar 1) - ancla META - 2026. Sintesis docente en espanol para adjuntos y residentes (CAUSA / SACYL). Cifras procedentes de fuentes primarias indexadas verificadas contra PubMed. No sustituye al juicio clinico ni a los protocolos locales vigentes.<br><strong>Ideacion:</strong> Emilio Garcia Hernandez - Licenciado Especialista en Anestesiologia y Reanimacion - CAUSA - SACYL.</div>
+</body>
+</html>

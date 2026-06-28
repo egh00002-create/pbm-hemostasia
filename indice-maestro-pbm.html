@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Índice maestro · Serie Hemostasia y Medicina Transfusional Perioperatoria (PBM)</title>
+<!--
+  ÍNDICE MAESTRO / ESTADO VIVO — Serie PBM. Fuente de verdad del estado de cada documento.
+  Al cerrar uno, cambiar la clase del punto: .dot.pend -> .prog -> .done. Acento: granate #8E2433 + acero #4F6B7A.
+-->
+<style>
+  :root{ --accent:#8E2433; --accent-soft:#F4E3E6; --accent2:#4F6B7A; --accent2-soft:#E7EDF1; --warm:#B0682B;
+    --ink:#211A1C; --ink2:#3A2E31; --muted:#6E6168; --line:#E0D6D8; --bg:#FAF6F7; }
+  *{ box-sizing:border-box; }
+  body{ font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.5; }
+  .wrap{ max-width:1040px; margin:0 auto; padding:28px 22px 60px; }
+  header{ border-bottom:3px solid var(--accent); padding-bottom:14px; margin-bottom:8px; }
+  .kicker{ font-family:"Consolas",monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+  h1{ font-size:26px; margin:6px 0 4px; letter-spacing:-.01em; }
+  .sub{ color:var(--ink2); font-size:14px; font-style:italic; }
+  .spine{ background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 6px 6px 0; padding:11px 15px; margin:16px 0; font-size:13.5px; color:var(--ink2); }
+  .spine b{ color:var(--accent); }
+  .legend{ display:flex; flex-wrap:wrap; gap:18px; margin:14px 0 6px; font-size:12.5px; }
+  .legend .grp{ background:#fff; border:1px solid var(--line); border-radius:8px; padding:9px 13px; }
+  .legend h3{ font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 7px; }
+  .badge{ display:inline-block; font-family:"Consolas",monospace; font-size:10px; letter-spacing:.05em; font-weight:700; padding:2px 7px; border-radius:3px; color:#fff; margin-right:3px; }
+  .b-guia{ background:#8E2433; } .b-meta{ background:#4F6B7A; } .b-eca{ background:#7A3E6E; } .b-rev{ background:#6E6358; } .b-alg{ background:#4E5A66; }
+  .lvl{ display:inline-block; font-family:"Consolas",monospace; font-size:9.5px; letter-spacing:.04em; font-weight:700; padding:2px 7px; border-radius:10px; border:1.5px solid; }
+  .lvl-bas{ color:#3A5563; border-color:#4F6B7A; background:#E7EDF1; }
+  .lvl-adv{ color:#8E2433; border-color:#8E2433; background:#F4E3E6; }
+  .dot{ display:inline-block; width:11px; height:11px; border-radius:50%; vertical-align:middle; margin-right:5px; }
+  .dot.pend{ background:#fff; border:2px solid #C8B9BC; } .dot.prog{ background:#E8B23A; border:2px solid #C8922A; } .dot.done{ background:#4F6B7A; border:2px solid #3A5563; }
+  .module{ margin-top:24px; }
+  .module h2{ font-size:16px; color:var(--accent); border-bottom:1px solid var(--line); padding-bottom:6px; margin:0 0 4px; }
+  table{ width:100%; border-collapse:collapse; font-size:13px; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+  th{ background:var(--ink); color:#fff; text-align:left; padding:7px 10px; font-weight:600; font-size:11.5px; letter-spacing:.03em; }
+  td{ border-bottom:1px solid var(--line); padding:7px 10px; vertical-align:top; }
+  tr:last-child td{ border-bottom:none; }
+  .code{ font-family:"Consolas",monospace; font-weight:700; font-size:12px; color:var(--accent); white-space:nowrap; }
+  .star{ color:var(--warm); font-weight:700; }
+  .note{ color:var(--muted); font-size:11.5px; font-style:italic; }
+  footer{ margin-top:34px; padding-top:12px; border-top:1px solid var(--line); font-size:11.5px; color:var(--muted); font-style:italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">Serie formativa · CAUSA · SACYL</div>
+  <h1>Hemostasia y Medicina Transfusional Perioperatoria (PBM)</h1>
+  <div class="sub">Gestión de la sangre y del sangrado perioperatorio — índice maestro y estado vivo</div>
+</header>
+
+<div class="spine">
+  <b>Espina conceptual — los 3 pilares del PBM + el eje de la hemostasia:</b> (1) optimizar la masa eritrocitaria ·
+  (2) minimizar la pérdida sanguínea · (3) optimizar y tolerar la anemia · <b>+ eje transversal:</b> evaluación y
+  manejo del sangrado y las coagulopatías. Todo documento debe poder situarse en un pilar o en el eje.
+</div>
+
+<div class="legend">
+  <div class="grp">
+    <h3>Anclas de evidencia</h3>
+    <div><span class="badge b-guia">GUÍA</span> Guía/consenso (NBA PBM, BSH, SEDAR/ESAIC, AABB)</div>
+    <div><span class="badge b-meta">META</span> Revisión sistemática / metaanálisis</div>
+    <div><span class="badge b-eca">ECA</span> Ensayo pivotal (TRICC/TRISS, CRASH-2, WOMAN…)</div>
+    <div><span class="badge b-rev">REV</span> Revisión narrativa / síntesis</div>
+    <div><span class="badge b-alg">ALG</span> Algoritmo / tarjeta</div>
+  </div>
+  <div class="grp">
+    <h3>Nivel</h3>
+    <div><span class="lvl lvl-bas">BÁSICO</span> Competencia nuclear</div>
+    <div><span class="lvl lvl-adv">AVANZADO</span> Profundización</div>
+  </div>
+  <div class="grp">
+    <h3>Estado</h3>
+    <div><span class="dot pend"></span> Pendiente</div>
+    <div><span class="dot prog"></span> En progreso</div>
+    <div><span class="dot done"></span> Cerrado y verificado</div>
+    <div class="note" style="margin-top:7px">★ = documento núcleo</div>
+  </div>
+</div>
+
+<div class="module">
+  <h2>Módulo 1 · Fundamentos: PBM y medicina transfusional</h2>
+  <table><thead><tr><th style="width:84px">Código</th><th>Documento</th><th style="width:64px">Ancla</th><th style="width:92px">Nivel</th><th style="width:128px">Estado</th></tr></thead><tbody>
+    <tr><td class="code">PBM-01 <span class="star">★</span></td><td>Qué es el PBM: los 3 pilares y el marco perioperatorio <span class="note">— cabeza de serie</span></td><td><span class="badge b-guia">GUÍA</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-02 <span class="star">★</span></td><td>Componentes sanguíneos y sus indicaciones (hematíes, plasma, plaquetas)</td><td><span class="badge b-guia">GUÍA</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-03</td><td>Seguridad transfusional: identificación, trazabilidad y reacciones adversas</td><td><span class="badge b-guia">GUÍA</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+  </tbody></table>
+</div>
+
+<div class="module">
+  <h2>Módulo 2 · Pilar 1: optimizar la masa eritrocitaria</h2>
+  <table><thead><tr><th style="width:84px">Código</th><th>Documento</th><th style="width:64px">Ancla</th><th style="width:92px">Nivel</th><th style="width:128px">Estado</th></tr></thead><tbody>
+    <tr><td class="code">PBM-04 <span class="star">★</span></td><td>Diagnóstico y manejo de la anemia preoperatoria</td><td><span class="badge b-guia">GUÍA</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-05 <span class="star">★</span></td><td>Ferropenia y hierro intravenoso</td><td><span class="badge b-meta">META</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-06</td><td>Eritropoyetina (EPO) en PBM: evidencia y uso</td><td><span class="badge b-meta">META</span></td><td><span class="lvl lvl-adv">AVANZADO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+  </tbody></table>
+</div>
+
+<div class="module">
+  <h2>Módulo 3 · Pilar 2: minimizar la pérdida sanguínea</h2>
+  <table><thead><tr><th style="width:84px">Código</th><th>Documento</th><th style="width:64px">Ancla</th><th style="width:92px">Nivel</th><th style="width:128px">Estado</th></tr></thead><tbody>
+    <tr><td class="code">PBM-07 <span class="star">★</span></td><td>Hemostasia perioperatoria: fisiología y estrategia de minimización</td><td><span class="badge b-rev">REV</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-08 <span class="star">★</span></td><td>Antifibrinolíticos: ácido tranexámico (CRASH-2/3, WOMAN, ATACAS)</td><td><span class="badge b-eca">ECA</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-09</td><td>Pruebas viscoelásticas (ROTEM/TEG) y algoritmos guiados</td><td><span class="badge b-meta">META</span></td><td><span class="lvl lvl-adv">AVANZADO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-10</td><td>Recuperación celular intraoperatoria y técnicas de ahorro</td><td><span class="badge b-meta">META</span></td><td><span class="lvl lvl-adv">AVANZADO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-11</td><td>Pérdida sanguínea admisible (MABL): cálculo y planificación</td><td><span class="badge b-rev">REV</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+  </tbody></table>
+</div>
+
+<div class="module">
+  <h2>Módulo 4 · Pilar 3: tolerancia a la anemia y transfusión</h2>
+  <table><thead><tr><th style="width:84px">Código</th><th>Documento</th><th style="width:64px">Ancla</th><th style="width:92px">Nivel</th><th style="width:128px">Estado</th></tr></thead><tbody>
+    <tr><td class="code">PBM-12 <span class="star">★</span></td><td>Umbrales restrictivos de transfusión (TRICC, TRISS, REALITY)</td><td><span class="badge b-eca">ECA</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-13 <span class="star">★</span></td><td>Hemorragia crítica y protocolo de transfusión masiva</td><td><span class="badge b-guia">GUÍA</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-14</td><td>Optimización de la tolerancia a la anemia: fisiología y límites</td><td><span class="badge b-rev">REV</span></td><td><span class="lvl lvl-adv">AVANZADO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+  </tbody></table>
+</div>
+
+<div class="module">
+  <h2>Módulo 5 · Hemostasia clínica y paciente con riesgo hemorrágico</h2>
+  <table><thead><tr><th style="width:84px">Código</th><th>Documento</th><th style="width:64px">Ancla</th><th style="width:92px">Nivel</th><th style="width:128px">Estado</th></tr></thead><tbody>
+    <tr><td class="code">PBM-15 <span class="star">★</span></td><td>Cribado del riesgo hemorrágico preoperatorio (HEMSTOP)</td><td><span class="badge b-rev">REV</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-16 <span class="star">★</span></td><td>Manejo perioperatorio de antiagregantes y anticoagulantes</td><td><span class="badge b-guia">GUÍA</span></td><td><span class="lvl lvl-adv">AVANZADO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-17</td><td>Coagulopatías congénitas y adquiridas en cirugía</td><td><span class="badge b-rev">REV</span></td><td><span class="lvl lvl-adv">AVANZADO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">PBM-18</td><td>Fármacos hemostáticos (CCP, fibrinógeno, rFVIIa, desmopresina)</td><td><span class="badge b-rev">REV</span></td><td><span class="lvl lvl-adv">AVANZADO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+  </tbody></table>
+</div>
+
+<div class="module">
+  <h2>Quick-reference (P-QR)</h2>
+  <table><thead><tr><th style="width:84px">Código</th><th>Documento</th><th style="width:64px">Ancla</th><th style="width:92px">Nivel</th><th style="width:128px">Estado</th></tr></thead><tbody>
+    <tr><td class="code">P-QR-01 <span class="star">★</span></td><td>Los 3 pilares del PBM de un vistazo</td><td><span class="badge b-alg">ALG</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">P-QR-02 <span class="star">★</span></td><td>Umbrales de transfusión por componente</td><td><span class="badge b-alg">ALG</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">P-QR-03 <span class="star">★</span></td><td>Ácido tranexámico: dosis por escenario</td><td><span class="badge b-alg">ALG</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">P-QR-04 <span class="star">★</span></td><td>MABL rápido (volumen sanguíneo de Nadler + Gross)</td><td><span class="badge b-alg">ALG</span></td><td><span class="lvl lvl-bas">BÁSICO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+    <tr><td class="code">P-QR-05</td><td>Manejo de antitrombóticos según fármaco y riesgo</td><td><span class="badge b-alg">ALG</span></td><td><span class="lvl lvl-adv">AVANZADO</span></td><td><span class="dot done"></span>Cerrado y verificado</td></tr>
+  </tbody></table>
+</div>
+
+<div class="module">
+  <h2>Actualización de evidencia 2024–2025 · verificada en PubMed</h2>
+  <p class="note" style="margin:4px 0 8px">Fuentes confirmadas (autoría + título + revista + año + DOI/PMID) el 15-jun-2026 y mapeadas a su documento. Detalle y correcciones en <code>material-fuente/fuentes-verificadas-2024-2025.md</code>. No indexadas en PubMed (pendientes de verificar por web oficial): WHO <i>Guidance on Implementing PBM</i> (mar-2025), NICE NG24 TXA (borrador nov-2025) y la revisión de hierro de <i>Blood Transfusion</i> (ene-2025).</p>
+  <table><thead><tr><th>Fuente verificada</th><th style="width:150px">Cita · PMID</th><th style="width:150px">Documento destino</th></tr></thead><tbody>
+    <tr><td>AABB/ICTMG — Plaquetas 2025</td><td>JAMA 2025;334(7):606–617 · PMID 40440268</td><td class="code">PBM-02 ✓ · P-QR-02</td></tr>
+    <tr><td>AABB — Hematíes 2023</td><td>JAMA 2023;330(19):1892 · PMID 37824153</td><td class="code">PBM-02 ✓ · PBM-12</td></tr>
+    <tr><td>CHEST — Hematíes en críticos</td><td>Chest 2025;167(2):477 · PMID 39341492</td><td class="code">PBM-12</td></tr>
+    <tr><td>Metaanálisis SCA (datos individuales)</td><td>NEJM Evid 2024;4(2) · PMID 39714935</td><td class="code">PBM-12</td></tr>
+    <tr><td>Cochrane — umbrales transfusión (2025)</td><td>Cochrane 2025;10:CD002042 · PMID 41114449</td><td class="code">PBM-12 · PBM-14</td></tr>
+    <tr><td>EACTS/EACTAIC — PBM cirugía cardíaca</td><td>EJCTS 2025;67(5) · PMID 39385500</td><td class="code">PBM-09 · PBM-05/06</td></tr>
+    <tr><td>BSH — Anemia preoperatoria 2024</td><td>Br J Haematol 2024;205(1):88 · PMID 38664944</td><td class="code">PBM-04 · PBM-05</td></tr>
+    <tr><td>ESA perioperatorios (revisión)</td><td>Best Pract Res Clin Anaesthesiol · PMID 39764839</td><td class="code">PBM-06</td></tr>
+    <tr><td>Revisión PBM vía RICA</td><td>Cir Esp 2025;103(2):104 · PMID 39617300</td><td class="code">PBM-01 · CMA/prehab.</td></tr>
+  </tbody></table>
+</div>
+
+<footer>
+  18 documentos formativos (PBM-01 … PBM-18) + 5 quick-reference (P-QR-01 … P-QR-05) en 5 módulos.
+  Anclas y niveles provisionales hasta cerrar cada documento contra fuentes primarias verificadas (PubMed) y guías (NBA/BSH/SEDAR).
+  Síntesis docente en español para adjuntos y residentes (CAUSA / SACYL). No sustituye al juicio clínico ni a los protocolos locales vigentes.<br>
+  <strong>Ideación:</strong> Emilio García Hernández — Licenciado Especialista en Anestesiología y Reanimación · CAUSA · SACYL.
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿Codigo;Titulo;Modulo/Pilar;Ancla;Contenido correcto (Si/No/Parcial);Errores o matices a corregir;Cifras/umbrales a revisar;Revisor;Fecha
+PBM-01;Qué es el Patient Blood Management: los 3 pilares y el marco perioperatorio;Fundamentos;GUIA;;;;;
+PBM-02;Componentes sanguíneos y sus indicaciones: hematíes, plasma y plaquetas;Fundamentos;GUIA;;;;;
+PBM-03;Seguridad transfusional: identificación, trazabilidad y reacciones adversas;Fundamentos;GUIA;;;;;
+PBM-04;Diagnóstico y manejo de la anemia preoperatoria;Pilar 1;GUIA;;;;;
+PBM-05;Ferropenia y hierro intravenoso;Pilar 1;META;;;;;
+PBM-06;Eritropoyetina (EPO) en PBM: evidencia y uso;Pilar 1;META;;;;;
+PBM-07;Hemostasia perioperatoria: fisiología y estrategia de minimización;Pilar 2;REV;;;;;
+PBM-08;Antifibrinolíticos: ácido tranexámico;Pilar 2;ECA;;;;;
+PBM-09;Pruebas viscoelásticas (ROTEM/TEG) y algoritmos guiados;Pilar 2;META;;;;;
+PBM-10;Recuperación celular intraoperatoria y técnicas de ahorro;Pilar 2;META;;;;;
+PBM-11;Pérdida sanguínea admisible (MABL): cálculo y planificación;Pilar 2;REV;;;;;
+PBM-12;Umbrales restrictivos de transfusión;Pilar 3;ECA;;;;;
+PBM-13;Hemorragia crítica y protocolo de transfusión masiva;Pilar 3;GUIA;;;;;
+PBM-14;Optimización de la tolerancia a la anemia: fisiología y límites;Pilar 3;REV;;;;;
+PBM-15;Cribado del riesgo hemorrágico preoperatorio (HEMSTOP);Eje hemostasia;REV;;;;;
+PBM-16;Manejo perioperatorio de antiagregantes y anticoagulantes;Eje hemostasia;GUIA;;;;;
+PBM-17;Coagulopatías congénitas y adquiridas en cirugía;Eje hemostasia;REV;;;;;
+PBM-18;Fármacos hemostáticos: CCP, fibrinógeno, rFVIIa y desmopresina;Eje hemostasia;REV;;;;;
+P-QR-01;Los 3 pilares del PBM de un vistazo;Tarjetas;ALG;;;;;
+P-QR-02;Umbrales de transfusión por componente;Tarjetas;ALG;;;;;
+P-QR-03;Ácido tranexámico: dosis por escenario;Tarjetas;ALG;;;;;
+P-QR-04;MABL rápido: volumen sanguíneo (Nadler) + Gross;Tarjetas;ALG;;;;;
+P-QR-05;Manejo de antitrombóticos según fármaco y riesgo;Tarjetas;ALG;;;;;

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- SERIE PBM - PBM-05 Ferropenia y hierro intravenoso. Ancla META. -->
+<style>
+  @page { size:A4; margin:16mm 15mm 18mm 15mm; @bottom-center{ content:counter(page);} }
+  :root{
+    --accent:#8E2433; --accent-soft:#F4E3E6; --accent2:#4F6B7A; --accent2-soft:#E7EDF1;
+    --warm:#B0682B; --warm-soft:#F6E8D8;
+    --ink:#211A1C; --ink2:#3A2E31; --muted:#6E6168; --line:#E0D6D8;
+    --violet:#6B2740;
+    --key:var(--accent); --key-bg:var(--accent-soft);
+    --alert:#9A3B1E; --alert-bg:var(--warm-soft);
+    --note:#4F6B7A; --note-bg:var(--accent2-soft);
+    --pearl:#0E6E6B; --pearl-bg:#D7EFEC;
+    --rev:#6E6168; --rev-bg:#EFEAEB;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif; color:var(--ink); font-size:9.3pt; line-height:1.48; margin:0; }
+  h1,h2,h3,h4{ font-family:"DejaVu Serif",Georgia,serif; color:var(--ink); line-height:1.18; }
+  p{ margin:0 0 7px 0; text-align:justify; }
+  .mono{ font-family:"DejaVu Sans Mono",monospace; }
+  sub,sup{ font-size:75%; }
+  .docref{ display:flex; align-items:center; gap:10px; margin-bottom:8px; flex-wrap:wrap; }
+  .doc-code{ font-family:"DejaVu Sans Mono",monospace; font-size:8.4pt; font-weight:700; letter-spacing:.06em; color:#fff; background:var(--accent); padding:3px 9px; border-radius:3px; }
+  .badge{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:7pt; letter-spacing:.06em; font-weight:700; padding:3px 8px; border-radius:3px; color:#fff; }
+  .b-guia{ background:#8E2433; } .b-meta{ background:#4F6B7A; } .b-eca{ background:#7A3E6E; }
+  .b-rev{ background:#6E6358; } .b-alg{ background:#4E5A66; }
+  .module-tag{ font-family:"DejaVu Sans Mono",monospace; font-size:7.2pt; color:var(--muted); letter-spacing:.04em; }
+  .kicker{ font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:8px; }
+  h1.title{ font-size:20pt; margin:0 0 6px 0; letter-spacing:-.01em; border-bottom:3px solid var(--accent); padding-bottom:12px; }
+  .subtitle{ font-size:11pt; color:var(--ink2); font-family:"DejaVu Serif",Georgia,serif; font-style:italic; margin:10px 0 14px 0; }
+  .tagline{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; color:var(--muted); line-height:1.7; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0; margin-bottom:14px; }
+  .refbar{ background:var(--accent2-soft); border-left:4px solid var(--accent2); padding:9px 12px; font-size:8.3pt; color:var(--ink2); margin-bottom:10px; border-radius:0 4px 4px 0; }
+  .refbar.guiabar{ background:var(--accent-soft); border-left-color:var(--accent); }
+  .refbar b{ color:var(--ink); }
+  .meta-row{ display:flex; flex-wrap:wrap; margin-bottom:6px; }
+  .meta-chip{ font-family:"DejaVu Sans Mono",monospace; font-size:7pt; color:var(--ink2); background:#F3ECEE; border:1px solid var(--line); border-radius:20px; padding:3px 9px; margin:0 6px 6px 0; }
+  .lead{ font-size:9.5pt; color:var(--ink2); line-height:1.55; }
+  .toc{ background:#FBF7F8; border:1px solid var(--line); border-radius:6px; padding:12px 16px; margin:6px 0 4px; }
+  .toc h2{ font-size:11pt; margin:0 0 8px 0; color:var(--accent); }
+  .toc ol{ margin:0; padding-left:20px; columns:2; column-gap:26px; font-size:8.5pt; }
+  .toc li{ margin-bottom:4px; }
+  h2.sec{ font-size:12.5pt; margin:18px 0 4px 0; padding-top:8px; border-top:2px solid var(--ink); color:var(--ink); }
+  h2.sec .num{ color:var(--accent); margin-right:8px; }
+  h3{ font-size:10pt; margin:11px 0 3px 0; color:var(--violet); }
+  h4{ font-size:9pt; margin:8px 0 2px 0; color:var(--ink2); }
+  .box{ border-radius:0 6px 6px 0; padding:9px 13px 7px 13px; margin:10px 0; font-size:8.6pt; line-height:1.44; }
+  .box .box-h{ font-family:"DejaVu Sans Mono",monospace; font-weight:700; font-size:7.6pt; letter-spacing:.07em; text-transform:uppercase; margin-bottom:5px; display:block; }
+  .box ul{ margin:3px 0 2px 0; padding-left:16px; }
+  .box li{ margin-bottom:3px; }
+  .box p{ margin:0 0 4px 0; }
+  .key{ background:var(--key-bg); border-left:4px solid var(--key);} .key .box-h{ color:var(--key);}
+  .alert{ background:var(--alert-bg); border-left:4px solid var(--warm);} .alert .box-h{ color:var(--alert);}
+  .note{ background:var(--note-bg); border-left:4px solid var(--note);} .note .box-h{ color:var(--note);}
+  .pearl{ background:var(--pearl-bg); border-left:4px solid var(--pearl);} .pearl .box-h{ color:var(--pearl);}
+  .rev{ background:var(--rev-bg); border-left:4px solid var(--rev);} .rev .box-h{ color:var(--rev);}
+  table{ width:100%; border-collapse:collapse; margin:10px 0; font-size:7.5pt; }
+  caption{ caption-side:bottom; font-size:7pt; color:var(--muted); text-align:left; padding-top:5px; line-height:1.4; }
+  th{ background:var(--ink); color:#fff; text-align:left; padding:5px 7px; font-weight:600; vertical-align:top; }
+  td{ border:1px solid var(--line); padding:4px 7px; vertical-align:top; }
+  tbody tr:nth-child(even){ background:#F7F1F2; }
+  td.c{ text-align:center; }
+  .gr{ display:inline-block; font-family:"DejaVu Sans Mono",monospace; font-size:6.6pt; font-weight:700; color:#fff; border-radius:3px; padding:1px 5px; }
+  .gr-fuerte{ background:#4F6B7A; } .gr-mod{ background:#8E2433; } .gr-debil{ background:var(--muted); } .gr-no{ background:#9A3B1E; }
+  .tbl-title{ font-family:"DejaVu Sans Mono",monospace; font-size:7.3pt; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); font-weight:700; margin:14px 0 0; }
+  ol.refs{ font-size:7.4pt; line-height:1.4; padding-left:22px; margin:6px 0; }
+  ol.refs li{ margin-bottom:4px; }
+  ol.refs .doi{ color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7pt; }
+  .footer-note{ margin-top:16px; padding-top:8px; border-top:1px solid var(--line); font-size:7.3pt; color:var(--muted); font-style:italic; line-height:1.45; }
+  .avoid-break{ break-inside:avoid; }
+  strong{ color:var(--ink); }
+  .pillars{ display:flex; gap:8px; margin:10px 0; flex-wrap:wrap; }
+  .pillar{ flex:1 1 0; min-width:110px; border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:0 0 5px 5px; padding:7px 9px; font-size:8pt; }
+  .pillar h4{ margin:0 0 3px; color:var(--accent); font-family:"DejaVu Sans Mono",monospace; font-size:7.4pt; letter-spacing:.04em; text-transform:uppercase; }
+  .pillar.p5{ border-top-color:var(--accent2); } .pillar.p5 h4{ color:var(--accent2); }
+  .flow{ display:flex; flex-direction:column; gap:0; margin:10px 0; }
+  .step{ border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:0 5px 5px 0; padding:7px 11px; margin-bottom:6px; font-size:8.4pt; background:#FBF7F8; }
+  .step b{ color:var(--accent); }
+  .step.q{ border-left-color:var(--accent2); } .step.q b{ color:var(--accent2); }
+  .step.a{ border-left-color:var(--warm); background:var(--warm-soft); } .step.a b{ color:var(--alert); }
+  figure{ margin:12px 0; text-align:center; break-inside:avoid; }
+  figure img{ display:block; width:70%; height:auto; margin:0 auto; border:1px solid var(--line); border-radius:5px; }
+  figure.wide img{ width:86%; } figure.narrow img{ width:42%; }
+  figcaption{ font-size:7pt; color:var(--muted); line-height:1.4; text-align:center; margin:5px auto 0; max-width:82%; }
+  figcaption b{ color:var(--accent); }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="docref">
+    <span class="doc-code">PBM-05</span>
+    <span class="badge b-meta">META &middot; revisi&oacute;n sistem&aacute;tica / metaan&aacute;lisis</span>
+    <span class="module-tag">M&oacute;dulo 2 &middot; Pilar 1: optimizar la masa eritrocitaria</span>
+  </div>
+  <div class="kicker">Ferropenia &middot; Hierro oral e intravenoso &middot; Qu&eacute; espera realmente la evidencia</div>
+  <h1 class="title">Ferropenia y hierro intravenoso</h1>
+  <div class="subtitle">El hierro corrige la ferropenia &mdash; pero &laquo;corregir la analítica&raquo; y &laquo;mejorar desenlaces&raquo; no son lo mismo</div>
+  <div class="meta-row">
+    <span class="meta-chip">Ferropenia absoluta y funcional</span>
+    <span class="meta-chip">Hierro oral: c&oacute;mo dosificarlo</span>
+    <span class="meta-chip">Hierro IV: cu&aacute;ndo</span>
+    <span class="meta-chip">La lecci&oacute;n de PREVENTT</span>
+    <span class="meta-chip">Honestidad sobre desenlaces</span>
+  </div>
+  <div class="refbar">
+    <b>Ancla de evidencia (referencia vertebral):</b> Richards T, Baikady RR, Clevenger B, et&nbsp;al.
+    <i>Preoperative intravenous iron to treat anaemia before major abdominal surgery (PREVENTT): a randomised, double-blind, controlled trial.</i>
+    Lancet 2020;396(10259):1353&ndash;1361. <span class="mono">doi:10.1016/S0140-6736(20)31539-7 &middot; PMID&nbsp;32896294</span>.
+  </div>
+  <div class="tagline">
+    2026 &middot; 3 referencias indexadas verificadas en PubMed &middot; S&iacute;ntesis docente para adjuntos y residentes (CAUSA / SACYL)<br>
+    <b>Mensaje nuclear:</b> el hierro &mdash;oral si hay tiempo, intravenoso si no&mdash; es el tratamiento de la <b>anemia
+    ferrop&eacute;nica</b> preoperatoria y aumenta la hemoglobina. Pero la evidencia es <b>matizada</b>: el ensayo PREVENTT no
+    demostr&oacute; reducci&oacute;n de transfusiones con hierro IV en cirug&iacute;a abdominal mayor. El beneficio es mayor cuando hay
+    <b>ferropenia real, anemia significativa y tiempo</b>; menos claro como medida universal.
+  </div>
+  <div class="lead">
+    <p>La ferropenia es la causa m&aacute;s frecuente de anemia preoperatoria y, a la vez, la m&aacute;s tratable. El hierro repone los
+    dep&oacute;sitos y permite la eritropoyesis; la pregunta cl&iacute;nica no es <i>si</i> corrige la ferritina, sino <b>cu&aacute;ndo se
+    traduce en mejores desenlaces</b>.</p>
+    <p>Este documento, con ancla <b>META/ECA</b>, presenta el uso del hierro con honestidad: c&oacute;mo dosificar el oral, cu&aacute;ndo
+    elegir el intravenoso y qu&eacute; ense&ntilde;a el ensayo PREVENTT sobre los l&iacute;mites del &laquo;hierro para todos&raquo; [1].</p>
+  </div>
+</section>
+
+
+<nav class="toc avoid-break"><h2>&Iacute;ndice</h2><ol>
+  <li>Ferropenia absoluta y funcional</li>
+  <li>Hierro oral: c&oacute;mo dosificarlo bien</li>
+  <li>Hierro intravenoso: cu&aacute;ndo elegirlo</li>
+  <li>La lecci&oacute;n de PREVENTT</li>
+  <li>S&iacute;ntesis pr&aacute;ctica y honestidad sobre la evidencia</li>
+  <li>Mensaje nuclear y conexiones</li>
+  <li>Verificaci&oacute;n bibliogr&aacute;fica</li>
+  <li>Referencias</li>
+</ol></nav>
+
+<h2 class="sec"><span class="num">1.</span>Ferropenia absoluta y funcional</h2>
+<p>La <b>ferropenia absoluta</b> es el agotamiento de los dep&oacute;sitos (ferritina baja); la <b>funcional</b> es la
+incapacidad de movilizar el hierro a pesar de dep&oacute;sitos aparentemente normales, t&iacute;pica de la inflamaci&oacute;n (saturaci&oacute;n de
+transferrina baja con ferritina normal-alta) [2]. Distinguirlas importa: la absoluta responde bien al hierro; la funcional
+responde peor al hierro oral y puede requerir hierro IV &plusmn; EPO.</p>
+
+<div class="box key avoid-break"><span class="box-h">Puntos clave</span><ul>
+  <li>El objetivo es tratar la <b>ferropenia</b>, no &laquo;normalizar un n&uacute;mero&raquo;: la indicaci&oacute;n nace del d&eacute;ficit + la anemia + el contexto.</li>
+  <li>El hierro <b>oral</b> sirve si hay tiempo y tolerancia; el <b>IV</b>, si hay intolerancia, mala absorci&oacute;n, poco margen o ferropenia funcional [2].</li>
+  <li>La evidencia de mejora de <b>desenlaces duros</b> es desigual: clara en correcci&oacute;n de Hb, m&aacute;s d&eacute;bil en transfusi&oacute;n/mortalidad [1].</li>
+</ul></div>
+
+<h2 class="sec"><span class="num">2.</span>Hierro oral: c&oacute;mo dosificarlo bien</h2>
+<p>El hierro oral es barato y eficaz en la ferropenia absoluta <b>con margen de semanas</b>. La fisiolog&iacute;a de la hepcidina
+ha cambiado la pauta: dosis <b>m&aacute;s bajas y menos frecuentes</b> (por ejemplo, una toma al d&iacute;a, o en d&iacute;as alternos) mejoran
+la absorci&oacute;n fraccional y la tolerancia frente a las pautas cl&aacute;sicas de varias tomas diarias [2]. Requiere
+<b>tiempo</b> (semanas) para reponer dep&oacute;sitos.</p>
+
+<h2 class="sec"><span class="num">3.</span>Hierro intravenoso: cu&aacute;ndo elegirlo</h2>
+<p>El hierro IV (formulaciones modernas en dosis &uacute;nica alta) repone dep&oacute;sitos con rapidez y evita los problemas de
+absorci&oacute;n y tolerancia digestiva. Es la opci&oacute;n preferente ante <b>intolerancia o ineficacia del oral, malabsorci&oacute;n,
+anemia moderada-grave, ferropenia funcional o poco tiempo hasta la cirug&iacute;a</b> [2]. Su perfil de seguridad es bueno con
+las formulaciones actuales; las reacciones graves son raras.</p>
+
+<h2 class="sec"><span class="num">4.</span>La lecci&oacute;n de PREVENTT</h2>
+<p>El ensayo <b>PREVENTT</b> aleatoriz&oacute; a 487 pacientes an&eacute;micos a hierro IV (carboximaltosa f&eacute;rrica 1000&nbsp;mg) o placebo
+10&ndash;42&nbsp;d&iacute;as antes de cirug&iacute;a abdominal mayor. <b>No</b> redujo el desenlace combinado de muerte o transfusi&oacute;n
+(riesgo relativo 1,03; IC95&nbsp;% 0,78&ndash;1,37) ni el n&uacute;mero de transfusiones a los 30&nbsp;d&iacute;as [1]. Es la pieza de honestidad
+del tema: administrar hierro IV de forma <b>indiscriminada</b> en cirug&iacute;a abdominal no mejor&oacute; los desenlaces primarios,
+aunque s&iacute; aument&oacute; la Hb y mejor&oacute; algunos desenlaces secundarios a largo plazo.</p>
+
+<div class="box rev avoid-break"><span class="box-h">C&oacute;mo leer PREVENTT sin sobreinterpretarlo</span>
+  <p>PREVENTT no dice &laquo;el hierro no sirve&raquo;: dice que <b>darlo a todo an&eacute;mico tarde y sin filiar el d&eacute;ficit</b> no rinde en
+  transfusi&oacute;n. El mensaje PBM coherente es <b>diagnosticar la ferropenia, tratarla con tiempo y reservar el hierro IV</b>
+  para quien lo necesita, no usarlo como gesto universal de &uacute;ltima hora [1,2].</p>
+</div>
+
+<h2 class="sec"><span class="num">5.</span>S&iacute;ntesis pr&aacute;ctica y honestidad sobre la evidencia</h2>
+<div class="tbl-title">Tabla 1 &middot; Elecci&oacute;n de la vía del hierro seg&uacute;n el escenario</div>
+<table class="avoid-break">
+  <thead><tr><th style="width:30%">Escenario</th><th>Opci&oacute;n preferente</th><th style="width:18%">Certeza</th></tr></thead>
+  <tbody>
+    <tr><td>Ferropenia absoluta, &ge; 6&ndash;8 semanas de margen, buena tolerancia</td><td>Hierro <b>oral</b> a dosis baja diaria o en d&iacute;as alternos</td><td class="c"><span class="gr gr-mod">MODERADA</span></td></tr>
+    <tr><td>Intolerancia/ineficacia oral, malabsorci&oacute;n, anemia moderada-grave o poco tiempo</td><td>Hierro <b>intravenoso</b> (dosis &uacute;nica alta)</td><td class="c"><span class="gr gr-mod">MODERADA</span></td></tr>
+    <tr><td>Ferropenia funcional / inflamatoria</td><td>Hierro <b>IV</b> &plusmn; EPO (&rarr; PBM-06)</td><td class="c"><span class="gr gr-debil">D&Eacute;BIL</span></td></tr>
+    <tr><td>Hierro IV universal sin filiar d&eacute;ficit en cirug&iacute;a abdominal</td><td><b>No</b> reduce transfusi&oacute;n (PREVENTT)</td><td class="c"><span class="gr gr-no">EN CONTRA</span></td></tr>
+  </tbody>
+  <caption>S&iacute;ntesis a partir de PREVENTT [1] y de la gu&iacute;a BSH [2]. La certeza refleja la heterogeneidad real de la evidencia por escenario.</caption>
+</table>
+
+<h2 class="sec"><span class="num">6.</span>Mensaje nuclear y conexiones</h2>
+<p><b>Mensaje nuclear (equilibrado):</b> el hierro es el tratamiento de la anemia ferrop&eacute;nica y eleva la hemoglobina, pero
+su impacto en transfusi&oacute;n y desenlaces depende de <b>tratar al paciente correcto, con el d&eacute;ficit correcto y con tiempo</b>;
+el uso indiscriminado de hierro IV de &uacute;ltima hora no rinde (PREVENTT). Diagnosticar bien y anticipar es lo que convierte el
+hierro en una herramienta &uacute;til de PBM, en l&iacute;nea con el marco del consenso internacional [3].</p>
+<p>Conecta con <b>PBM-04</b> (diagn&oacute;stico de la anemia), <b>PBM-06</b> (EPO, para ferropenia funcional/inflamatoria y rechazo
+de transfusi&oacute;n) y con <b>PBM-12</b> (umbrales restrictivos que reducen la exposici&oacute;n a transfusi&oacute;n).</p>
+
+<div class="box key avoid-break"><span class="box-h">Resumen en una frase</span>
+  <p>Hierro oral a dosis baja si hay tiempo, hierro IV si no o si la ferropenia es funcional &mdash;pero diagnostica primero:
+  el hierro universal de &uacute;ltima hora no reduce transfusiones&mdash;.</p>
+</div>
+
+<h2 class="sec"><span class="num">7.</span>Verificaci&oacute;n bibliogr&aacute;fica</h2>
+<p>Documento de tipo <b>META/ECA</b>. Las cifras de PREVENTT (RR 1,03; IC95&nbsp;% 0,78&ndash;1,37 para muerte o transfusi&oacute;n) [1] y
+las recomendaciones de dosificaci&oacute;n y elecci&oacute;n de vía [2] proceden de fuentes primarias verificadas contra PubMed
+(autor&iacute;a, t&iacute;tulo, revista, a&ntilde;o, DOI/PMID). Se declara expl&iacute;citamente el resultado <b>neutro</b> de PREVENTT en su desenlace
+primario para evitar sobreestimar el beneficio del hierro IV universal.</p>
+
+
+<h2 class="sec"><span class="num">8.</span>Referencias</h2>
+<ol class="refs">
+  <li>Richards T, Baikady RR, Clevenger B, Butcher A, Abeysiri S, Chau M, et al. Preoperative intravenous iron to treat anaemia before major abdominal surgery (PREVENTT): a randomised, double-blind, controlled trial. <i>Lancet</i> 2020;396(10259):1353&ndash;1361. <span class="doi">doi:10.1016/S0140-6736(20)31539-7</span> &middot; PMID 32896294.</li>
+  <li>Hands K, Daru J, Evans C, Kotze A, Lewis C, Narayan S, et al. Identification and management of preoperative anaemia in adults: A British Society for Haematology Guideline update. <i>Br J Haematol</i> 2024;205(1):88&ndash;99. <span class="doi">doi:10.1111/bjh.19440</span> &middot; PMID 38664944.</li>
+  <li>Mueller MM, Van Remoortel H, Meybohm P, Aranko K, Aubron C, Burger R, et al. Patient Blood Management: Recommendations From the 2018 Frankfurt Consensus Conference. <i>JAMA</i> 2019;321(10):983&ndash;997. <span class="doi">doi:10.1001/jama.2019.0554</span> &middot; PMID 30860564.</li>
+</ol>
+
+<div class="footer-note">Serie Hemostasia y Medicina Transfusional Perioperatoria (PBM) - Documento PBM-05 - Modulo 2 (Pilar 1) - ancla META - 2026. Sintesis docente en espanol para adjuntos y residentes (CAUSA / SACYL). Cifras procedentes de fuentes primarias indexadas verificadas contra PubMed. No sustituye al juicio clinico ni a los protocolos locales vigentes.<br><strong>Ideacion:</strong> Emilio Garcia Hernandez - Licenciado Especialista en Anestesiologia y Reanimacion - CAUSA - SACYL.</div>
+</body>
+</html>
