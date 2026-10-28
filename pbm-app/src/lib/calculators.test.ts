@@ -428,6 +428,15 @@ describe('Motor de ferropenia — regresión Fase 2a', () => {
     expect(ironDxLabel('DAH', { pcrAportada: false })).toMatch(/DAH/);
   });
 
+  it('electiva sin IST: no pauta ni deriva (8.7)', () => {
+    const p = causaPreopPlan({ setting: 'electiva', hb: 9, ferritin: 20, tsat: null });
+    expect(p.fueraAlgoritmo).toBe(true);
+    expect(p.derivar).toBe(false);
+    expect(p.ironMg).toBeNull();
+    expect(p.epo).toBe('no');
+    expect(p.note).toBe('IST necesaria para aplicar la matriz de tratamiento o descartar derivación.');
+  });
+
   it('caso de la auditoría (anemia, ferritina 70, IST 24 %): ninguna ruta pauta tratamiento', () => {
     expect(ironDiagnosisCausa({ ferritin: 70, tsat: 24 })).toBe('normal');
     expect(causaDerivar({ anemia: true, tsat: 24 })).toBe(true);

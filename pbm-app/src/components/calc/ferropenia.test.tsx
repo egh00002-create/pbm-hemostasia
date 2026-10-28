@@ -45,6 +45,13 @@ describe('Pantallas de ferropenia — regresión Fase 2a', () => {
     expect(screen.queryByText(/Hierro IV:/)).toBeNull();
   });
 
+  it('Electiva: IST vacía → sin pauta (antes pautaba la matriz)', () => {
+    render(<FeEpoElectivaCalc />);
+    set(/IST/, '');
+    expect(screen.getByText(/IST necesaria para aplicar la matriz de tratamiento o descartar derivación/)).toBeInTheDocument();
+    expect(screen.queryByText(/Hierro IV:/)).toBeNull();
+  });
+
   it('Urgente: caso 70 / IST 24 → fuera de la Figura 13, sin hierro ni EPO', () => {
     render(<FeEpoUrgenteCalc />);
     set(/Hemoglobina/, '10.5');

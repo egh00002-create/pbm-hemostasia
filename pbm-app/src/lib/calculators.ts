@@ -750,7 +750,7 @@ export type EpoScheme = 'no' | 'una' | 'dos' | 'reducida';
 
 export interface PreopTreatmentPlan {
   derivar: boolean; // IST ≥ 20 % en electiva → derivar a M. Interna / Hematología
-  fueraAlgoritmo: boolean; // urgente sin IST < 20 %: la Figura 13 no da pauta
+  fueraAlgoritmo: boolean; // sin IST (electiva) o sin IST < 20 % (urgente): no hay pauta del protocolo
   ironMg: number | null; // dosis de hierro IV (mg); null = no pauta de hierro fija
   ironLabel: string;
   epo: EpoScheme;
@@ -767,7 +767,8 @@ const EPO_SCHEME_LABEL: Record<EpoScheme, string> = {
 
 /**
  * Plan de tratamiento Fe + EPO preoperatorio del protocolo.
- *  - electiva: matriz Hb (<8 / 8–10 / >10) × ferritina (<30 / 30–300 / >300) [Figura 12].
+ *  - electiva: matriz Hb (<8 / 8–10 / >10) × ferritina (<30 / 30–300 / >300) [Figura 12];
+ *    sin IST → fueraAlgoritmo; IST ≥ 20 % → derivar.
  *  - urgente: matriz ferritina (<30 / 30–100 / >100) × función renal (normal / FG<60) [Figura 13],
  *    solo con IST < 20 %; IST ≥ 20 % o ausente → fueraAlgoritmo, sin pauta.
  * Fe coadyuvante a EPO (ferritina alta): 500 mg si Hb ≤ 10, 200 mg si Hb > 10 (si ferritina < 500).
@@ -783,6 +784,19 @@ export function causaPreopPlan(input: {
   const coadyuvanteMg = hb <= 10 ? 500 : 200;
 
   if (setting === 'electiva') {
+    // 8.7: IST ≥ 20 % se deriva y la matriz se aplica "con IST < 20 %". Sin IST no se sabe en qué
+    // grupo está el paciente: no se pauta.
+    if (tsat == null) {
+      return {
+        derivar: false,
+        fueraAlgoritmo: true,
+        ironMg: null,
+        ironLabel: 'Sin pauta',
+        epo: 'no',
+        epoLabel: 'Sin pauta',
+        note: 'IST necesaria para aplicar la matriz de tratamiento o descartar derivación.',
+      };
+    }
     // La Figura 12 se aplica a pacientes con anemia; la derivación es la regla única.
     if (causaDerivar({ anemia: true, tsat })) {
       return {

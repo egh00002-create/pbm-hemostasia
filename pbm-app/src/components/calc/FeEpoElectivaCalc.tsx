@@ -61,7 +61,12 @@ export function FeEpoElectivaCalc() {
           Valor no válido en: {invalid.join(', ')}. Introduce un número ≥ 0 (IST ≤ 100 %).
         </p>
       ) : valid && plan ? (
-        plan.derivar ? (
+        plan.fueraAlgoritmo ? (
+          <div className="result-box" aria-live="polite">
+            <span className="big" style={{ fontSize: '1.1rem', color: 'var(--warm)' }}>Sin pauta del protocolo</span>
+            <p style={{ margin: '6px 0 0', fontSize: '0.9rem' }}>{plan.note}</p>
+          </div>
+        ) : plan.derivar ? (
           <div className="result-box" aria-live="polite">
             <span className="big" style={{ fontSize: '1.2rem', color: 'var(--warm)' }}>DERIVAR a M. Interna / Hematología</span>
             <p style={{ margin: '6px 0 0', fontSize: '0.9rem' }}>{plan.note}</p>
