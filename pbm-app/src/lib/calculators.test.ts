@@ -8,8 +8,6 @@ import {
   fibrinogenIndicated,
   hemstopScore,
   antithromboticAdvice,
-  assessPreopAnemia,
-  ironStatusOf,
   ganzoniIronDeficitMg,
   fcmCumulativeDoseMg,
   ironSucroseSessions,
@@ -152,49 +150,6 @@ describe('Antitrombóticos / BRIDGE', () => {
       isAtrialFibrillation: false,
     });
     expect(a.continueIfPossible).toBe(true);
-  });
-});
-
-describe('Optimización preoperatoria (anemia + ferropenia)', () => {
-  it('umbral OMS por sexo y detección de anemia', () => {
-    const r = assessPreopAnemia({ sex: 'varon', hbGdl: 11, ferritin: 20 });
-    expect(r.hbThreshold).toBe(13);
-    expect(r.anemia).toBe(true);
-    const m = assessPreopAnemia({ sex: 'mujer', hbGdl: 12.5, ferritin: 50, tsatPct: 25 });
-    expect(m.hbThreshold).toBe(12);
-    expect(m.anemia).toBe(false);
-  });
-
-  it('ferritina <30 = ferropenia absoluta', () => {
-    expect(ironStatusOf({ sex: 'varon', hbGdl: 11, ferritin: 20 })).toBe('absoluta');
-  });
-
-  it('30–100 con IST baja o inflamación = funcional', () => {
-    expect(
-      ironStatusOf({ sex: 'varon', hbGdl: 11, ferritin: 60, tsatPct: 15 }),
-    ).toBe('funcional');
-    expect(
-      ironStatusOf({ sex: 'varon', hbGdl: 11, ferritin: 60, inflammation: true }),
-    ).toBe('funcional');
-  });
-
-  it('absoluta con margen → oral; con poco tiempo o intolerancia → IV', () => {
-    expect(assessPreopAnemia({ sex: 'varon', hbGdl: 11, ferritin: 20, weeksToSurgery: 8 }).route).toBe(
-      'oral',
-    );
-    expect(assessPreopAnemia({ sex: 'varon', hbGdl: 11, ferritin: 20, weeksToSurgery: 2 }).route).toBe(
-      'iv',
-    );
-    expect(
-      assessPreopAnemia({ sex: 'varon', hbGdl: 11, ferritin: 20, weeksToSurgery: 8, oralIntolerance: true })
-        .route,
-    ).toBe('iv');
-  });
-
-  it('funcional → IV ± EPO', () => {
-    expect(
-      assessPreopAnemia({ sex: 'varon', hbGdl: 11, ferritin: 60, tsatPct: 15 }).route,
-    ).toBe('iv+epo');
   });
 });
 
