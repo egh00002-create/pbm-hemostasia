@@ -3,9 +3,6 @@ import { NavLink, Link } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
 import { DISCLAIMER_TEXT } from './Disclaimer';
 
-/** App que despliega el servicio para hierro y EPO; esta app no es la referencia para dosis. */
-const REFERENCE_APP_URL = 'https://pbm-perioperative.pages.dev/';
-
 const NAV = [
   { to: '/', label: 'Inicio', icon: '🏠', end: true },
   { to: '/indice', label: 'Índice', icon: '📚' },
@@ -61,13 +58,13 @@ export function Layout({ children }: { children: ReactNode }) {
 
       <main id="contenido" className="main" tabIndex={-1}>
         <div className="container">
+          {/* Aviso temporal mientras se revisan las calculadoras de hierro/EPO (auditoría 2026-10). */}
           <p className="disclaimer" role="note">
             <span className="ic" aria-hidden="true">⚠</span>
             <span>
-              Las calculadoras de hierro y EPO de referencia del servicio están en{' '}
-              <a href={REFERENCE_APP_URL} target="_blank" rel="noopener noreferrer">
-                {REFERENCE_APP_URL}
-              </a>
+              <strong>Herramienta en revisión.</strong> Las calculadoras de hierro y EPO pueden dar
+              recomendaciones no concordantes entre pantallas. No usar para prescribir sin verificar con el
+              protocolo del servicio.
             </span>
           </p>
           {children}
