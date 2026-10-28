@@ -2,20 +2,16 @@ import { useState } from 'react';
 import {
   preopAnemiaThreshold,
   ironDiagnosisCausa,
+  ironDxLabel,
+  causaDerivar,
+  parseLabField,
+  labValue,
+  invalidLabFields,
   type SurgicalBleedingRisk,
   type PreopSex,
-  type IronDxCausa,
 } from '../../lib/calculators';
 import { SourceNote } from './SourceNote';
 import { ProtocolStamp } from './ProtocolStamp';
-
-const DX_LABEL: Record<IronDxCausa, string> = {
-  DAH: 'Déficit absoluto de hierro (DAH) → hierro IV',
-  DFH: 'Déficit funcional de hierro (DFH) → hierro IV ± EPO',
-  inflamatoria: 'Anemia inflamatoria (ferritina alta, IST baja) → EPO ± hierro IV',
-  normal: 'Metabolismo férrico normal → considerar otras causas',
-  indeterminada: 'Estudio férrico incompleto (falta IST)',
-};
 
 export function AnemiaDxCalc() {
   const [sex, setSex] = useState<PreopSex>('mujer');
@@ -25,17 +21,22 @@ export function AnemiaDxCalc() {
   const [tsat, setTsat] = useState('15');
   const [retHb, setRetHb] = useState('');
 
-  const num = (s: string) => (s.trim() === '' ? null : parseFloat(s.replace(',', '.')));
-  const hbV = num(hb);
-  const ferV = num(ferritin);
-  const tsatV = num(tsat);
-  const retV = num(retHb);
+  const hbF = parseLabField(hb);
+  const ferF = parseLabField(ferritin);
+  const tsatF = parseLabField(tsat, { max: 100 });
+  const retF = parseLabField(retHb);
+  const invalid = invalidLabFields({ Hemoglobina: hbF, Ferritina: ferF, IST: tsatF, 'Ret-Hb': retF });
+  const hbV = labValue(hbF);
+  const ferV = labValue(ferF);
+  const tsatV = labValue(tsatF);
+  // Esta pantalla no recoge PCR: la inflamación queda sin evaluar.
+  const pcrV: number | null = null;
 
   const threshold = preopAnemiaThreshold(risk, sex);
-  const anemia = hbV != null ? hbV < threshold : false;
-  const valid = hbV != null && Number.isFinite(hbV) && ferV != null && Number.isFinite(ferV);
-  const dx = valid ? ironDiagnosisCausa({ ferritin: ferV!, tsat: tsatV, retHbPg: retV }) : null;
-  const derivar = anemia && tsatV != null && tsatV >= 20;
+  const valid = invalid.length === 0 && hbV != null && ferV != null;
+  const anemia = valid && hbV! < threshold;
+  const dx = valid ? ironDiagnosisCausa({ ferritin: ferV!, tsat: tsatV, retHbPg: labValue(retF), pcrMgL: pcrV }) : null;
+  const derivar = valid && causaDerivar({ anemia, tsat: tsatV });
 
   return (
     <div className="card">
@@ -74,14 +75,21 @@ export function AnemiaDxCalc() {
         </div>
       </div>
 
-      {valid ? (
+      {invalid.length > 0 ? (
+        <p className="source-note" role="alert" style={{ color: 'var(--warm)', fontWeight: 600 }}>
+          Valor no válido en: {invalid.join(', ')}. Introduce un número ≥ 0 (IST ≤ 100 %).
+        </p>
+      ) : valid && dx ? (
         <div className="result-box" aria-live="polite">
           <div>
             Umbral de anemia: <strong>Hb &lt; {threshold} g/dl</strong> →{' '}
             {anemia ? <span className="badge guia">ANEMIA</span> : <span style={{ color: 'var(--accent2)' }}>sin anemia por la cifra</span>}
           </div>
           <div style={{ marginTop: 8 }}>
-            Diagnóstico férrico: <span className="big" style={{ fontSize: '1.05rem' }}>{dx ? DX_LABEL[dx] : '—'}</span>
+            Diagnóstico férrico:{' '}
+            <span className="big" style={{ fontSize: '1.05rem' }}>
+              {ironDxLabel(dx, { pcrAportada: pcrV != null })}
+            </span>
           </div>
           {derivar && (
             <p style={{ margin: '10px 0 0', color: 'var(--warm)', fontWeight: 600 }}>
@@ -90,7 +98,7 @@ export function AnemiaDxCalc() {
           )}
         </div>
       ) : (
-        <p className="source-note" role="status">Introduce Hb y ferritina válidas.</p>
+        <p className="source-note" role="status">Introduce Hb y ferritina.</p>
       )}
 
       <p className="disclaimer" role="note" style={{ marginTop: 12 }}>

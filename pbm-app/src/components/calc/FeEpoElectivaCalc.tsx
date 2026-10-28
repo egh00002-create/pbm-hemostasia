@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { causaPreopPlan, epoWeeklyVialUI } from '../../lib/calculators';
+import { causaPreopPlan, epoWeeklyVialUI, parseLabField, labValue, invalidLabFields } from '../../lib/calculators';
 import { SourceNote } from './SourceNote';
 import { ProtocolStamp } from './ProtocolStamp';
 
@@ -9,12 +9,18 @@ export function FeEpoElectivaCalc() {
   const [ferritin, setFerritin] = useState('60');
   const [tsat, setTsat] = useState('15');
 
-  const num = (s: string) => (s.trim() === '' ? null : parseFloat(s.replace(',', '.')));
-  const w = num(weight);
-  const hbV = num(hb);
-  const ferV = num(ferritin);
-  const tsatV = num(tsat);
-  const valid = w != null && w > 0 && hbV != null && Number.isFinite(hbV) && ferV != null && Number.isFinite(ferV);
+  const fields = {
+    Peso: parseLabField(weight),
+    Hemoglobina: parseLabField(hb),
+    Ferritina: parseLabField(ferritin),
+    IST: parseLabField(tsat, { max: 100 }),
+  };
+  const invalid = invalidLabFields(fields);
+  const w = labValue(fields.Peso);
+  const hbV = labValue(fields.Hemoglobina);
+  const ferV = labValue(fields.Ferritina);
+  const tsatV = labValue(fields.IST);
+  const valid = invalid.length === 0 && w != null && w > 0 && hbV != null && ferV != null;
 
   const plan = valid ? causaPreopPlan({ setting: 'electiva', hb: hbV!, ferritin: ferV!, tsat: tsatV }) : null;
   const vialUI = w != null && w > 0 ? epoWeeklyVialUI(w) : null;
@@ -50,7 +56,11 @@ export function FeEpoElectivaCalc() {
         </div>
       </div>
 
-      {valid && plan ? (
+      {invalid.length > 0 ? (
+        <p className="source-note" role="alert" style={{ color: 'var(--warm)', fontWeight: 600 }}>
+          Valor no válido en: {invalid.join(', ')}. Introduce un número ≥ 0 (IST ≤ 100 %).
+        </p>
+      ) : valid && plan ? (
         plan.derivar ? (
           <div className="result-box" aria-live="polite">
             <span className="big" style={{ fontSize: '1.2rem', color: 'var(--warm)' }}>DERIVAR a M. Interna / Hematología</span>
@@ -76,7 +86,7 @@ export function FeEpoElectivaCalc() {
           </div>
         )
       ) : (
-        <p className="source-note" role="status">Introduce peso, Hb y ferritina válidos.</p>
+        <p className="source-note" role="status">Introduce peso (&gt; 0), Hb y ferritina.</p>
       )}
 
       <p className="disclaimer" role="note" style={{ marginTop: 12 }}>

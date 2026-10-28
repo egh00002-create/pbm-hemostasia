@@ -21,7 +21,7 @@ el libro completo y una **PWA docente offline**.
 - **PWA** (`pbm-app/`): lector de la serie + **16 calculadoras clínicas** + evaluación con repaso
   espaciado. Instalable y **100 % offline**, sin backend ni telemetría.
 
-Versión **1.1.0** — ver [`CHANGELOG.md`](CHANGELOG.md). Guía de uso de los entregables en
+Versión **1.1.1** — ver [`CHANGELOG.md`](CHANGELOG.md). Guía de uso de los entregables en
 [`LEEME.md`](LEEME.md); detalles de la app en [`pbm-app/README.md`](pbm-app/README.md).
 
 ## Reconstruir

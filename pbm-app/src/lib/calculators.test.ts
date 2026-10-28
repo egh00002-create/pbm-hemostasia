@@ -24,6 +24,10 @@ import {
   preopAnemiaThreshold,
   epoWeeklyVialUI,
   ironDiagnosisCausa,
+  ironDxLabel,
+  causaDerivar,
+  parseLabField,
+  invalidLabFields,
   causaPreopPlan,
   causaPostopPlan,
 } from './calculators';
@@ -325,6 +329,18 @@ describe('Protocolo anemia preoperatoria (CAUSA / consenso ES 2024)', () => {
     expect(d.ironMg).toBe(200);
   });
 
+  it('urgente: sin IST < 20 % queda fuera de la Figura 13, sin pauta', () => {
+    for (const tsat of [20, 24, null]) {
+      const p = causaPreopPlan({ setting: 'urgente', hb: 9, ferritin: 60, tsat });
+      expect(p.fueraAlgoritmo).toBe(true);
+      expect(p.ironMg).toBeNull();
+      expect(p.epo).toBe('no');
+    }
+    const ok = causaPreopPlan({ setting: 'urgente', hb: 9, ferritin: 60, tsat: 19.9 });
+    expect(ok.fueraAlgoritmo).toBe(false);
+    expect(ok.ironMg).toBe(500);
+  });
+
   it('postoperatoria: matriz Hb × ferritina (Figura 16)', () => {
     // Hb<7, ferritina<100 → transfundir + Fe 1g + EPO 1 dosis
     const a = causaPostopPlan({ cardiac: false, hb: 6, ferritin: 50, weightKg: 70 });
@@ -350,5 +366,77 @@ describe('Protocolo anemia preoperatoria (CAUSA / consenso ES 2024)', () => {
     // Hb>10, ferritina>300 → nada
     const d = causaPostopPlan({ cardiac: false, hb: 11, ferritin: 400, weightKg: 70 });
     expect(d.ironLabel).toMatch(/Sin tratamiento/);
+  });
+});
+
+describe('Motor de ferropenia — regresión Fase 2a', () => {
+  it('parseLabField: vacío, inválido (no numérico, negativo, > max) y coma decimal', () => {
+    expect(parseLabField('  ')).toEqual({ kind: 'vacio' });
+    expect(parseLabField('abc').kind).toBe('invalido');
+    expect(parseLabField('24%').kind).toBe('invalido');
+    expect(parseLabField('12abc').kind).toBe('invalido');
+    expect(parseLabField('-1').kind).toBe('invalido');
+    expect(parseLabField('101', { max: 100 }).kind).toBe('invalido');
+    expect(parseLabField('100', { max: 100 })).toEqual({ kind: 'ok', value: 100 });
+    expect(parseLabField('12,5')).toEqual({ kind: 'ok', value: 12.5 });
+    expect(parseLabField('0')).toEqual({ kind: 'ok', value: 0 });
+  });
+
+  it('invalidLabFields lista solo los inválidos', () => {
+    expect(
+      invalidLabFields({ Hb: parseLabField('10'), IST: parseLabField('x'), 'Ret-Hb': parseLabField('') }),
+    ).toEqual(['IST']);
+  });
+
+  it('regla única de derivación: anemia + IST ≥ 20 %', () => {
+    expect(causaDerivar({ anemia: true, tsat: 20 })).toBe(true);
+    expect(causaDerivar({ anemia: true, tsat: 19.9 })).toBe(false);
+    expect(causaDerivar({ anemia: true, tsat: null })).toBe(false);
+    expect(causaDerivar({ anemia: false, tsat: 30 })).toBe(false);
+    expect(causaPreopPlan({ setting: 'electiva', hb: 9, ferritin: 60, tsat: 20 }).derivar).toBe(true);
+    expect(causaPreopPlan({ setting: 'electiva', hb: 9, ferritin: 60, tsat: 19.9 }).derivar).toBe(false);
+  });
+
+  it('límites de ironDiagnosisCausa (criterios actuales, sin cambios)', () => {
+    expect(ironDiagnosisCausa({ ferritin: 29.9, tsat: 50 })).toBe('DAH');
+    expect(ironDiagnosisCausa({ ferritin: 30, tsat: 19.9 })).toBe('DFH');
+    expect(ironDiagnosisCausa({ ferritin: 100, tsat: 19.9 })).toBe('DFH');
+    expect(ironDiagnosisCausa({ ferritin: 100.1, tsat: 19.9 })).toBe('inflamatoria');
+    expect(ironDiagnosisCausa({ ferritin: 50, tsat: 20 })).toBe('normal');
+    expect(ironDiagnosisCausa({ ferritin: 50, tsat: 19.99 })).toBe('DFH');
+    expect(ironDiagnosisCausa({ ferritin: 50, tsat: 25, pcrMgL: 5 })).toBe('normal');
+    expect(ironDiagnosisCausa({ ferritin: 50, tsat: 25, pcrMgL: 5.01 })).toBe('inflamatoria');
+    expect(ironDiagnosisCausa({ ferritin: 60, tsat: 15, retHbPg: 24.9 })).toBe('DAH');
+    expect(ironDiagnosisCausa({ ferritin: 60, tsat: 15, retHbPg: 25 })).toBe('DFH');
+    expect(ironDiagnosisCausa({ ferritin: 60, tsat: 15, retHbPg: 28 })).toBe('DFH');
+    expect(ironDiagnosisCausa({ ferritin: 60, tsat: 15, retHbPg: 28.1 })).toBe('normal');
+  });
+
+  it('un dato inválido nunca produce "normal"', () => {
+    expect(ironDiagnosisCausa({ ferritin: 50, tsat: NaN })).toBe('indeterminada');
+    expect(ironDiagnosisCausa({ ferritin: NaN, tsat: 10 })).toBe('indeterminada');
+    expect(ironDiagnosisCausa({ ferritin: -5, tsat: 10 })).toBe('indeterminada');
+    expect(ironDiagnosisCausa({ ferritin: 50, tsat: 25, pcrMgL: -1 })).toBe('indeterminada');
+    expect(ironDiagnosisCausa({ ferritin: 60, tsat: 15, retHbPg: NaN })).toBe('indeterminada');
+  });
+
+  it('"normal" sin PCR se rotula como inflamación no evaluada', () => {
+    expect(ironDxLabel('normal', { pcrAportada: false })).toBe(
+      'Patrón férrico normal — inflamación no evaluada (PCR no aportada)',
+    );
+    expect(ironDxLabel('normal', { pcrAportada: true })).toMatch(/Metabolismo férrico normal/);
+    expect(ironDxLabel('DAH', { pcrAportada: false })).toMatch(/DAH/);
+  });
+
+  it('caso de la auditoría (anemia, ferritina 70, IST 24 %): ninguna ruta pauta tratamiento', () => {
+    expect(ironDiagnosisCausa({ ferritin: 70, tsat: 24 })).toBe('normal');
+    expect(causaDerivar({ anemia: true, tsat: 24 })).toBe(true);
+    const e = causaPreopPlan({ setting: 'electiva', hb: 10.5, ferritin: 70, tsat: 24 });
+    expect(e.derivar).toBe(true);
+    expect(e.ironMg).toBeNull();
+    const u = causaPreopPlan({ setting: 'urgente', hb: 10.5, ferritin: 70, tsat: 24 });
+    expect(u.fueraAlgoritmo).toBe(true);
+    expect(u.ironMg).toBeNull();
+    expect(u.epo).toBe('no');
   });
 });

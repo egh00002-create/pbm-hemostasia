@@ -1,7 +1,7 @@
 # Serie PBM — Hemostasia y Medicina Transfusional Perioperatoria
 
 Manual docente sobre *Patient Blood Management* (PBM) y hemostasia perioperatoria, en español, para anestesiólogos
-adjuntos y residentes (CAUSA / SACYL). **Versión 1.1.0** (ver `VERSION` y `CHANGELOG.md`).
+adjuntos y residentes (CAUSA / SACYL). **Versión 1.1.1** (ver `VERSION` y `CHANGELOG.md`).
 
 > Material **docente**. No es un dispositivo médico ni una guía oficial. **No sustituye al juicio clínico ni a los
 > protocolos locales vigentes.** Cifras verificadas contra PubMed; los tiempos y dosis se confirman con la ficha técnica

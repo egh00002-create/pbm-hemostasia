@@ -2,6 +2,27 @@
 
 Formato: versión · fecha · cambios. Próxima revisión de evidencia prevista: **2027**.
 
+## v1.1.1 — 2026-10
+Correcciones técnicas del motor de ferropenia de la app (Fase 2a de la auditoría). **Sin cambios de criterio
+clínico**: umbrales y matrices del PTC-ANR-22-01-01 intactos.
+- **Motor único.** Diagnóstico, derivación y Fe + EPO salen de un solo motor (`ironDiagnosisCausa` +
+  `causaDerivar` + `causaPreopPlan`). La regla «anemia + IST ≥ 20 % → derivar» ya no está duplicada entre la
+  pantalla de diagnóstico y la matriz electiva.
+- **Motor antiguo retirado.** `ironStatusOf` / `assessPreopAnemia` no los usaba ninguna pantalla y su lógica
+  divergía del protocolo; se eliminan junto con sus tests.
+- **Validación de entradas.** Si Hb, ferritina, IST, Ret-Hb o peso no son numéricos, son negativos o la IST
+  supera el 100 %, el resultado queda bloqueado y se indica qué campo falla. Antes, una IST no numérica daba
+  «normal» y, en electiva, se saltaba la derivación y se pautaba hierro.
+- **PCR no aportada.** El resultado «normal» de la pantalla de diagnóstico se rotula ahora «Patrón férrico
+  normal — inflamación no evaluada (PCR no aportada)». La clasificación no cambia.
+- **Cirugía urgente (Fig. 13).** Nuevo campo IST. Con IST < 20 % la pauta no cambia. Con IST ≥ 20 % o sin IST,
+  la app ya no calcula pauta («Fuera del algoritmo de la Figura 13; valorar individualmente»), porque la tabla
+  del protocolo solo cubre IST < 20 %. Caso afectado: ferritina 70 + IST 24 % daba antes hierro IV 500 mg + EPO.
+- **Comentario de Ret-Hb unificado.** El criterio diagnóstico es el de la Figura 7 (25–28 pg, 28 incluido =
+  DFH); el «< 28» de la Fig. 15 se documenta como rótulo de otro contexto. La lógica no cambia.
+- **Tests de regresión** (+11): límites de ferritina 30/100, IST 20 %, PCR 5 mg/L y Ret-Hb 25/28 pg;
+  entradas inválidas; el caso de la auditoría en las tres pantallas.
+
 ## v1.1.0 — 2026-06
 Revisión de las fuentes que quedaban pendientes de confirmar; dos resultaron ya publicadas y verificables y se
 **incorporan** al contenido.

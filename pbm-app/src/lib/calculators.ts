@@ -657,8 +657,44 @@ export function epoWeeklyVialUI(weightKg: number): number {
   return weightKg >= 55 ? 40000 : 30000;
 }
 
+/** Campo de laboratorio tecleado por el usuario: vacío, inválido o valor utilizable. */
+export type LabField = { kind: 'vacio' } | { kind: 'invalido' } | { kind: 'ok'; value: number };
+
+/**
+ * Lee un valor de laboratorio (admite coma decimal). No numérico, negativo o por encima de `max`
+ * → 'invalido': la pantalla debe bloquear el resultado, nunca tratarlo como dato ausente.
+ */
+export function parseLabField(raw: string, opts: { max?: number } = {}): LabField {
+  const s = raw.trim();
+  if (s === '') return { kind: 'vacio' };
+  const v = Number(s.replace(',', '.'));
+  if (!Number.isFinite(v) || v < 0 || (opts.max != null && v > opts.max)) return { kind: 'invalido' };
+  return { kind: 'ok', value: v };
+}
+
+export function labValue(f: LabField): number | null {
+  return f.kind === 'ok' ? f.value : null;
+}
+
+/** Nombres de los campos inválidos, en el orden recibido. */
+export function invalidLabFields(fields: Record<string, LabField>): string[] {
+  return Object.entries(fields)
+    .filter(([, f]) => f.kind === 'invalido')
+    .map(([name]) => name);
+}
+
+/**
+ * Regla única de derivación del protocolo: anemia con IST ≥ 20 % → Consultas de
+ * M. Interna / Hematología. La consumen el diagnóstico (Fig. 5) y la matriz electiva (Fig. 12).
+ */
+export function causaDerivar(input: { anemia: boolean; tsat?: number | null }): boolean {
+  return input.anemia && input.tsat != null && input.tsat >= 20;
+}
+
 /** Clasificación de ferropenia del protocolo (Figura 7, con Ret-Hb opcional). */
 export type IronDxCausa = 'DAH' | 'DFH' | 'inflamatoria' | 'normal' | 'indeterminada';
+
+const isValidLab = (v: number | null | undefined) => v == null || (Number.isFinite(v) && v >= 0);
 
 export function ironDiagnosisCausa(input: {
   ferritin: number;
@@ -667,6 +703,10 @@ export function ironDiagnosisCausa(input: {
   pcrMgL?: number | null;
 }): IronDxCausa {
   const { ferritin, tsat, retHbPg, pcrMgL } = input;
+  // Un dato inválido nunca puede desembocar en "normal" (las pantallas ya lo bloquean antes).
+  if (!Number.isFinite(ferritin) || ferritin < 0 || ![tsat, retHbPg, pcrMgL].every(isValidLab)) {
+    return 'indeterminada';
+  }
   // Déficit absoluto: ferritina < 30.
   if (ferritin < 30) return 'DAH';
   const istBaja = tsat != null && tsat < 20;
@@ -675,7 +715,8 @@ export function ironDiagnosisCausa(input: {
   if (istBaja) {
     if (retHbPg != null) {
       if (retHbPg < 25) return 'DAH';
-      if (retHbPg <= 28) return 'DFH';
+      if (retHbPg <= 28) return 'DFH'; // Fig. 7: 25–28 pg, 28 incluido
+
       return 'normal';
     }
     // Sin Ret-Hb: ferritina 30–100 con IST baja = déficit funcional/inflamatorio.
@@ -686,10 +727,30 @@ export function ironDiagnosisCausa(input: {
   return tsat != null ? 'normal' : 'indeterminada';
 }
 
+const IRON_DX_LABEL: Record<IronDxCausa, string> = {
+  DAH: 'Déficit absoluto de hierro (DAH) → hierro IV',
+  DFH: 'Déficit funcional de hierro (DFH) → hierro IV ± EPO',
+  inflamatoria: 'Anemia inflamatoria (ferritina alta, IST baja) → EPO ± hierro IV',
+  normal: 'Metabolismo férrico normal → considerar otras causas',
+  indeterminada: 'Estudio férrico incompleto (falta IST)',
+};
+
+/**
+ * Texto del diagnóstico. Sin PCR, "normal" solo describe el patrón férrico: la inflamación
+ * no se ha evaluado y no puede darse por descartada.
+ */
+export function ironDxLabel(dx: IronDxCausa, opts: { pcrAportada: boolean }): string {
+  if (dx === 'normal' && !opts.pcrAportada) {
+    return 'Patrón férrico normal — inflamación no evaluada (PCR no aportada)';
+  }
+  return IRON_DX_LABEL[dx];
+}
+
 export type EpoScheme = 'no' | 'una' | 'dos' | 'reducida';
 
 export interface PreopTreatmentPlan {
   derivar: boolean; // IST ≥ 20 % en electiva → derivar a M. Interna / Hematología
+  fueraAlgoritmo: boolean; // urgente sin IST < 20 %: la Figura 13 no da pauta
   ironMg: number | null; // dosis de hierro IV (mg); null = no pauta de hierro fija
   ironLabel: string;
   epo: EpoScheme;
@@ -707,7 +768,8 @@ const EPO_SCHEME_LABEL: Record<EpoScheme, string> = {
 /**
  * Plan de tratamiento Fe + EPO preoperatorio del protocolo.
  *  - electiva: matriz Hb (<8 / 8–10 / >10) × ferritina (<30 / 30–300 / >300) [Figura 12].
- *  - urgente: matriz ferritina (<30 / 30–100 / >100) × función renal (normal / FG<60) [Figura 13].
+ *  - urgente: matriz ferritina (<30 / 30–100 / >100) × función renal (normal / FG<60) [Figura 13],
+ *    solo con IST < 20 %; IST ≥ 20 % o ausente → fueraAlgoritmo, sin pauta.
  * Fe coadyuvante a EPO (ferritina alta): 500 mg si Hb ≤ 10, 200 mg si Hb > 10 (si ferritina < 500).
  */
 export function causaPreopPlan(input: {
@@ -721,10 +783,11 @@ export function causaPreopPlan(input: {
   const coadyuvanteMg = hb <= 10 ? 500 : 200;
 
   if (setting === 'electiva') {
-    // Regla de derivación: anemia con IST ≥ 20 % → estudio por M. Interna / Hematología.
-    if (tsat != null && tsat >= 20) {
+    // La Figura 12 se aplica a pacientes con anemia; la derivación es la regla única.
+    if (causaDerivar({ anemia: true, tsat })) {
       return {
         derivar: true,
+        fueraAlgoritmo: false,
         ironMg: null,
         ironLabel: 'No iniciar pauta marcial empírica',
         epo: 'no',
@@ -775,6 +838,7 @@ export function causaPreopPlan(input: {
     }
     return {
       derivar: false,
+      fueraAlgoritmo: false,
       ironMg,
       ironLabel: ironMg != null ? `Hierro IV ${ironMg >= 1000 ? `${ironMg / 1000} g` : `${ironMg} mg`}` : 'Sin hierro IV',
       epo,
@@ -783,7 +847,19 @@ export function causaPreopPlan(input: {
     };
   }
 
-  // ---- URGENTE (Figura 13): requiere IST < 20 %; bandas ferritina <30 / 30–100 / >100 ----
+  // ---- URGENTE (Figura 13): la tabla solo cubre IST < 20 %; bandas ferritina <30 / 30–100 / >100 ----
+  // Con IST ≥ 20 % o sin IST el protocolo no da pauta: no se calcula ninguna.
+  if (tsat == null || tsat >= 20) {
+    return {
+      derivar: false,
+      fueraAlgoritmo: true,
+      ironMg: null,
+      ironLabel: 'Sin pauta',
+      epo: 'no',
+      epoLabel: 'Sin pauta',
+      note: 'Fuera del algoritmo de la Figura 13 (requiere IST < 20 %). Valorar individualmente.',
+    };
+  }
   const renal = input.renalImpaired === true;
   const feLow = ferritin < 30;
   const feMid = ferritin <= 100;
@@ -806,6 +882,7 @@ export function causaPreopPlan(input: {
   }
   return {
     derivar: false,
+    fueraAlgoritmo: false,
     ironMg,
     ironLabel: ironMg != null ? `Hierro IV ${ironMg >= 1000 ? `${ironMg / 1000} g` : `${ironMg} mg`}` : 'Sin hierro IV',
     epo,
@@ -819,7 +896,9 @@ export function causaPreopPlan(input: {
 // Matriz Hb × ferritina con umbrales de transfusión distintos en cirugía cardíaca
 // ("en card"): fila baja Hb < 7 (< 8 card), fila media 7–10 (8–10 card), fila alta > 10.
 // El déficit de hierro postoperatorio se define con ferritina postQx < 100 (o < 300 + IST
-// < 20 % / Ret-Hb < 28 pg). La TCH se decide por clínica, no solo por la cifra.
+// < 20 % / Ret-Hb baja; la Fig. 15 lo rotula "< 28 pg"). El criterio diagnóstico de Ret-Hb es
+// el de la Figura 7 (25–28 pg, 28 incluido = DFH), implementado en ironDiagnosisCausa; esta
+// matriz no usa Ret-Hb. La TCH se decide por clínica, no solo por la cifra.
 
 export interface PostopPlan {
   transfuse: boolean;
