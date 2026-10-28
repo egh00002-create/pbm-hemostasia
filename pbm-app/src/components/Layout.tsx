@@ -3,6 +3,9 @@ import { NavLink, Link } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
 import { DISCLAIMER_TEXT } from './Disclaimer';
 
+/** App que despliega el servicio para hierro y EPO; esta app no es la referencia para dosis. */
+const REFERENCE_APP_URL = 'https://pbm-perioperative.pages.dev/';
+
 const NAV = [
   { to: '/', label: 'Inicio', icon: '🏠', end: true },
   { to: '/indice', label: 'Índice', icon: '📚' },
@@ -57,7 +60,18 @@ export function Layout({ children }: { children: ReactNode }) {
       </header>
 
       <main id="contenido" className="main" tabIndex={-1}>
-        <div className="container">{children}</div>
+        <div className="container">
+          <p className="disclaimer" role="note">
+            <span className="ic" aria-hidden="true">⚠</span>
+            <span>
+              Las calculadoras de hierro y EPO de referencia del servicio están en{' '}
+              <a href={REFERENCE_APP_URL} target="_blank" rel="noopener noreferrer">
+                {REFERENCE_APP_URL}
+              </a>
+            </span>
+          </p>
+          {children}
+        </div>
       </main>
 
       <nav className="tabbar" aria-label="Navegación inferior">

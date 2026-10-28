@@ -18,9 +18,14 @@ clínico**: umbrales y matrices del PTC-ANR-22-01-01 intactos.
 - **Cirugía urgente (Fig. 13).** Nuevo campo IST. Con IST < 20 % la pauta no cambia. Con IST ≥ 20 % o sin IST,
   la app ya no calcula pauta («Fuera del algoritmo de la Figura 13; valorar individualmente»), porque la tabla
   del protocolo solo cubre IST < 20 %. Caso afectado: ferritina 70 + IST 24 % daba antes hierro IV 500 mg + EPO.
+- **Cirugía electiva sin IST (Fig. 12 / 8.7).** Sin IST la app ya no pauta: «IST necesaria para aplicar la
+  matriz de tratamiento o descartar derivación». El 8.7 aplica la matriz solo con IST < 20 % y deriva el resto;
+  sin el dato no se sabe en qué grupo está el paciente. Antes se aplicaba la matriz.
+- **Aviso de app de referencia.** Cabecera visible en todas las páginas: las calculadoras de hierro y EPO de
+  referencia del servicio están en `https://pbm-perioperative.pages.dev/`.
 - **Comentario de Ret-Hb unificado.** El criterio diagnóstico es el de la Figura 7 (25–28 pg, 28 incluido =
   DFH); el «< 28» de la Fig. 15 se documenta como rótulo de otro contexto. La lógica no cambia.
-- **Tests de regresión** (+11): límites de ferritina 30/100, IST 20 %, PCR 5 mg/L y Ret-Hb 25/28 pg;
+- **Tests de regresión** (+13): límites de ferritina 30/100, IST 20 %, PCR 5 mg/L y Ret-Hb 25/28 pg;
   entradas inválidas; el caso de la auditoría en las tres pantallas.
 
 ## v1.1.0 — 2026-06
